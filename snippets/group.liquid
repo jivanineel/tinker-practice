@@ -21,6 +21,8 @@
     size-style
     {% if settings.inherit_color_scheme == false %} color-{{ settings.color_scheme }}{% endif %}
     {{ class }}
+
+    {{ settings.group_class }}
   "
   style="
     {% render 'border-override', settings: settings %}
