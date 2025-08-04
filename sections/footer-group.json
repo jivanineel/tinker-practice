@@ -13,6 +13,7 @@
   "sections": {
     "footer": {
       "type": "footer",
+      "disabled": true,
       "name": "Footer",
       "settings": {
         "content_direction": "column",
