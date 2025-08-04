@@ -61,10 +61,6 @@
 
   
 
-  if shop.customer_accounts_enabled
-    assign search_class = 'mobile:hidden'
-  endif
-
   if section.settings.search_position == 'left'
     if shop.customer_accounts_enabled
       assign order = 'mobile_search,logo,search,menu,localization,actions'
