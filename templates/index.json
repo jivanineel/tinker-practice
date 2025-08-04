@@ -54,7 +54,7 @@
               "type": "text",
               "name": "t:names.heading",
               "settings": {
-                "text": "<h2>Our signature product.</h2>",
+                "text": "<p>Transform Your Skin with OurExpert Solution</p>",
                 "width": "fit-content",
                 "max_width": "none",
                 "alignment": "left",
