@@ -59,21 +59,6 @@
     content_for 'block', type: '_header-menu', id: 'header-menu', variant: 'navigation_bar', transparent: transparent
   endcapture
 
-  capture actions
-    render 'header-actions'
-  endcapture
-
-  if shop.customer_accounts_enabled
-    assign search_class = 'mobile:hidden'
-  endif
-
-  if section.settings.search_position == 'left'
-    if shop.customer_accounts_enabled
-      assign order = 'mobile_search,logo,search,menu,localization,actions'
-    else
-      assign order = 'logo,search,menu,localization,mobile_search,actions'
-    endif
-  endif
   capture search
     render 'search', style: search_style, class: search_class
   endcapture
@@ -91,6 +76,22 @@
     capture mobile_search
       render 'search', class: 'desktop:hidden', style: search_style
     endcapture
+  endif
+
+  capture actions
+    render 'header-actions'
+  endcapture
+
+  if shop.customer_accounts_enabled
+    assign search_class = 'mobile:hidden'
+  endif
+
+  if section.settings.search_position == 'left'
+    if shop.customer_accounts_enabled
+      assign order = 'mobile_search,logo,search,menu,localization,actions'
+    else
+      assign order = 'logo,search,menu,localization,mobile_search,actions'
+    endif
   endif
 
   assign show_language = section.settings.show_language
