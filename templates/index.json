@@ -79,7 +79,7 @@
             "text_DMAN9T": {
               "type": "text",
               "settings": {
-                "text": "<p>Made with care and unconditionally loved by our customers, this signature bestseller exceeds all expectations.</p>",
+                "text": "<h6>Made with care and unconditionally loved by our customers, this signature bestseller exceeds all expectations.</h6>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
