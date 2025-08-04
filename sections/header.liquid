@@ -4,7 +4,7 @@
   assign order = 'logo,menu,localization,actions,search,mobile_search'
 
   if shop.customer_accounts_enabled
-    assign order = 'mobile_search,logo,menu,localization,actions,search'
+  assign order = 'logo,menu,mobile_search,localization,actions,search'
   endif
 
   assign rows = 'top,bottom' | split: ','
