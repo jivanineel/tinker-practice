@@ -58,20 +58,20 @@
   capture navigation_bar
     content_for 'block', type: '_header-menu', id: 'header-menu', variant: 'navigation_bar', transparent: transparent
   endcapture
-  
-  if shop.customer_accounts_enabled
-    assign search_class = 'mobile:hidden'
-  endif
+
   capture actions
     render 'header-actions'
   endcapture
 
+  if shop.customer_accounts_enabled
+    assign search_class = 'mobile:hidden'
+  endif
 
   if section.settings.search_position == 'left'
     if shop.customer_accounts_enabled
-      assign order = 'mobile_search,logo,search,menu,localization,actions'
+      assign order = 'mobile_search,logo,actions,search,menu,localization'
     else
-      assign order = 'logo,search,menu,localization,mobile_search,actions'
+      assign order = 'logo,actions,search,menu,localization,mobile_search'
     endif
   endif
   capture search
