@@ -148,6 +148,7 @@
         "group_UkkJC4",
         "image_MirWgx"
       ],
+      "disabled": true,
       "name": "t:names.image_with_text",
       "settings": {
         "content_direction": "row",
