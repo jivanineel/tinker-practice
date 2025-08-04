@@ -59,9 +59,7 @@
     content_for 'block', type: '_header-menu', id: 'header-menu', variant: 'navigation_bar', transparent: transparent
   endcapture
 
-  capture actions
-    render 'header-actions'
-  endcapture
+  
 
   if shop.customer_accounts_enabled
     assign search_class = 'mobile:hidden'
