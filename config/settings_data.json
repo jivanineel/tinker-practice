@@ -22,6 +22,7 @@
     "type_size_h4": "24",
     "type_size_h5": "18",
     "type_case_h6": "none",
+    "page_width": "narrow",
     "secondary_button_border_width": 0,
     "cart_type": "page",
     "popover_border": "none",
