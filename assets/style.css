@@ -3,7 +3,7 @@
     margin: 0 auto;
 }
 
-.banner-class button{
+.banner-class .button{
     font-size: 20px;
     line-height: 1;
     max-width: 230px;
