@@ -459,7 +459,7 @@
         "group_9xPyXN"
       ],
       "custom_css": [
-        "@media screen and (max-width: 991px) {slideshow-slides {gap: 30px; } slideshow-slide {width: 200px }}"
+        "@media screen and (max-width: 991px) {slideshow-slides {gap: 30px; } slideshow-slide {width: 200px; }}"
       ],
       "name": "t:names.collections_carousel",
       "settings": {
@@ -481,7 +481,7 @@
         "rows_gap": 8,
         "max_collections": 4,
         "icons_style": "arrow",
-        "icons_shape": "none",
+        "icons_shape": "circle",
         "section_width": "page-width",
         "gap": 0,
         "color_scheme": "",
