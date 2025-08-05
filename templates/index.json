@@ -777,7 +777,7 @@
               "type": "group",
               "name": "t:names.group",
               "settings": {
-                "link": "",
+                "link": "shopify://collections/all",
                 "group_class": "",
                 "open_in_new_tab": false,
                 "content_direction": "column",
@@ -874,7 +874,7 @@
               "type": "group",
               "name": "t:names.group",
               "settings": {
-                "link": "",
+                "link": "shopify://collections/all",
                 "group_class": "",
                 "open_in_new_tab": false,
                 "content_direction": "column",
