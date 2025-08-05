@@ -1,10 +1,13 @@
 .banner-class .layout-panel-flex--column{
     max-width: 75%;
     margin: 0 auto;
-  }
+}
 
-  @media screen and (max-width: 749px) {
+.banner-class
+
+@media screen and (max-width: 749px) {
     .banner-class .layout-panel-flex--column{
-      max-width: 100%;
+        max-width: 100%;
+        padding: 0 16px;
     }
-  }
+}
