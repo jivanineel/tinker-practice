@@ -254,7 +254,7 @@
               "name": "t:names.text",
               "settings": {
                 "text": "<h6>4.8/5 from 1,999 + Happy Customers</h6>",
-                "text_custom_class": "",
+                "text_custom_class": "rating-text",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "center",
