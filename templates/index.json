@@ -130,7 +130,7 @@
           "settings": {
             "image": "shopify://shop_images/skincare-banner.png",
             "link": "",
-            "custom_image_class": "",
+            "custom_image_class": "banner-image",
             "image_ratio": "square",
             "width": "fill",
             "custom_width": 100,
