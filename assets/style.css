@@ -74,8 +74,8 @@
         margin-bottom: 0;
     }
 
-    .rating-text{
-        font-size: 14px;
+    .rating-text p{
+        font-size: 14px !important;
     }
 }
 
