@@ -345,36 +345,6 @@
           },
           "blocks": {}
         },
-        "ai_gen_block_a8d714e_K3q34f": {
-          "type": "ai_gen_block_a8d714e",
-          "settings": {
-            "heading": "Shop by Category",
-            "subheading": "Discover our curated collections",
-            "collection_1": "",
-            "collection_2": "",
-            "collection_3": "",
-            "collection_4": "",
-            "collection_5": "",
-            "collection_6": "",
-            "collection_7": "",
-            "collection_8": "",
-            "desktop_columns": 4,
-            "card_height": 280,
-            "card_spacing": 20,
-            "section_padding": 60,
-            "background_color": "#ffffff",
-            "text_color": "#000000",
-            "card_background": "#ffffff",
-            "button_color": "#000000",
-            "button_text_color": "#ffffff",
-            "button_hover_color": "#333333",
-            "card_border_radius": 12,
-            "heading_size": 36,
-            "subheading_size": 16,
-            "card_title_size": 20
-          },
-          "blocks": {}
-        },
         "group_8nfMEL": {
           "type": "group",
           "name": "t:names.group",
@@ -1010,7 +980,6 @@
       },
       "block_order": [
         "text_GDgJTt",
-        "ai_gen_block_a8d714e_K3q34f",
         "group_8nfMEL"
       ],
       "name": "t:names.custom_section",

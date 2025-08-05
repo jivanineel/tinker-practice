@@ -1,5 +1,3 @@
-
-
 {% capture children %}
   {% content_for 'blocks' %}
 {% endcapture %}
@@ -492,7 +490,7 @@
       "step": 1,
       "unit": "px",
       "default": 0
-    },
+    }
   ],
   "presets": [
     {
@@ -502,3 +500,35 @@
   ]
 }
 {% endschema %}
+
+{% stylesheet %}
+  .category-slider {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    padding: 1rem 0;
+    scrollbar-width: none;
+  }
+  .category-slider::-webkit-scrollbar {
+    display: none;
+  }
+  .category-slider > * {
+    flex: 0 0 auto;
+    width: 120px;
+    scroll-snap-align: center;
+    text-align: center;
+  }
+  @media (min-width: 750px) {
+    .category-slider {
+      flex-wrap: wrap;
+      justify-content: center;
+      overflow: visible;
+      scroll-snap-type: none;
+    }
+    .category-slider > * {
+      width: auto;
+    }
+  }
+{% endstylesheet %}
