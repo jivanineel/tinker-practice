@@ -18,4 +18,8 @@
     .banner-heading {
         font-size: 38px !important;
     }
+
+    .banner-content{
+        font-size: 14px !important;
+    }
 }
