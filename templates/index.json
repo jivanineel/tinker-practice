@@ -318,6 +318,33 @@
     "section_3YbaDr": {
       "type": "section",
       "blocks": {
+        "text_GDgJTt": {
+          "type": "text",
+          "name": "t:names.text",
+          "settings": {
+            "text": "<p>Shop By Category</p>",
+            "text_custom_class": "",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "center",
+            "type_preset": "custom",
+            "font": "var(--font-body--family)",
+            "font_size": "2.5rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
         "group_8nfMEL": {
           "type": "group",
           "name": "t:names.group",
@@ -952,6 +979,7 @@
         }
       },
       "block_order": [
+        "text_GDgJTt",
         "group_8nfMEL"
       ],
       "name": "t:names.custom_section",
