@@ -1,7 +1,6 @@
 .banner-class .layout-panel-flex--column{
     max-width: 70%;
     margin: 0 auto;
-    padding-left: 86px;
 }
 
 .banner-class .button{
@@ -20,7 +19,6 @@
 @media screen and (max-width: 1580px){
     .banner-class .layout-panel-flex--column{
         max-width: 100%;
-        padding-left: 30px;
     }
 }
 
