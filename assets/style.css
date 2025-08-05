@@ -24,6 +24,7 @@
     max-width: 130px;
 }
 
+
 @media screen and (max-width: 1440px){
     .banner-class .layout-panel-flex--column{
         max-width: 90%;
@@ -37,6 +38,9 @@
 }
 
 @media screen and (max-width: 768px) {
+    .rating-group{
+        gap: 10px;
+    }
     .banner-class .layout-panel-flex--column{
         max-width: 100%;
         padding: 0 16px;
