@@ -24,13 +24,19 @@
     }
 }
 
+@media screen and (max-width: 991px) {
+    .banner-heading p{
+        font-size: 48px !important;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .banner-class .layout-panel-flex--column{
         max-width: 100%;
         padding: 0 16px;
     }
     .banner-heading p{
-        font-size: 48px !important;
+        font-size: 42px !important;
     }
 
     .banner-class .button{
