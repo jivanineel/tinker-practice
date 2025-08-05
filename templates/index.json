@@ -401,7 +401,7 @@
             "collection_card_gap": 8,
             "inherit_color_scheme": true,
             "color_scheme": "",
-            "border": "solid",
+            "border": "none",
             "border_width": 10,
             "border_opacity": 100,
             "border_radius": 75
