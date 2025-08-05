@@ -32,6 +32,8 @@
       {%- render 'theme-editor' -%}
     {% endif %}
 
+    {{ 'style.css' | asset_url | stylesheet_tag }}
+
     {{ content_for_header }}
   </head>
 
