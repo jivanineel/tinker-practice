@@ -9,7 +9,7 @@
         max-width: 100%;
         padding: 0 16px;
     }
-    .banner-heading{
+    .banner-heading p{
         font-size: 48px !important;
     }
 }
