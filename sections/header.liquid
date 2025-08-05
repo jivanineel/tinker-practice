@@ -1,10 +1,8 @@
-
-
 {% liquid
   assign order = 'logo,menu,localization,actions,search,mobile_search'
 
   if shop.customer_accounts_enabled
-  assign order = 'logo,menu,mobile_search,localization,actions,search'
+    assign order = 'logo,menu,mobile_search,localization,actions,search'
   endif
 
   assign rows = 'top,bottom' | split: ','
@@ -535,10 +533,6 @@
       .menu-drawer__menu-item--mainlist{
         font-size: 16px;
       }
-
-      .banner-class .layout-panel-flex--column{
-        max-width: 80%;
-      }
     }
   }
 
@@ -601,6 +595,10 @@
       margin-top: calc(var(--header-height) * var(--transparent-header-offset-boolean) * -1);
     }
   }
+
+  .banner-class .layout-panel-flex--column{
+        max-width: 80%;
+      }
 {% endstylesheet %}
 
 {% schema %}
