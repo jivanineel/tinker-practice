@@ -56,6 +56,7 @@
               "name": "t:names.heading",
               "settings": {
                 "text": "<p>Transform Your Skin with Our Expert Solution</p>",
+                "text_custom_class": "banner-heading",
                 "width": "100%",
                 "max_width": "narrow",
                 "alignment": "left",
@@ -81,6 +82,7 @@
               "type": "text",
               "settings": {
                 "text": "<h6>Made with care and unconditionally loved by our customers, this signature bestseller exceeds all expectations.</h6>",
+                "text_custom_class": "",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "left",
