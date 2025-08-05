@@ -184,36 +184,105 @@
     "section_rpriBr": {
       "type": "section",
       "blocks": {
-        "text_aUgqF3": {
-          "type": "text",
-          "name": "t:names.text",
+        "group_BKKRjJ": {
+          "type": "group",
+          "name": "t:names.group",
           "settings": {
-            "text": "<p>4.8/5 from 1,999 + Happy Customers<br/></p>",
-            "text_custom_class": "",
-            "width": "100%",
-            "max_width": "normal",
-            "alignment": "center",
-            "type_preset": "rte",
-            "font": "var(--font-body--family)",
-            "font_size": "1rem",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "color": "var(--color-foreground)",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
+            "link": "",
+            "group_class": "",
+            "open_in_new_tab": false,
+            "content_direction": "row",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
             "padding-block-start": 0,
             "padding-block-end": 0,
             "padding-inline-start": 0,
             "padding-inline-end": 0
           },
-          "blocks": {}
+          "blocks": {
+            "image_HC7FDz": {
+              "type": "image",
+              "name": "t:names.image",
+              "settings": {
+                "image": "shopify://shop_images/rating-icon.png",
+                "link": "",
+                "image_ratio": "adapt",
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "text_jLJnaA": {
+              "type": "text",
+              "name": "t:names.text",
+              "settings": {
+                "text": "<p>4.8/5 from 1,999 + Happy Customers</p>",
+                "text_custom_class": "",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "center",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "image_HC7FDz",
+            "text_jLJnaA"
+          ]
         }
       },
       "block_order": [
-        "text_aUgqF3"
+        "group_BKKRjJ"
       ],
       "name": "t:names.custom_section",
       "settings": {
@@ -228,7 +297,7 @@
         "section_width": "page-width",
         "section_height": "custom",
         "section_height_custom": 5,
-        "color_scheme": "",
+        "color_scheme": "scheme-7e372abc-a508-478a-a795-ff09cb62ac39",
         "background_media": "none",
         "video_position": "cover",
         "background_image_position": "cover",
