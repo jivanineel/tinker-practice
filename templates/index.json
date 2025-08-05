@@ -253,15 +253,15 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>4.8/5 from 1,999 + Happy Customers</p>",
+                "text": "<h6>4.8/5 from 1,999 + Happy Customers</h6>",
                 "text_custom_class": "",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "center",
-                "type_preset": "rte",
+                "type_preset": "custom",
                 "font": "var(--font-body--family)",
                 "font_size": "1rem",
-                "line_height": "normal",
+                "line_height": "tight",
                 "letter_spacing": "normal",
                 "case": "none",
                 "wrap": "pretty",
@@ -286,7 +286,7 @@
       "block_order": [
         "group_BKKRjJ"
       ],
-      "name": "t:names.custom_section",
+      "name": "Rating section",
       "settings": {
         "content_direction": "column",
         "vertical_on_mobile": true,
