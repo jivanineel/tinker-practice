@@ -20,7 +20,7 @@
 @media screen and (max-width: 1580px){
     .banner-class .layout-panel-flex--column{
         max-width: 100%;
-        margin: 0 auto;
+        padding-left: 30px;
     }
 }
 
