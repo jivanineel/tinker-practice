@@ -3,9 +3,13 @@
     margin: 0 auto;
 }
 
+
 @media screen and (max-width: 749px) {
     .banner-class .layout-panel-flex--column{
         max-width: 100%;
         padding: 0 16px;
+    }
+    .banner-heading{
+        font-size: 48px;
     }
 }
