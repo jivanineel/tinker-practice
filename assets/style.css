@@ -3,8 +3,6 @@
     margin: 0 auto;
 }
 
-.banner-class 
-
 @media screen and (max-width: 749px) {
     .banner-class .layout-panel-flex--column{
         max-width: 100%;
