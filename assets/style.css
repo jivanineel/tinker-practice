@@ -73,6 +73,10 @@
     .banner-content{
         margin-bottom: 0;
     }
+
+    .rating-text{
+        font-size: 14px;
+    }
 }
 
 @media screen and (max-width:425px) {
