@@ -74,6 +74,11 @@
         margin-bottom: 0;
     }
 
+    .rating-image{
+        max-width: 100px;
+    }
+
+
     .rating-text h6{
         font-size: 14px !important;
     }
