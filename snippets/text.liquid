@@ -48,7 +48,7 @@
 
 {% capture attributes %}
   class="{{ class }} spacing-style text-block text-block--{{ block.id }} {{ block.settings.type_preset }}
-    {{ text_block_classes }}
+    {{ text_block_classes }} {{ block.settings.text_custom_class }}
   "
 
   style="
