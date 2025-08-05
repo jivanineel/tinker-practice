@@ -459,7 +459,7 @@
         "group_9xPyXN"
       ],
       "custom_css": [
-        "@media screen and (max-width: 991px) {slideshow-slides {gap: 30px;}}"
+        "@media screen and (max-width: 991px) {slideshow-slides {gap: 30px; } slideshow-slide {width: 200px }}"
       ],
       "name": "t:names.collections_carousel",
       "settings": {
