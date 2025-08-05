@@ -130,6 +130,7 @@
           "settings": {
             "image": "shopify://shop_images/skincare-banner.png",
             "link": "",
+            "custom_image_class": "",
             "image_ratio": "square",
             "width": "fill",
             "custom_width": 100,
@@ -230,6 +231,7 @@
               "settings": {
                 "image": "shopify://shop_images/rating-icon.png",
                 "link": "",
+                "custom_image_class": "rating-image",
                 "image_ratio": "adapt",
                 "width": "fit-content",
                 "custom_width": 100,
