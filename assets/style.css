@@ -20,6 +20,10 @@
     margin-bottom: 20px;
 }
 
+.rating-image{
+    max-width: 130px;
+}
+
 @media screen and (max-width: 1440px){
     .banner-class .layout-panel-flex--column{
         max-width: 90%;
