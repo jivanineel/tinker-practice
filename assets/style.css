@@ -34,6 +34,7 @@
     .banner-class .layout-panel-flex--column{
         max-width: 100%;
         padding: 0 16px;
+        gap: 10px;
     }
     .banner-heading p{
         font-size: 42px !important;
@@ -51,10 +52,6 @@
     }
     .banner-content h6{
         font-size: 14px !important;
-    }
-
-    .banner-class .layout-panel-flex{
-        gap: 10px;
     }
 
     .banner-class .button{
