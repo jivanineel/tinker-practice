@@ -1,5 +1,3 @@
-
-
 {% liquid
   assign ratio = 1
 
@@ -41,17 +39,19 @@
 
 {% capture image %}
   {%- if block.settings.image -%}
-    {{
-      block.settings.image
-      | image_url: width: 3840
-      | image_tag:
-        width: block.settings.image.width,
-        widths: widths,
-        height: block.settings.image.height,
-        class: 'image-block__image border-style',
-        style: image_border_style,
-        sizes: sizes
-    }}
+    {% assign image_class = 'image-block__image border-style ' | append: block.settings.custom_image_class %}
+
+{{
+  block.settings.image
+  | image_url: width: 3840
+  | image_tag:
+    width: block.settings.image.width,
+    widths: widths,
+    height: block.settings.image.height,
+    class: image_class,
+    style: image_border_style,
+    sizes: sizes
+}}
   {%- else -%}
     <div class="placeholder-image border-style size-style" style="{{ image_border_style }}">
       <placeholder-image
