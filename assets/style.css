@@ -64,3 +64,9 @@
         margin-bottom: 0;
     }
 }
+
+@media screen and (max-width:425px) {
+    .banner-heading p{
+        font-size: 32px !important;
+    }
+}
