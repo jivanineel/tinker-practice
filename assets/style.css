@@ -48,4 +48,8 @@
         padding: 10px 0;
         max-width: 150px;
     }
+
+    .banner-content{
+        margin-bottom: 0;
+    }
 }
