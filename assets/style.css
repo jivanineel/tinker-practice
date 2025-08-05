@@ -12,6 +12,9 @@
     border: 1px solid #2C2723
 }
 
+.banner-content h6{
+    margin-bottom: 20px;
+}
 
 @media screen and (max-width: 749px) {
     .banner-class .layout-panel-flex--column{
