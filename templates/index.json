@@ -431,7 +431,7 @@
                   "settings": {
                     "image": "shopify://shop_images/product-1.png",
                     "link": "",
-                    "custom_image_class": "",
+                    "custom_image_class": "category-image",
                     "image_ratio": "adapt",
                     "width": "fill",
                     "custom_width": 100,
@@ -528,7 +528,7 @@
                   "settings": {
                     "image": "shopify://shop_images/product-2.png",
                     "link": "",
-                    "custom_image_class": "",
+                    "custom_image_class": "category-image",
                     "image_ratio": "adapt",
                     "width": "fill",
                     "custom_width": 100,
@@ -625,7 +625,7 @@
                   "settings": {
                     "image": "shopify://shop_images/product-3.png",
                     "link": "",
-                    "custom_image_class": "",
+                    "custom_image_class": "category-image",
                     "image_ratio": "adapt",
                     "width": "fill",
                     "custom_width": 100,
@@ -722,7 +722,7 @@
                   "settings": {
                     "image": "shopify://shop_images/product-4.png",
                     "link": "",
-                    "custom_image_class": "",
+                    "custom_image_class": "category-image",
                     "image_ratio": "adapt",
                     "width": "fill",
                     "custom_width": 100,
@@ -778,7 +778,7 @@
               "name": "t:names.group",
               "settings": {
                 "link": "shopify://collections/all",
-                "group_class": "",
+                "group_class": "category-image",
                 "open_in_new_tab": false,
                 "content_direction": "column",
                 "vertical_on_mobile": true,
@@ -819,7 +819,7 @@
                   "settings": {
                     "image": "shopify://shop_images/product-5.png",
                     "link": "",
-                    "custom_image_class": "",
+                    "custom_image_class": "category-image",
                     "image_ratio": "adapt",
                     "width": "fill",
                     "custom_width": 100,
@@ -916,7 +916,7 @@
                   "settings": {
                     "image": "shopify://shop_images/product-6.png",
                     "link": "",
-                    "custom_image_class": "",
+                    "custom_image_class": "category-image",
                     "image_ratio": "adapt",
                     "width": "fill",
                     "custom_width": 100,
