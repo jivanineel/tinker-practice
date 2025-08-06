@@ -47,7 +47,7 @@
     height: 100%;
 }
 
-.custom-product-card .product-card__content{
+.custom-product-card .product-grid-view-zoom-out--details{
     padding: 20px;
 }
 
