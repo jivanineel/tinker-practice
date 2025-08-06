@@ -363,7 +363,7 @@
               "name": "t:names.text",
               "settings": {
                 "text": "<p>Shop By Category</p>",
-                "text_custom_class": "",
+                "text_custom_class": "shopping-category",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "center",
