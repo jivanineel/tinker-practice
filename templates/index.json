@@ -445,7 +445,7 @@
                 "border": "solid",
                 "border_width": 4,
                 "border_opacity": 100,
-                "border_radius": 75
+                "border_radius": 100
               },
               "blocks": {}
             }
