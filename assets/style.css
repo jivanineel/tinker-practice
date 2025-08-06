@@ -199,6 +199,9 @@
         width: 30px;
         height: 30px;
     }
+    .resource-list--grid{
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
 @media screen and (max-width:425px) {
