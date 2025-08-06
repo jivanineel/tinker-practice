@@ -43,6 +43,10 @@
     height: 350px;
 }
 
+.custom-product-media{
+    height: 100%;
+}
+
 
 .overlay-icon{
     position: absolute;
