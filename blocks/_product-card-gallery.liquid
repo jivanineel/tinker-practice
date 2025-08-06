@@ -6,6 +6,13 @@
   {% endunless %}
 {% endcapture %}
 
+{% comment %}
+{%  if settings.quick_add or settings.mobile_quick_add %}
+  {% render 'quick-add', product: closest.product, section_id: section.id %}
+{% endif %}
+{% endcomment %}
+
+
 {% render 'card-gallery', children: children %}
 
 {% # Title and price for the zoomed out grid view %}
