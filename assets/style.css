@@ -81,6 +81,10 @@
     border-radius: 50%;
 }
 
+.custom-product-card .spacing-style.text-block:last-child{
+    font-weight: 700;
+}
+
 
 @media screen and (max-width: 1440px){
     .banner-class .layout-panel-flex--column{
