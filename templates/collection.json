@@ -6,7 +6,8 @@
  * or related systems. Please exercise caution as any changes
  * made to this file may be overwritten.
  * ------------------------------------------------------------
- */{
+ */
+{
   "sections": {
     "section": {
       "type": "section",
@@ -15,6 +16,7 @@
           "type": "text",
           "settings": {
             "text": "<p>{{ closest.collection.title }}</p>",
+            "text_custom_class": "",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
@@ -40,6 +42,8 @@
           "type": "group",
           "name": "t:names.group",
           "settings": {
+            "link": "",
+            "group_class": "",
             "open_in_new_tab": false,
             "content_direction": "column",
             "vertical_on_mobile": true,
@@ -80,6 +84,8 @@
               "disabled": true,
               "settings": {
                 "image": "{{ closest.collection.image }}",
+                "link": "",
+                "custom_image_class": "",
                 "image_ratio": "adapt",
                 "width": "fill",
                 "custom_width": 100,
@@ -102,6 +108,7 @@
               "name": "Text",
               "settings": {
                 "text": "{{ closest.collection.description }}",
+                "text_custom_class": "",
                 "width": "fit-content",
                 "max_width": "narrow",
                 "alignment": "left",
@@ -194,8 +201,8 @@
           "settings": {
             "product_card_gap": 0,
             "inherit_color_scheme": false,
-            "color_scheme": "scheme-e1e09ff5-6396-47cd-ad7a-c05470cf2a2e",
-            "border": "none",
+            "color_scheme": "scheme-7",
+            "border": "solid",
             "border_width": 1,
             "border_opacity": 100,
             "border_radius": 10,
@@ -223,6 +230,7 @@
             "group": {
               "type": "_product-card-group",
               "settings": {
+                "link": "",
                 "open_in_new_tab": false,
                 "content_direction": "column",
                 "vertical_on_mobile": true,
@@ -291,6 +299,12 @@
                     "type_preset": "paragraph",
                     "width": "fit-content",
                     "alignment": "center",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "color": "var(--color-foreground)",
                     "padding-block-start": 0,
                     "padding-block-end": 0,
                     "padding-inline-start": 0,
@@ -336,7 +350,7 @@
         "columns_gap_vertical": 16,
         "padding-inline-start": 0,
         "padding-inline-end": 0,
-        "color_scheme": "",
+        "color_scheme": "scheme-7",
         "padding-block-start": 32,
         "padding-block-end": 32
       }
