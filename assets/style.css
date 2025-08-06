@@ -24,6 +24,10 @@
     max-width: 130px;
 }
 
+.collection-card:hover .collection-card__image img{
+    transform: scale(1.1);
+}
+
 
 @media screen and (max-width: 1440px){
     .banner-class .layout-panel-flex--column{
