@@ -13,19 +13,17 @@
 {% render 'card-gallery', children: children %}
 
 {% # Title and price for the zoomed out grid view %}
-<div style="padding: 20px;">
-  <div class="product-grid-view-zoom-out--details">
-    {% if closest.product == blank %}
-      <h3 class="h4">{{ 'content.product_card_placeholder' | t }}</h3>
-    {% else %}
-      <h3 class="h4">{{ closest.product.title }}</h3>
-      <div class="h6">
-        <product-price data-product-id="{{ closest.product.id }}">
-          {% render 'price', product_resource: closest.product, show_unit_price: false %}
-        </product-price>
-      </div>
-    {% endif %}
-  </div>
+<div class="product-grid-view-zoom-out--details">
+  {% if closest.product == blank %}
+    <h3 class="h4">{{ 'content.product_card_placeholder' | t }}</h3>
+  {% else %}
+    <h3 class="h4">{{ closest.product.title }}</h3>
+    <div class="h6">
+      <product-price data-product-id="{{ closest.product.id }}">
+        {% render 'price', product_resource: closest.product, show_unit_price: false %}
+      </product-price>
+    </div>
+  {% endif %}
 </div>
 
 {% schema %}
