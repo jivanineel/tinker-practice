@@ -59,8 +59,8 @@
 }
 
 .overlay-icon svg{
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
 }
 
 .custom-product-card:hover .overlay-icon{
@@ -68,8 +68,8 @@
 }
 
 .adding-icons{
-    height:50px;
-    width: 50px;
+    height:40px;
+    width: 40px;
     background-color: white;
     display: flex;
     justify-content: center;
