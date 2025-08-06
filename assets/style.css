@@ -163,6 +163,10 @@
         font-size: 16px;
     }
     
+    .spacing-style.text-block:last-child{
+        padding: 10px 10px 0 10px;
+    }
+
     .spacing-style.text-block{
         padding: 0 10px 10px 10px
     }
