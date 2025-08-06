@@ -459,9 +459,8 @@
         "group_9xPyXN"
       ],
       "custom_css": [
-        "slideshow-slides{justify-content: center}",
-        "@media screen and (max-width: 1440px) {slideshow-slides{justify-content: start }}",
-        "@media screen and (max-width: 991px) {slideshow-slides {gap: 30px; } slideshow-slide {width: 200px; }}"
+        "slideshow-slides {justify-content: center;}",
+        "@media screen and (max-width: 991px) {slideshow-slides {gap: 30px; justify-content: start; } slideshow-slide {width: 200px; }}"
       ],
       "name": "Shop By Category",
       "settings": {
