@@ -137,7 +137,7 @@
     }
 
     .resource-list--grid{
-        grid-template-columns: repeat(2, 1fr)
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -204,5 +204,9 @@
 @media screen and (max-width:425px) {
     .banner-heading p{
         font-size: 32px !important;
+    }
+
+    .custom-product-media{
+        height: 200px;
     }
 }
