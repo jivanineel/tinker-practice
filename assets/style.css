@@ -163,10 +163,10 @@
         font-size: 16px;
     }
     
-    .spacing-style.text-block{
+    .custom-product-card .spacing-style.text-block{
         padding: 10px 10px 10px 10px
     }
-    .spacing-style.text-block:last-child{
+    .custom-product-card .spacing-style.text-block:last-child{
         padding: 0 10px 10px 10px;
     }
     
