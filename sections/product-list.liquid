@@ -48,7 +48,7 @@
     {{ styles }}
   "
 >
-  <div class="section-resource-list__header">
+  <div class="section-resource-list__header {{ section.settings.heading-class }}">
     {%- content_for 'block', type: '_product-list-content', id: 'static-header' -%}
   </div>
 
@@ -165,6 +165,11 @@
       "type": "collection",
       "id": "collection",
       "label": "t:settings.collection"
+    },
+    {
+      "type": "text",
+      "id": "heading-class",
+      "label": "collection heading class"
     },
     {
       "type": "select",
