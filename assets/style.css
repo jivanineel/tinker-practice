@@ -123,6 +123,10 @@
     .custom-product-card p{
         font-size: 18px;
     }
+
+    .custom-product-card span{
+        font-size: 16px;
+    }
 }
 
 @media screen and (max-width: 575px) {
@@ -161,7 +165,7 @@
     }
 
     .custom-product-card span{
-        font-size: 16px;
+        font-size: 14px;
         padding: 10px 10px 0 10px
     }
 }
