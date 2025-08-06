@@ -37,6 +37,15 @@
     transition : all 0.5s ease-in-out;
 }
 
+.custom-product-media{
+    position:  relative;
+}
+
+.overlay-icon{
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
 
 @media screen and (max-width: 1440px){
     .banner-class .layout-panel-flex--column{
