@@ -173,6 +173,10 @@
     .custom-product-card span{
         font-size: 14px;
     }
+
+    .custom-product-media{
+        height: 250px;
+    }
 }
 
 @media screen and (max-width:425px) {
