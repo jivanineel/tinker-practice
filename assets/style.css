@@ -35,6 +35,10 @@
     .banner-heading p{
         font-size: 48px !important;
     }
+
+    .shopping-category{
+        font-size: 34px;
+    }
 }
 
 @media screen and (max-width: 768px) {
