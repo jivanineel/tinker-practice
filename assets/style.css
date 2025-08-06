@@ -47,6 +47,9 @@
     height: 100%;
 }
 
+.custom-product-card .product-card__content{
+    padding: 20px;
+}
 
 .overlay-icon{
     position: absolute;
