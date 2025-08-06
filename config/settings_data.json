@@ -30,6 +30,7 @@
     "currency_code_enabled_product_pages": false,
     "currency_code_enabled_product_cards": false,
     "show_second_image_on_hover": false,
+    "product_card_carousel": false,
     "empty_state_collection": "",
     "product_corner_radius": 10,
     "card_corner_radius": 10,
