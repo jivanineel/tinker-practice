@@ -138,9 +138,6 @@
       ref="addToCartButton"
       on:click="/handleClick"
       class="button {{ class }}"
-      {% unless can_add_to_cart %}
-        disabled
-      {% endunless %}
     >
       <div class="wishlist-icon adding-icons">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
