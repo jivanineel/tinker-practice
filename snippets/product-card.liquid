@@ -87,6 +87,7 @@
       border-style
       gap-style
       {% if block.settings.inherit_color_scheme == false %} color-{{ block.settings.color_scheme }}{% endif %}
+       
     "
     style="
       {% render 'border-override', settings: block.settings %}
