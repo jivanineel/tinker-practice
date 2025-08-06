@@ -41,6 +41,10 @@
     position:  relative;
 }
 
+.custom-product-card:hover .overlay-icon{
+    top:0;
+}
+
 .overlay-icon{
     position: absolute;
     top: 100%;
