@@ -181,6 +181,16 @@
     .custom-product-media{
         height: 250px;
     }
+
+    .overlay-icon svg{
+        width: 15px;
+        height: 15px;
+    }
+
+    .adding-icons{
+        width: 30px;
+        height: 30px;
+    }
 }
 
 @media screen and (max-width:425px) {
