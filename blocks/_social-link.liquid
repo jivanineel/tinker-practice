@@ -20,7 +20,6 @@
   1. In editor mode (always show, but may be disabled)
   2. On storefront AND has a valid profile link
 {% endcomment %}
-{% if request.design_mode or has_profile %}
   <div
     class="social-icons__icon-wrapper{% unless has_profile %} social-icons__icon-wrapper--disabled{% endunless %}"
     {{ block.shopify_attributes }}
@@ -49,7 +48,6 @@
       </svg>
     </a>
   </div>
-{% endif %}
 
 {% stylesheet %}
   .social-icons__icon-wrapper {
