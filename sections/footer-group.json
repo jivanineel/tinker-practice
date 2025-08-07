@@ -457,7 +457,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Shop</p>",
+                    "text": "<p>Support</p>",
                     "text_custom_class": "",
                     "width": "fit-content",
                     "max_width": "normal",
