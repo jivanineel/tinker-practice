@@ -94,6 +94,10 @@
     width: 100%;
 }
 
+.footer-rating{
+    max-width: 100px;
+}
+
 .email-signup__button--integrated>.email-signup__button-icon{
     stroke: #000;
     color: #000
