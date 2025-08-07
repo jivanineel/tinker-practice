@@ -160,6 +160,10 @@
         width: 50%;
     }
 
+    .footer-grid>.group-block-content{
+        flex-wrap: wrap;
+    }
+
     .footer-grid .footer-groups.footer-input{
         width: 100%;
     }
