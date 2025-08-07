@@ -278,8 +278,8 @@
         flex: none !important;
     }
     
-    .dot-link-none li,
-    .dot-link li{
+    .dot-link-none li a,
+    .dot-link li a{
         font-size: 12px !important;
     }
 
