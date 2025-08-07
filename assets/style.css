@@ -159,6 +159,10 @@
     .footer-input{
         width: 50%;
     }
+    
+    .footer-grid .group-block{
+        width: 50%;
+    }
 }
 
 @media screen and (max-width: 768px) {
