@@ -85,6 +85,10 @@
     font-weight: 700;
 }
 
+.footer-logo{
+    max-width: 132px;
+}
+
 
 @media screen and (max-width: 1440px){
     .banner-class .layout-panel-flex--column{
