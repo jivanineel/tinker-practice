@@ -109,6 +109,11 @@
 
 .dot-link{
     list-style: disc;
+    padding-left: 16px;
+}
+
+.footer-dot-text{
+
 }
 
 @media screen and (max-width: 1440px){
