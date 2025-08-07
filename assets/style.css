@@ -278,6 +278,10 @@
         flex: none !important;
     }
     
+    .dot-link-none,
+    .dot-link{
+        font-size: 12px;
+    }
 }
 
 @media screen and (max-width:425px) {
