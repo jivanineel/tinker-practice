@@ -274,7 +274,7 @@
     .footer-input,
     .footer-contact-info{
         max-width: 100%;
-        width: 100%;
+        width: 100% !important;
         flex: none !important;
     }
     
