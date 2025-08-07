@@ -753,12 +753,6 @@
                 "case": "none"
               },
               "blocks": {}
-            },
-            "social_icons": {
-              "type": "_footer-social-icons",
-              "static": true,
-              "settings": {},
-              "blocks": {}
             }
           },
           "block_order": []
@@ -778,7 +772,7 @@
         "align_baseline": false,
         "horizontal_alignment_flex_direction_column": "center",
         "vertical_alignment_flex_direction_column": "center",
-        "gap": 12,
+        "gap": 0,
         "section_width": "page-width",
         "section_height": "",
         "color_scheme": "scheme-5",
