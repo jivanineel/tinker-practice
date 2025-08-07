@@ -280,7 +280,7 @@
     
     .dot-link-none li,
     .dot-link li{
-        font-size: 12px;
+        font-size: 12px !important;
     }
 
     .footer-heading p{
