@@ -130,6 +130,7 @@
 .social-media .social-icons__icon-wrapper svg{
     width: 24px;
     height: 24px;
+    color: #CBB6A6;
 }
 
 @media screen and (max-width: 1440px){
