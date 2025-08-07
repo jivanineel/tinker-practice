@@ -128,8 +128,8 @@
 }
 
 .social-media .social-icons__icon-wrapper svg{
-    width:18px;
-    height:18px;
+    width: 24px;
+    height: 24px;
 }
 
 @media screen and (max-width: 1440px){
