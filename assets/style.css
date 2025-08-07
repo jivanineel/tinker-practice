@@ -282,6 +282,10 @@
     .dot-link li{
         font-size: 12px;
     }
+
+    .footer-heading{
+        font-size: 16px;
+    }
 }
 
 @media screen and (max-width:425px) {
