@@ -2200,6 +2200,10 @@ deferred-media[class] :is(.deferred-media__poster-button img, .deferred-media__p
 
   .layout-panel-flex--row:not(.mobile-column) {
 
+    .image-block {
+      flex: 1 1 var(--size-style-width-mobile-min);
+    }
+
     .button {
       flex: 0 0 fit-content;
     }
