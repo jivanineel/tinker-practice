@@ -431,10 +431,10 @@
       "scheme-51e48eb1-e2cf-44cd-be0c-bd817c9abea8": {
         "settings": {
           "background": "#553e3980",
-          "foreground_heading": "#ffffffb2",
-          "foreground": "#ffffffb2",
-          "primary": "#ffffffb2",
-          "primary_hover": "#ffffffb2",
+          "foreground_heading": "#ffffffb3",
+          "foreground": "#ffffffb3",
+          "primary": "#ffffffb3",
+          "primary_hover": "#ffffffb3",
           "border": "#553e3980",
           "shadow": "#553e3980",
           "primary_button_background": "#c3cca6",
