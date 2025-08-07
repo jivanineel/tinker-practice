@@ -271,10 +271,12 @@
         width: 50%;
     }
 
-    .footer-input{
+    .footer-input,
+    .footer-contact-info{
         max-width: 100%;
         flex: none !important;
     }
+    
 }
 
 @media screen and (max-width:425px) {
