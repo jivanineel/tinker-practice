@@ -186,6 +186,9 @@
     .resource-list--grid{
         grid-template-columns: repeat(2, 1fr);
     }
+    .custom-email-signup{
+        padding: 14px 20px;
+    }
 }
 
 @media screen and (max-width: 575px) {
