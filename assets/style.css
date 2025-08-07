@@ -155,23 +155,6 @@
     .resource-list--grid{
         grid-template-columns: repeat(3, 1fr)
     }
-
-    .footer-input{
-        width: 100%;
-    }
-
-    .footer-grid .group-block-content{
-        display: flex;
-        flex-wrap: wrap;
-    }
-    
-    .footer-grid .group-block{
-        width: 50%;
-    }
-
-    .footer-grid .group-block.footer-input{
-        width: 100%;
-    }
 }
 
 @media screen and (max-width: 768px) {
