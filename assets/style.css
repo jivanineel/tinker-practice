@@ -262,6 +262,11 @@
     .resource-list--grid{
         grid-template-columns: repeat(1, 1fr);
     }
+
+    
+    .footer-grid .footer-groups.footer-input{
+        width: 100%;
+    }
 }
 
 @media screen and (max-width:425px) {
@@ -279,9 +284,5 @@
         flex-wrap: wrap;
         gap: 0;
         row-gap: 20px
-    }
-
-    .footer-grid .footer-groups.footer-input{
-        width: 100%;
     }
 }
