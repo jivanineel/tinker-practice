@@ -134,7 +134,7 @@
 }
 
 .custom-email-signup{
-    padding: 14px 24px;
+    padding: 14px 24px !important;
 }
 
 @media screen and (max-width: 1440px){
