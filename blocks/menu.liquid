@@ -52,7 +52,7 @@
 
       <div class="details-content">
         {% if menu %}
-          <ul class="list-unstyled">
+          <ul class="list-unstyled {{ block.settings.list-style }}">
             {% for link in menu.links %}
               <li class="menu__item {{ block.settings.link_preset }} {{ block.settings.menu_class }}">
                 <a href="{{ link.url }}">
