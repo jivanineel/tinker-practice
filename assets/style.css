@@ -133,6 +133,10 @@
     color: #CBB6A6;
 }
 
+.custom-email-signup{
+    padding: 14px 24px;
+}
+
 @media screen and (max-width: 1440px){
     .banner-class .layout-panel-flex--column{
         max-width: 90%;
@@ -185,9 +189,6 @@
 
     .resource-list--grid{
         grid-template-columns: repeat(2, 1fr);
-    }
-    .custom-email-signup{
-        padding: 14px 24px;
     }
 }
 
