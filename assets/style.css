@@ -273,7 +273,8 @@
 
     .footer-input,
     .footer-contact-info{
-        max-width: 100% !important;
+        max-width: 100%;
+        width: 100%;
         flex: none !important;
     }
     
