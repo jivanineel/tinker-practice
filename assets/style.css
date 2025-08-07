@@ -119,6 +119,12 @@
     gap: 12px
 }
 
+.social-media .social-icons__icon-wrapper{
+    width: 36px;
+    height: 36px;
+    background-color: #553E3980
+}
+
 @media screen and (max-width: 1440px){
     .banner-class .layout-panel-flex--column{
         max-width: 90%;
