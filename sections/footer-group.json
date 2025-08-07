@@ -369,7 +369,7 @@
                   "name": "t:names.text",
                   "settings": {
                     "text": "<p>Shop</p>",
-                    "text_custom_class": "",
+                    "text_custom_class": "footer-heading",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -466,7 +466,7 @@
                   "name": "t:names.text",
                   "settings": {
                     "text": "<p>Support</p>",
-                    "text_custom_class": "",
+                    "text_custom_class": "footer-heading",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -563,7 +563,7 @@
                   "name": "t:names.text",
                   "settings": {
                     "text": "<p>Contact</p>",
-                    "text_custom_class": "",
+                    "text_custom_class": "footer-heading",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
