@@ -113,7 +113,7 @@
 }
 
 .footer-dot-text{
-
+    list-style: disc;
 }
 
 @media screen and (max-width: 1440px){
