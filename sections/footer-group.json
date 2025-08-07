@@ -392,7 +392,7 @@
                   "settings": {
                     "menu": "footer-shop",
                     "menu_class": "",
-                    "list-style": "dot-link",
+                    "list-style": "dot-link-none",
                     "heading": "",
                     "menu_spacing": 12,
                     "show_as_accordion": false,
@@ -488,7 +488,7 @@
                   "settings": {
                     "menu": "footer-support",
                     "menu_class": "",
-                    "list-style": "dot-link",
+                    "list-style": "dot-link-none",
                     "heading": "",
                     "menu_spacing": 12,
                     "show_as_accordion": false,
@@ -584,7 +584,7 @@
                   "settings": {
                     "menu": "footer-contact",
                     "menu_class": "",
-                    "list-style": "dot-link-none",
+                    "list-style": "dot-link",
                     "heading": "",
                     "menu_spacing": 12,
                     "show_as_accordion": false,
