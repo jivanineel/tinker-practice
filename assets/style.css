@@ -272,7 +272,8 @@
     }
 
     .footer-input{
-        max-width: 100%
+        max-width: 100%;
+        flex: 1;
     }
 }
 
