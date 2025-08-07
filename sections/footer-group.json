@@ -20,6 +20,7 @@
           "settings": {
             "link": "",
             "group_class": "footer-grid",
+            "common_group_class": "",
             "open_in_new_tab": false,
             "content_direction": "row",
             "vertical_on_mobile": true,
@@ -60,6 +61,7 @@
               "settings": {
                 "link": "",
                 "group_class": "footer-input",
+                "common_group_class": "footer-groups",
                 "open_in_new_tab": false,
                 "content_direction": "column",
                 "vertical_on_mobile": true,
@@ -124,6 +126,7 @@
                   "settings": {
                     "link": "",
                     "group_class": "",
+                    "common_group_class": "",
                     "open_in_new_tab": false,
                     "content_direction": "column",
                     "vertical_on_mobile": true,
@@ -215,6 +218,7 @@
                       "settings": {
                         "link": "",
                         "group_class": "",
+                        "common_group_class": "",
                         "open_in_new_tab": false,
                         "content_direction": "row",
                         "vertical_on_mobile": true,
@@ -325,6 +329,7 @@
               "settings": {
                 "link": "",
                 "group_class": "",
+                "common_group_class": "footer-groups",
                 "open_in_new_tab": false,
                 "content_direction": "column",
                 "vertical_on_mobile": true,
@@ -421,6 +426,7 @@
               "settings": {
                 "link": "",
                 "group_class": "",
+                "common_group_class": "footer-groups",
                 "open_in_new_tab": false,
                 "content_direction": "column",
                 "vertical_on_mobile": true,
@@ -517,6 +523,7 @@
               "settings": {
                 "link": "",
                 "group_class": "",
+                "common_group_class": "footer-groups",
                 "open_in_new_tab": false,
                 "content_direction": "column",
                 "vertical_on_mobile": true,
@@ -634,6 +641,7 @@
                   "settings": {
                     "link": "",
                     "group_class": "social-media",
+                    "common_group_class": "",
                     "open_in_new_tab": false,
                     "content_direction": "row",
                     "vertical_on_mobile": true,
