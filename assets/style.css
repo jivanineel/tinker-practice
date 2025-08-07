@@ -270,6 +270,10 @@
     .footer-grid .footer-groups{
         width: 50%;
     }
+
+    .footer-input{
+        max-width: 100%
+    }
 }
 
 @media screen and (max-width:425px) {
