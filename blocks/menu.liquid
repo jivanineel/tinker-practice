@@ -54,7 +54,7 @@
         {% if menu %}
           <ul class="list-unstyled">
             {% for link in menu.links %}
-              <li class="menu__item {{ block.settings.link_preset }}">
+              <li class="menu__item {{ block.settings.link_preset }} {{ block.settings.menu_class }}">
                 <a href="{{ link.url }}">
                   {{ link.title }}
                 </a>
@@ -139,6 +139,11 @@
       "id": "menu",
       "label": "t:settings.menu",
       "default": "main-menu"
+    },
+    {
+      "type": "text",
+      "id": "menu_class",
+      "label": "main menu class"
     },
     {
       "type": "text",
