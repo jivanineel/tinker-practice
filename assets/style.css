@@ -162,6 +162,8 @@
 
     .footer-grid>.group-block-content{
         flex-wrap: wrap;
+        gap: 0;
+        row-gap: 20px
     }
 
     .footer-grid .footer-groups.footer-input{
