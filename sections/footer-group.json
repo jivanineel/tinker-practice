@@ -668,14 +668,6 @@
                     "padding-inline-end": 0
                   },
                   "blocks": {
-                    "social_link_6WTxaQ": {
-                      "type": "_social-link",
-                      "name": "t:names.social_link",
-                      "settings": {
-                        "link": "https://www.facebook.com/"
-                      },
-                      "blocks": {}
-                    },
                     "social_link_d4gjcb": {
                       "type": "_social-link",
                       "name": "t:names.social_link",
@@ -684,18 +676,26 @@
                       },
                       "blocks": {}
                     },
-                    "social_link_ByEkgP": {
+                    "social_link_6WTxaQ": {
                       "type": "_social-link",
                       "name": "t:names.social_link",
                       "settings": {
                         "link": "https://www.facebook.com/"
                       },
                       "blocks": {}
+                    },
+                    "social_link_ByEkgP": {
+                      "type": "_social-link",
+                      "name": "t:names.social_link",
+                      "settings": {
+                        "link": "https://x.com/"
+                      },
+                      "blocks": {}
                     }
                   },
                   "block_order": [
-                    "social_link_6WTxaQ",
                     "social_link_d4gjcb",
+                    "social_link_6WTxaQ",
                     "social_link_ByEkgP"
                   ]
                 }
