@@ -122,7 +122,8 @@
 .social-media .social-icons__icon-wrapper{
     width: 36px;
     height: 36px;
-    background-color: #553E3980
+    background-color: #553E3980;
+    border: 1px solid #553E39
 }
 
 @media screen and (max-width: 1440px){
