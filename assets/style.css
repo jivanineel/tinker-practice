@@ -112,6 +112,10 @@
     padding-left: 20px;
 }
 
+.footer-dot-text{
+    padding-left: 20px;
+}
+
 @media screen and (max-width: 1440px){
     .banner-class .layout-panel-flex--column{
         max-width: 90%;
