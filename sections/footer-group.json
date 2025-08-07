@@ -280,7 +280,7 @@
                             "text": "<p><strong>4.8/5 </strong>from <strong>1,999 +</strong> Happy Customers</p>",
                             "text_custom_class": "",
                             "width": "fit-content",
-                            "max_width": "normal",
+                            "max_width": "none",
                             "alignment": "left",
                             "type_preset": "custom",
                             "font": "var(--font-body--family)",
