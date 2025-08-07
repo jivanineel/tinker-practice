@@ -269,3 +269,19 @@
         font-size: 32px !important;
     }
 }
+
+@media screen and (min-width: 575px){
+    .footer-grid .footer-groups{
+        width: 50%;
+    }
+
+    .footer-grid>.group-block-content{
+        flex-wrap: wrap;
+        gap: 0;
+        row-gap: 20px
+    }
+
+    .footer-grid .footer-groups.footer-input{
+        width: 100%;
+    }
+}
