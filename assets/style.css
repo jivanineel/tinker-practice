@@ -123,7 +123,8 @@
     min-width: 36px;
     height: 36px;
     background-color: #553E3980;
-    border: 1px solid #553E39
+    border: 1px solid #553E39;
+    border-radius: 50%;
 }
 
 @media screen and (max-width: 1440px){
