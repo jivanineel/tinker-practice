@@ -127,6 +127,11 @@
     border-radius: 50%;
 }
 
+.social-media .social-icons__icon-wrapper svg{
+    width:18px;
+    height:18px;
+}
+
 @media screen and (max-width: 1440px){
     .banner-class .layout-panel-flex--column{
         max-width: 90%;
