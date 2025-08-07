@@ -103,6 +103,14 @@
     color: #000
 }
 
+.dot-link-none{
+    list-style: none;
+}
+
+.dot-link{
+    list-style: disc;
+}
+
 @media screen and (max-width: 1440px){
     .banner-class .layout-panel-flex--column{
         max-width: 90%;
