@@ -197,12 +197,12 @@
       "scheme-5": {
         "settings": {
           "background": "#2c2723",
-          "foreground_heading": "#f4f0ec",
-          "foreground": "#f4f0ec",
-          "primary": "#f4f0ec",
-          "primary_hover": "#acacac",
-          "border": "#2c2723",
-          "shadow": "#2c2723",
+          "foreground_heading": "#ffffff",
+          "foreground": "#ffffff",
+          "primary": "#ffffff",
+          "primary_hover": "#ffffff",
+          "border": "rgba(0,0,0,0)",
+          "shadow": "rgba(0,0,0,0)",
           "primary_button_background": "#2c2723",
           "primary_button_text": "#f4f0ec",
           "primary_button_border": "#2c2723",
