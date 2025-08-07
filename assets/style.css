@@ -160,7 +160,7 @@
         width: 50%;
     }
 
-    .footer-grid{
+    .footer-grid .group-block-content{
         display: flex;
         flex-wrap: wrap;
     }
