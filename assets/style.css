@@ -159,6 +159,10 @@
     .footer-input{
         width: 50%;
     }
+
+    .footer-grid{
+        flex-wrap: wrap;
+    }
     
     .footer-grid .group-block{
         width: 50%;
