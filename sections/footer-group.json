@@ -14,14 +14,6 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "social_link_GdHhfh": {
-          "type": "_social-link",
-          "name": "t:names.social_link",
-          "settings": {
-            "link": ""
-          },
-          "blocks": {}
-        },
         "group_pTtcXR": {
           "type": "group",
           "name": "t:names.group",
@@ -650,11 +642,19 @@
             "group_WmYEyN",
             "group_YXVxzn"
           ]
+        },
+        "social_link_GdHhfh": {
+          "type": "_social-link",
+          "name": "t:names.social_link",
+          "settings": {
+            "link": "https://www.facebook.com/"
+          },
+          "blocks": {}
         }
       },
       "block_order": [
-        "social_link_GdHhfh",
-        "group_pTtcXR"
+        "group_pTtcXR",
+        "social_link_GdHhfh"
       ],
       "name": "Footer",
       "settings": {
