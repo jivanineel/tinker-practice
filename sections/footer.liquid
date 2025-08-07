@@ -5,6 +5,8 @@
   class="
     section section--{{ section.settings.section_width }} color-{{ section.settings.color_scheme }}
     {% if section.settings.section_height != "" %} {{ section.settings.section_height | prepend: "section--height-" }}{% endif %}
+
+    footer-section
   "
 >
   {% render 'background-media',
