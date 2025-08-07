@@ -31,12 +31,11 @@
   style="
     {% render 'spacing-style', settings: block.settings %}
     --product-price-width: 100%;
-    font-weight: 700;
   "
   {{ block.shopify_attributes }}
 >
   {% if product.price_varies and has_swatches_only == false and price_min != blank and request.design_mode %}
-    <span class="price">{{ display_price }}</span>
+    <span class="price" style="font-weight: 700;">{{ display_price }}</span>
   {% else %}
     {% render 'price',
       show_unit_price: true,
