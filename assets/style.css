@@ -95,8 +95,8 @@
 }
 
 .email-signup__button--integrated>.email-signup__button-icon{
-    fill: #000;
-    stroke: #000
+    stroke: #000;
+    color: #000
 }
 
 @media screen and (max-width: 1440px){
