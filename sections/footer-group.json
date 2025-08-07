@@ -151,8 +151,8 @@
                   "settings": {
                     "width": "fill",
                     "custom_width": 100,
-                    "inherit_color_scheme": true,
-                    "color_scheme": "",
+                    "inherit_color_scheme": false,
+                    "color_scheme": "scheme-51e48eb1-e2cf-44cd-be0c-bd817c9abea8",
                     "border_style": "all",
                     "border_width": 1,
                     "border_radius": 100,
