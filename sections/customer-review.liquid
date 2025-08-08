@@ -60,6 +60,33 @@
             "min": 0,
             "default": 20,
             "step": 1,
+        },
+        {
+            "type": "range",
+            "id": "padding-bottom",
+            "label": "Padding bottom",
+            "max": 100,
+            "min": 0,
+            "default": 20,
+            "step": 1,
+        },
+        {
+            "type": "range",
+            "id": "padding-left",
+            "label": "Padding left",
+            "max": 100,
+            "min": 0,
+            "default": 20,
+            "step": 1,
+        },
+        {
+            "type": "range",
+            "id": "padding-right",
+            "label": "Padding right",
+            "max": 100,
+            "min": 0,
+            "default": 20,
+            "step": 1,
         }
       ]
     }
@@ -74,10 +101,11 @@
 {% endschema %}
 
 <style>
-    .review-card{
-        padding: {{ block.settings.padding-top }}px ; 
+    {% for block in section.blocks %}
+    .review-card-{{ block.id }} {
+        padding: {{ block.settings.padding_top }}px {{ block.settings.padding_right }}px {{ block.settings.padding_bottom }}px {{ block.settings.padding_left }}px;
     }
-
+    {% endfor %}
 </style>
 
 {% stylesheet %}
