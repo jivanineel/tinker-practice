@@ -1,5 +1,5 @@
 <div class="customer-review-slider">
-    <h1 class="{{ section.settings.section_title }}">{{ section.settings.title }}</h1>
+    <h1 class="section-{{ section.settings.section_title }}">{{ section.settings.customer_title }}</h1>
 
   <div class="swiper">
     <div class="swiper-wrapper">
@@ -35,6 +35,16 @@
 {
   "name": "Customer Say Slider",
   "settings": [
+    {
+        "type": "text",
+        "id": "customer_title",
+        "label": "Section title"
+    },
+    {
+        "type": "text",
+        "id": "section_title",
+        "label": "Heading class"
+    },
     {
       "type": "range",
       "id": "padding_top",
@@ -175,6 +185,9 @@
 
     .swiper-pagination{
       margin-top: 20px;
+    }
+    .section-{{ section.settings.section_title }}{
+        font-size: 40px;
     }
 </style>
 
