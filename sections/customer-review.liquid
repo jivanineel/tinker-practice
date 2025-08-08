@@ -104,14 +104,15 @@
     {% for block in section.blocks %}
     .review-card-{{ block.id }} {
         padding: {{ block.settings.padding_top }}px {{ block.settings.padding_right }}px {{ block.settings.padding_bottom }}px {{ block.settings.padding_left }}px;
+        background: {{ block.settings.background_color }}
     }
     {% endfor %}
 </style>
 
 {% stylesheet %}
-
   .customer-info{
     display: flex;
+    align-items: center;
     gap: 20px;
   }
 {% endstylesheet %}
