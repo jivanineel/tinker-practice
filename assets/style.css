@@ -214,7 +214,7 @@
         flex-wrap: wrap;
     }
 
-    .gallery-section>.layout-panel-flex .instagram-image{
+    .gallery-section .layout-panel-flex .instagram-image{
         width: 33.33%;
     }
 
