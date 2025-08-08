@@ -1954,6 +1954,23 @@
         "padding-block-start": 0,
         "padding-block-end": 0
       }
+    },
+    "customer_review_YVz7pC": {
+      "type": "customer-review",
+      "blocks": {
+        "review_M3Fbjt": {
+          "type": "review",
+          "settings": {
+            "name": "Isabella",
+            "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+          }
+        }
+      },
+      "block_order": [
+        "review_M3Fbjt"
+      ],
+      "name": "Customer Say Slider",
+      "settings": {}
     }
   },
   "order": [
@@ -1962,6 +1979,7 @@
     "collection_list_zBqmAz",
     "product_list_PRka8r",
     "section_UYTUbG",
-    "section_HX4Edd"
+    "section_HX4Edd",
+    "customer_review_YVz7pC"
   ]
 }
