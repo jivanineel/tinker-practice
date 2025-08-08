@@ -109,6 +109,10 @@
     color: #fff
 }
 
+.gallery-section .instagram-image .overlay-image .social-icons__icon-wrapper .social-icons__icon {
+    color: #fff
+}
+
 .gallery-section .instagram-image:hover .overlay-image{
     top: 0;
     transition: all 0.5s ease-in-out;
