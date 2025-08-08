@@ -689,7 +689,7 @@
             "type_preset": "custom",
             "font": "var(--font-body--family)",
             "font_size": "2.5rem",
-            "line_height": "normal",
+            "line_height": "tight",
             "letter_spacing": "normal",
             "case": "none",
             "wrap": "pretty",
