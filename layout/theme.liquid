@@ -36,7 +36,6 @@
     {{ 'swiper.css' | asset_url | stylesheet_tag }}
     {{ 'style.css' | asset_url | stylesheet_tag }}
     
-    <script src="{{ 'swiper.js' | asset_url }}"></script>
     {{ content_for_header }}
   </head>
 
@@ -45,7 +44,7 @@
     <div id="header-group">
       {% sections 'header-group' %}
     </div>
-
+    
     <main
       id="MainContent"
       class="content-for-layout"
@@ -58,7 +57,7 @@
     </main>
 
     {% sections 'footer-group' %}
-
+    
     {% # theme-check-disable ParserBlockingScript %}
     <script src="{{ 'critical.js' | asset_url }}"></script>
     {% # theme-check-enable ParserBlockingScript %}
@@ -68,5 +67,6 @@
     {% if settings.quick_add or settings.mobile_quick_add %}
       {% render 'quick-add-modal' %}
     {% endif %}
+    <script src="{{ 'swiper.js' | asset_url }}"></script>
   </body>
 </html>
