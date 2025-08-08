@@ -1575,7 +1575,7 @@
                   "type": "image",
                   "name": "t:names.image",
                   "settings": {
-                    "image": "shopify://shop_images/gallery-1.png",
+                    "image": "shopify://shop_images/gallery-5.png",
                     "link": "",
                     "custom_image_class": "",
                     "image_ratio": "adapt",
@@ -1635,7 +1635,19 @@
                     "padding-inline-start": 0,
                     "padding-inline-end": 0
                   },
-                  "blocks": {}
+                  "blocks": {
+                    "social_link_Ut43EU": {
+                      "type": "_social-link",
+                      "name": "t:names.social_link",
+                      "settings": {
+                        "link": "https://www.instagram.com/"
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "social_link_Ut43EU"
+                  ]
                 }
               },
               "block_order": [
