@@ -106,6 +106,7 @@
 
 .gallery-section .instagram-image .overlay-image .social-icons__icon-wrapper{
     margin: 0 auto;
+    color: #fff
 }
 
 .gallery-section .instagram-image:hover .overlay-image{
