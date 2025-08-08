@@ -216,6 +216,7 @@
 
     .gallery-section .layout-panel-flex .instagram-image{
         width: 33.33%;
+        flex: none;
     }
 
 }
