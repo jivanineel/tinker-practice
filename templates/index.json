@@ -1035,7 +1035,7 @@
               "name": "t:names.group",
               "settings": {
                 "link": "",
-                "group_class": "",
+                "group_class": "instagram-image",
                 "common_group_class": "",
                 "open_in_new_tab": false,
                 "content_direction": "column",
