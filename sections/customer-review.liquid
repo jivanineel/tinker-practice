@@ -161,10 +161,10 @@
     }
 
   {% for block in section.blocks %}
-  .review-card-{{ block.id }} {
-      padding: {{ block.settings.padding_top }}px {{ block.settings.padding_right }}px {{ block.settings.padding_bottom }}px {{ block.settings.padding_left }}px;
-      background: {{ block.settings.card_background }}
-  }
+    .review-card {
+        padding: {{ block.settings.padding_top }}px {{ block.settings.padding_right }}px {{ block.settings.padding_bottom }}px {{ block.settings.padding_left }}px;
+        background: {{ block.settings.card_background }}
+    }
   {% endfor %}
 </style>
 
