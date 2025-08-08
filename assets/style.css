@@ -86,9 +86,15 @@
 }
 
 .gallery-section .instagram-image{
-    position: relative
+    position: relative;
+    overflow: hidden;
 }
 
+.gallery-section .instagram-image .overlay-image{
+    position:absolute;
+    top:100%;
+    left:0
+}
 
 .footer-logo{
     max-width: 132px;
