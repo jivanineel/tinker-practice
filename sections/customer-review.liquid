@@ -1,31 +1,35 @@
-<div class="swiper customer-review-slider">
-  <div class="swiper-wrapper">
-    {% for block in section.blocks %}
-      <div class="swiper-slide">
-        <div class="review-card">
-          <div class="customer-info">
-            {% if block.settings.image != blank %}
-              <img
-                src="{{ block.settings.image | image_url: width: 80 }}"
-                alt="{{ block.settings.image.alt | escape }}"
-                width="80"
-                height="80"
-                loading="lazy"
-              >
-            {% endif %}
-            <div class="customer-rating">
+<div class="customer-review-slider">
+  <div class="swiper ">
+    <div class="swiper-wrapper">
+      {% for block in section.blocks %}
+        <div class="swiper-slide">
+          <div class="review-card">
+            <div class="customer-info">
+              {% if block.settings.image != blank %}
+                <img
+                  src="{{ block.settings.image | image_url: width: 80 }}"
+                  alt="{{ block.settings.image.alt | escape }}"
+                  width="80"
+                  height="80"
+                  loading="lazy"
+                >
+              {% endif %}
+              <div class="customer-rating">
                 <h4>{{ block.settings.name }}</h4>
+              </div>
             </div>
+            <p>{{ block.settings.text }}</p>
           </div>
-          <p>{{ block.settings.text }}</p>
         </div>
-      </div>
-    {% endfor %}
+      {% endfor %}
+    </div>
   </div>
 
   <div class="swiper-pagination"></div>
-  {% comment %} <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div> {% endcomment %}
+  {% comment %}
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  {% endcomment %}
 </div>
 
 {% schema %}
@@ -55,40 +59,40 @@
           "default": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
         },
         {
-            "type": "range",
-            "id": "padding-top",
-            "label": "Padding top",
-            "max": 100,
-            "min": 0,
-            "default": 20,
-            "step": 1,
+          "type": "range",
+          "id": "padding-top",
+          "label": "Padding top",
+          "max": 100,
+          "min": 0,
+          "default": 20,
+          "step": 1
         },
         {
-            "type": "range",
-            "id": "padding-bottom",
-            "label": "Padding bottom",
-            "max": 100,
-            "min": 0,
-            "default": 20,
-            "step": 1,
+          "type": "range",
+          "id": "padding-bottom",
+          "label": "Padding bottom",
+          "max": 100,
+          "min": 0,
+          "default": 20,
+          "step": 1
         },
         {
-            "type": "range",
-            "id": "padding-left",
-            "label": "Padding left",
-            "max": 100,
-            "min": 0,
-            "default": 20,
-            "step": 1,
+          "type": "range",
+          "id": "padding-left",
+          "label": "Padding left",
+          "max": 100,
+          "min": 0,
+          "default": 20,
+          "step": 1
         },
         {
-            "type": "range",
-            "id": "padding-right",
-            "label": "Padding right",
-            "max": 100,
-            "min": 0,
-            "default": 20,
-            "step": 1,
+          "type": "range",
+          "id": "padding-right",
+          "label": "Padding right",
+          "max": 100,
+          "min": 0,
+          "default": 20,
+          "step": 1
         }
       ]
     }
@@ -103,12 +107,12 @@
 {% endschema %}
 
 <style>
-    {% for block in section.blocks %}
-    .review-card-{{ block.id }} {
-        padding: {{ block.settings.padding_top }}px {{ block.settings.padding_right }}px {{ block.settings.padding_bottom }}px {{ block.settings.padding_left }}px;
-        background: {{ block.settings.background_color }}
-    }
-    {% endfor %}
+  {% for block in section.blocks %}
+  .review-card-{{ block.id }} {
+      padding: {{ block.settings.padding_top }}px {{ block.settings.padding_right }}px {{ block.settings.padding_bottom }}px {{ block.settings.padding_left }}px;
+      background: {{ block.settings.background_color }}
+  }
+  {% endfor %}
 </style>
 
 {% stylesheet %}
