@@ -1,34 +1,36 @@
 <div class="customer-review-slider">
-  <h1 class="section-{{ section.settings.section_title }}">{{ section.settings.customer_title }}</h1>
+  <div>
+    <h1 class="section-{{ section.settings.section_title }}">{{ section.settings.customer_title }}</h1>
 
-  <div class="swiper">
-    <div class="swiper-wrapper">
-      {% for block in section.blocks %}
-        <div class="swiper-slide">
-          <div class="review-card" {{ block.shopify_attributes }}>
-            <div class="customer-info">
-              {% if block.settings.image != blank %}
-                <img
-                  src="{{ block.settings.image | image_url: width: 50 }}"
-                  alt="{{ block.settings.image.alt | escape }}"
-                  width="50"
-                  height="50"
-                  loading="lazy"
-                  {{ block.shopify_attributes }}
-                >
-              {% endif %}
-              <div class="customer-rating">
-                <h4 {{ block.shopify_attributes }}>{{ block.settings.name }}</h4>
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        {% for block in section.blocks %}
+          <div class="swiper-slide">
+            <div class="review-card" {{ block.shopify_attributes }}>
+              <div class="customer-info">
+                {% if block.settings.image != blank %}
+                  <img
+                    src="{{ block.settings.image | image_url: width: 50 }}"
+                    alt="{{ block.settings.image.alt | escape }}"
+                    width="50"
+                    height="50"
+                    loading="lazy"
+                    {{ block.shopify_attributes }}
+                  >
+                {% endif %}
+                <div class="customer-rating">
+                  <h4 {{ block.shopify_attributes }}>{{ block.settings.name }}</h4>
+                </div>
               </div>
+              <p {{ block.shopify_attributes }}>{{ block.settings.text }}</p>
             </div>
-            <p {{ block.shopify_attributes }}>{{ block.settings.text }}</p>
           </div>
-        </div>
-      {% endfor %}
+        {% endfor %}
+      </div>
     </div>
-  </div>
 
-  <div class="swiper-pagination"></div>
+    <div class="swiper-pagination"></div>
+  </div>
 </div>
 
 {% schema %}
@@ -178,62 +180,62 @@
 {% endschema %}
 
 <style>
-    .customer-review-slider{
-        padding: {{ section.settings.padding_top }}px {{ section.settings.padding_right }}px {{ section.settings.padding_bottom }}px {{ section.settings.padding_left }}px;
-        background: {{ section.settings.section_background }}
-    }
-    .review-card {
-        padding: {{ section.settings.card_padding_top }}px {{ section.settings.card_padding_right }}px {{ section.settings.card_padding_bottom }}px {{ section.settings.card_padding_left }}px;
-        background: {{ section.settings.card_background }};
-        border-radius: {{ section.settings.card_border_radius }}px;
-    }
+  .customer-review-slider{
+      padding: {{ section.settings.padding_top }}px {{ section.settings.padding_right }}px {{ section.settings.padding_bottom }}px {{ section.settings.padding_left }}px;
+      background: {{ section.settings.section_background }}
+  }
+  .review-card {
+      padding: {{ section.settings.card_padding_top }}px {{ section.settings.card_padding_right }}px {{ section.settings.card_padding_bottom }}px {{ section.settings.card_padding_left }}px;
+      background: {{ section.settings.card_background }};
+      border-radius: {{ section.settings.card_border_radius }}px;
+  }
 
-    .swiper-pagination{
-      margin-top: 20px;
-    }
+  .swiper-pagination{
+    margin-top: 20px;
+  }
 
-    .swiper-pagination .swiper-pagination-bullet{
-      background: #553E39;
-      width: 8px;
-      height: 8px;
-      opacity: 1;
-    }
+  .swiper-pagination .swiper-pagination-bullet{
+    background: #553E39;
+    width: 8px;
+    height: 8px;
+    opacity: 1;
+  }
 
-    .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active{
-        position: relative
-    }
+  .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active{
+      position: relative
+  }
 
-    .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active:before{
-        content: "";
-        width: 14px;
-        height: 14px;
-        border: 1px solid #553e39;
-        position: absolute;
-        top: -4px;
-        left: -4px;
-        border-radius: 50%;
-    }
+  .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active:before{
+      content: "";
+      width: 14px;
+      height: 14px;
+      border: 1px solid #553e39;
+      position: absolute;
+      top: -4px;
+      left: -4px;
+      border-radius: 50%;
+  }
 
+  .section-{{ section.settings.section_title }}{
+      font-size: 40px;
+      text-align: {{ section.settings.text-align }}
+  }
+
+  @media only and screen (max-width: 991px) {
     .section-{{ section.settings.section_title }}{
-        font-size: 40px;
-        text-align: {{ section.settings.text-align }}
+      font-size: 34px;
     }
-
-    @media only and screen (max-width: 991px) {
-      .section-{{ section.settings.section_title }}{
-        font-size: 34px;
-      }
+  }
+  @media only and screen (max-width: 767px) {
+    .section-{{ section.settings.section_title }}{
+      font-size: 30px;
     }
-    @media only and screen (max-width: 767px) {
-      .section-{{ section.settings.section_title }}{
-        font-size: 30px;
-      }
+  }
+  @media only and screen (max-width: 575px) {
+    .section-{{ section.settings.section_title }}{
+      font-size: 24px;
     }
-    @media only and screen (max-width: 575px) {
-      .section-{{ section.settings.section_title }}{
-        font-size: 24px;
-      }
-    }
+  }
 </style>
 
 {% stylesheet %}
