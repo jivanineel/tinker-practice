@@ -46,9 +46,9 @@
       "label": "Heading class"
     },
     {
-        "type": "text_alignment",
-        "id": "text-align",
-        "label": "Title align"
+      "type": "text_alignment",
+      "id": "text-align",
+      "label": "Title align"
     },
     {
       "type": "range",
@@ -178,44 +178,46 @@
 {% endschema %}
 
 <style>
-  .customer-review-slider{
-      padding: {{ section.settings.padding_top }}px {{ section.settings.padding_right }}px {{ section.settings.padding_bottom }}px {{ section.settings.padding_left }}px;
-      background: {{ section.settings.section_background }}
-  }
-  .review-card {
-      padding: {{ section.settings.card_padding_top }}px {{ section.settings.card_padding_right }}px {{ section.settings.card_padding_bottom }}px {{ section.settings.card_padding_left }}px;
-      background: {{ section.settings.card_background }};
-      border-radius: {{ section.settings.card_border_radius }}px;
-  }
-
-  .swiper-pagination{
-    margin-top: 20px;
-  }
-
-  .swiper-pagination .swiper-pagination-bullet{
-    background#553E39
-}
-
-  .section-{{ section.settings.section_title }}{
-      font-size: 40px;
-      text-align: {{ section.settings.text-align }}
-  }
-
-  @media only and screen (max-width: 991px) {
-    .section-{{ section.settings.section_title }}{
-      font-size: 34px;
+    .customer-review-slider{
+        padding: {{ section.settings.padding_top }}px {{ section.settings.padding_right }}px {{ section.settings.padding_bottom }}px {{ section.settings.padding_left }}px;
+        background: {{ section.settings.section_background }}
     }
-  }
-  @media only and screen (max-width: 767px) {
-    .section-{{ section.settings.section_title }}{
-      font-size: 30px;
+    .review-card {
+        padding: {{ section.settings.card_padding_top }}px {{ section.settings.card_padding_right }}px {{ section.settings.card_padding_bottom }}px {{ section.settings.card_padding_left }}px;
+        background: {{ section.settings.card_background }};
+        border-radius: {{ section.settings.card_border_radius }}px;
     }
-  }
-  @media only and screen (max-width: 575px) {
-    .section-{{ section.settings.section_title }}{
-      font-size: 24px;
+
+    .swiper-pagination{
+      margin-top: 20px;
     }
-  }
+
+    .swiper-pagination .swiper-pagination-bullet{
+      background: #553E39;
+      width: 8px;
+      height: 8px;
+    }
+
+    .section-{{ section.settings.section_title }}{
+        font-size: 40px;
+        text-align: {{ section.settings.text-align }}
+    }
+
+    @media only and screen (max-width: 991px) {
+      .section-{{ section.settings.section_title }}{
+        font-size: 34px;
+      }
+    }
+    @media only and screen (max-width: 767px) {
+      .section-{{ section.settings.section_title }}{
+        font-size: 30px;
+      }
+    }
+    @media only and screen (max-width: 575px) {
+      .section-{{ section.settings.section_title }}{
+        font-size: 24px;
+      }
+    }
 </style>
 
 {% stylesheet %}
