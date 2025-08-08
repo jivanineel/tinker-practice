@@ -194,13 +194,19 @@
 
     .swiper-pagination .swiper-pagination-bullet{
       background: #553E39;
-      width: 8px;
-      height: 8px;
+      width: 9px;
+      height: 9px;
       opacity: 1;
     }
 
     .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active{
         border: 1px solid #ffffff;
+    }
+
+    .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active:before{
+        content: "";
+        width: 10px;
+        height: 10px;
     }
 
     .section-{{ section.settings.section_title }}{
