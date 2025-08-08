@@ -181,7 +181,7 @@
     }
     
     .gallery-section .layout-panel-flex div{
-        width: 33%;
+        width: 33.33%;
         flex: none !important;
     }
 }
