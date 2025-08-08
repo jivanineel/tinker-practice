@@ -1265,7 +1265,7 @@
                       "type": "_social-link",
                       "name": "t:names.social_link",
                       "settings": {
-                        "link": ""
+                        "link": "https://www.instagram.com/"
                       },
                       "blocks": {}
                     }
