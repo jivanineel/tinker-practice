@@ -19,10 +19,10 @@
                   >
                 {% endif %}
                 <div class="customer-rating">
-                  <p {{ block.shopify_attributes }}>{{ block.settings.name }}</p>
+                  <p {{ block.shopify_attributes }} class="customer-name">{{ block.settings.name }}</p>
                 </div>
               </div>
-              <p {{ block.shopify_attributes }}>{{ block.settings.text }}</p>
+              <p {{ block.shopify_attributes }} class="review-text">{{ block.settings.text }}</p>
             </div>
           </div>
         {% endfor %}
@@ -270,5 +270,10 @@
     .customer-review-slider .swiper{
         padding: 0 20px;
         overflow: visible;
+    }
+
+    .review-card .review-text{
+        font-size: 14px;
+        line-height: normal;
     }
 {% endstylesheet %}
