@@ -81,7 +81,7 @@
 
     {
       "type": "range",
-      "id": "padding-top",
+      "id": "card_padding_top",
       "label": "Padding top",
       "max": 100,
       "min": 0,
@@ -90,7 +90,7 @@
     },
     {
       "type": "range",
-      "id": "padding-bottom",
+      "id": "card_padding_bottom",
       "label": "Padding bottom",
       "max": 100,
       "min": 0,
@@ -99,7 +99,7 @@
     },
     {
       "type": "range",
-      "id": "padding-left",
+      "id": "card_padding_left",
       "label": "Padding left",
       "max": 100,
       "min": 0,
@@ -108,7 +108,7 @@
     },
     {
       "type": "range",
-      "id": "padding-right",
+      "id": "card_padding_right",
       "label": "Padding right",
       "max": 100,
       "min": 0,
@@ -156,14 +156,14 @@
 {% endschema %}
 
 <style>
-    .customer-review-slider{
-        padding: {{ section.settings.padding_top }}px {{ section.settings.padding_right }}px {{ section.settings.padding_bottom }} {{ section.settings.padding_left }};
-        background: {{ section.settings.section_background }}
-    }
-    .review-card {
-        padding: {{ section.settings.padding_top }}px {{ section.settings.padding_right }}px {{ section.settings.padding_bottom }}px {{ section.settings.padding_left }}px;
-        background: {{ section.settings.card_background }}
-    }
+  .customer-review-slider{
+      padding: {{ section.settings.padding_top }}px {{ section.settings.padding_right }}px {{ section.settings.padding_bottom }} {{ section.settings.padding_left }};
+      background: {{ section.settings.section_background }}
+  }
+  .review-card {
+      padding: {{ section.settings.card_padding_top }}px {{ section.settings.card_padding_right }}px {{ section.settings.card_padding_bottom }}px {{ section.settings.card_padding_left }}px;
+      background: {{ section.settings.card_background }}
+  }
 </style>
 
 {% stylesheet %}
