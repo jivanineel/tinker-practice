@@ -1,5 +1,4 @@
 <div class="customer-review-slider">
-  <div class="page-width">
     <div class="swiper">
       <div class="swiper-wrapper">
         {% for block in section.blocks %}
@@ -24,7 +23,6 @@
           </div>
         {% endfor %}
       </div>
-    </div>
   </div>
 
   <div class="swiper-pagination"></div>
@@ -37,7 +35,44 @@
 {% schema %}
 {
   "name": "Customer Say Slider",
-  "settings": [],
+  "settings": [
+    {
+        "type": "range",
+        "id": "padding_top",
+        "label": "section padding top",
+        "max": 100,
+        "min": 0,
+        "step": 1,
+        "default": 0
+    },
+    {
+        "type": "range",
+        "id": "padding_bottom",
+        "label": "section padding bottom",
+        "max": 100,
+        "min": 0,
+        "step": 1,
+        "default": 0
+    },
+    {
+        "type": "range",
+        "id": "padding_left",
+        "label": "section padding left",
+        "max": 100,
+        "min": 0,
+        "step": 1,
+        "default": 0
+    },
+    {
+        "type": "range",
+        "id": "padding_right",
+        "label": "section padding right",
+        "max": 100,
+        "min": 0,
+        "step": 1,
+        "default": 0
+    }
+  ],
   "blocks": [
     {
       "type": "review",
@@ -109,6 +144,10 @@
 {% endschema %}
 
 <style>
+    .customer-review-slider{
+        padding: {{ section.settings.padding_top }}px {{ section.settings.padding_right }}px {{ section.settings.padding_bottom }} {{ section.settings.padding_left }};
+    }
+
   {% for block in section.blocks %}
   .review-card-{{ block.id }} {
       padding: {{ block.settings.padding_top }}px {{ block.settings.padding_right }}px {{ block.settings.padding_bottom }}px {{ block.settings.padding_left }}px;
