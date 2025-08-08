@@ -51,6 +51,15 @@
           "id": "text",
           "label": "Review Text",
           "default": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+        },
+        {
+            "type": "range",
+            "id": "padding-top",
+            "label": "Padding top",
+            "max": 100,
+            "min": 0,
+            "default": 20,
+            "step": 1,
         }
       ]
     }
@@ -64,7 +73,15 @@
 }
 {% endschema %}
 
+<style>
+    .review-card{
+        padding: {{ block.settings.padding-top }}px ; 
+    }
+
+</style>
+
 {% stylesheet %}
+
   .customer-info{
     display: flex;
     gap: 20px;
