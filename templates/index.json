@@ -812,7 +812,7 @@
                 "horizontal_alignment": "flex-start",
                 "vertical_alignment": "center",
                 "align_baseline": false,
-                "horizontal_alignment_flex_direction_column": "flex-start",
+                "horizontal_alignment_flex_direction_column": "center",
                 "vertical_alignment_flex_direction_column": "center",
                 "gap": 12,
                 "width": "fill",
@@ -840,7 +840,7 @@
                 "padding-inline-end": 0
               },
               "blocks": {
-                "image_Vtb4Dy": {
+                "image_nBnADj": {
                   "type": "image",
                   "name": "t:names.image",
                   "settings": {
@@ -866,7 +866,7 @@
                 }
               },
               "block_order": [
-                "image_Vtb4Dy"
+                "image_nBnADj"
               ]
             },
             "image_AfKFCr": {
