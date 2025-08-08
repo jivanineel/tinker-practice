@@ -1,5 +1,5 @@
 <div class="customer-review-slider">
-    <h1 class="section-{{ section.settings.section_title }}">{{ section.settings.customer_title }}</h1>
+  <h1 class="section-{{ section.settings.section_title }}">{{ section.settings.customer_title }}</h1>
 
   <div class="swiper">
     <div class="swiper-wrapper">
@@ -36,14 +36,14 @@
   "name": "Customer Say Slider",
   "settings": [
     {
-        "type": "text",
-        "id": "customer_title",
-        "label": "Section title"
+      "type": "text",
+      "id": "customer_title",
+      "label": "Section title"
     },
     {
-        "type": "text",
-        "id": "section_title",
-        "label": "Heading class"
+      "type": "text",
+      "id": "section_title",
+      "label": "Heading class"
     },
     {
       "type": "range",
@@ -173,22 +173,33 @@
 {% endschema %}
 
 <style>
-    .customer-review-slider{
-        padding: {{ section.settings.padding_top }}px {{ section.settings.padding_right }}px {{ section.settings.padding_bottom }}px {{ section.settings.padding_left }}px;
-        background: {{ section.settings.section_background }}
-    }
-    .review-card {
-        padding: {{ section.settings.card_padding_top }}px {{ section.settings.card_padding_right }}px {{ section.settings.card_padding_bottom }}px {{ section.settings.card_padding_left }}px;
-        background: {{ section.settings.card_background }};
-        border-radius: {{ section.settings.card_border_radius }}px;
-    }
+  .customer-review-slider{
+      padding: {{ section.settings.padding_top }}px {{ section.settings.padding_right }}px {{ section.settings.padding_bottom }}px {{ section.settings.padding_left }}px;
+      background: {{ section.settings.section_background }}
+  }
+  .review-card {
+      padding: {{ section.settings.card_padding_top }}px {{ section.settings.card_padding_right }}px {{ section.settings.card_padding_bottom }}px {{ section.settings.card_padding_left }}px;
+      background: {{ section.settings.card_background }};
+      border-radius: {{ section.settings.card_border_radius }}px;
+  }
 
-    .swiper-pagination{
-      margin-top: 20px;
-    }
+  .swiper-pagination{
+    margin-top: 20px;
+  }
+  .section-{{ section.settings.section_title }}{
+      font-size: 40px;
+  }
+
+  @media only and screen (max-width: 991px) {
     .section-{{ section.settings.section_title }}{
-        font-size: 40px;
+      font-size: 34px;
     }
+  }
+  @media only and screen (max-width: 991px) {
+    .section-{{ section.settings.section_title }}{
+      font-size: 30px;
+    }
+  }
 </style>
 
 {% stylesheet %}
