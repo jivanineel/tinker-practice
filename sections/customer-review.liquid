@@ -19,7 +19,7 @@
                   >
                 {% endif %}
                 <div class="customer-rating">
-                  <h4 {{ block.shopify_attributes }}>{{ block.settings.name }}</h4>
+                  <p {{ block.shopify_attributes }}>{{ block.settings.name }}</p>
                 </div>
               </div>
               <p {{ block.shopify_attributes }}>{{ block.settings.text }}</p>
@@ -251,23 +251,24 @@
         overflow: visible;
     }
 
-  .customer-info{
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
+    .customer-info{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
 
-  .customer-info p{
-    font-size: 15px;
-  }
+    .customer-info p{
+        font-size: 15px;
 
-  .customer-info img{
-    width: 50px;
-    height: 50px;
-  }
+    }
 
-  .customer-review-slider .swiper{
-    padding: 0 20px;
-    overflow: visible;
-  }
+    .customer-info img{
+        width: 50px;
+        height: 50px;
+    }
+
+    .customer-review-slider .swiper{
+        padding: 0 20px;
+        overflow: visible;
+    }
 {% endstylesheet %}
