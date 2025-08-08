@@ -1135,7 +1135,19 @@
                     "padding-inline-start": 0,
                     "padding-inline-end": 0
                   },
-                  "blocks": {}
+                  "blocks": {
+                    "social_link_inmpcQ": {
+                      "type": "_social-link",
+                      "name": "t:names.social_link",
+                      "settings": {
+                        "link": ""
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "social_link_inmpcQ"
+                  ]
                 }
               },
               "block_order": [
