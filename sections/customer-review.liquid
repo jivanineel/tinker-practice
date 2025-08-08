@@ -101,9 +101,9 @@
           "default": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
         },
         {
-            "type": "color",
-            "id": "background_color",
-            "label": "Card Background"
+          "type": "color",
+          "id": "background_color",
+          "label": "Card Background"
         },
         {
           "type": "range",
@@ -140,7 +140,7 @@
           "min": 0,
           "default": 20,
           "step": 1
-        },
+        }
       ]
     }
   ],
@@ -179,3 +179,30 @@
     height: 50px;
   }
 {% endstylesheet %}
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    new Swiper('.customer-review-slider', {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        0: { slidesPerView: 1 },
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 },
+      },
+    });
+  });
+</script>
