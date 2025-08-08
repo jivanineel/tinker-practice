@@ -219,6 +219,10 @@
         width: 33.33%;
         flex: none !important;
     }
+
+    .gallery-section .layout-panel-flex .layout-panel-flex .image-block{
+        flex: none !important;
+    }
 }
 
 @media screen and (max-width: 768px) {
