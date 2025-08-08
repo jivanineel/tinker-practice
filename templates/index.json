@@ -678,6 +678,34 @@
         "padding-block-end": 48
       }
     },
+    "customer_review_YVz7pC": {
+      "type": "customer-review",
+      "blocks": {
+        "review_M3Fbjt": {
+          "type": "review",
+          "settings": {
+            "name": "Isabella",
+            "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+            "background_color": "",
+            "padding-top": 20,
+            "padding-bottom": 20,
+            "padding-left": 20,
+            "padding-right": 20
+          }
+        }
+      },
+      "block_order": [
+        "review_M3Fbjt"
+      ],
+      "name": "Customer Say Slider",
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_left": 0,
+        "padding_right": 0,
+        "section_background": ""
+      }
+    },
     "section_UYTUbG": {
       "type": "section",
       "blocks": {
@@ -1954,23 +1982,6 @@
         "padding-block-start": 0,
         "padding-block-end": 0
       }
-    },
-    "customer_review_YVz7pC": {
-      "type": "customer-review",
-      "blocks": {
-        "review_M3Fbjt": {
-          "type": "review",
-          "settings": {
-            "name": "Isabella",
-            "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-          }
-        }
-      },
-      "block_order": [
-        "review_M3Fbjt"
-      ],
-      "name": "Customer Say Slider",
-      "settings": {}
     }
   },
   "order": [
@@ -1978,8 +1989,8 @@
     "section_rpriBr",
     "collection_list_zBqmAz",
     "product_list_PRka8r",
+    "customer_review_YVz7pC",
     "section_UYTUbG",
-    "section_HX4Edd",
-    "customer_review_YVz7pC"
+    "section_HX4Edd"
   ]
 }
