@@ -215,7 +215,7 @@
         flex-wrap: wrap
     }
     
-    .gallery-section .layout-panel-flex div{
+    .gallery-section .layout-panel-flex .layout-panel-flex{
         width: 33.33%;
         flex: none !important;
     }
