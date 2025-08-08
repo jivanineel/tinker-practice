@@ -741,7 +741,6 @@
       "name": "Customer Say Slider",
       "settings": {
         "customer_title": "Customer Say",
-        "section_title": "customer-title",
         "text-align": "center",
         "padding_top": 100,
         "padding_bottom": 100,
@@ -768,7 +767,7 @@
             "common_group_class": "",
             "open_in_new_tab": false,
             "content_direction": "row",
-            "vertical_on_mobile": true,
+            "vertical_on_mobile": false,
             "horizontal_alignment": "flex-start",
             "vertical_alignment": "center",
             "align_baseline": false,
