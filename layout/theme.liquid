@@ -71,11 +71,6 @@
     <script>
       document.addEventListener('DOMContentLoaded', function () {
         var swiperEl = document.querySelector('.swiper');
-        if (!swiperEl) {
-          console.error('Swiper element not found!');
-          return;
-        }
-
         new Swiper(swiperEl, {
           loop: true,
           slidesPerView: 1,
