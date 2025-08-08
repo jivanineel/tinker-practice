@@ -12,13 +12,14 @@
                   width="50"
                   height="50"
                   loading="lazy"
+                  {{ block.shopify_attributes }}
                 >
               {% endif %}
               <div class="customer-rating">
-                <h4>{{ block.settings.name }}</h4>
+                <h4 {{ block.shopify_attributes }}>{{ block.settings.name }}</h4>
               </div>
             </div>
-            <p>{{ block.settings.text }}</p>
+            <p {{ block.shopify_attributes }}>{{ block.settings.text }}</p>
           </div>
         </div>
       {% endfor %}
@@ -102,7 +103,7 @@
         },
         {
           "type": "color",
-          "id": "background_color",
+          "id": "card_background",
           "label": "Card Background"
         },
         {
@@ -162,7 +163,7 @@
   {% for block in section.blocks %}
   .review-card-{{ block.id }} {
       padding: {{ block.settings.padding_top }}px {{ block.settings.padding_right }}px {{ block.settings.padding_bottom }}px {{ block.settings.padding_left }}px;
-      background: {{ block.settings.background_color }}
+      background: {{ block.settings.card_background }}
   }
   {% endfor %}
 </style>
