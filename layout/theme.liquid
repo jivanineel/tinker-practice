@@ -32,10 +32,9 @@
       {%- render 'theme-editor' -%}
     {% endif %}
 
-    
     {{ 'swiper.css' | asset_url | stylesheet_tag }}
     {{ 'style.css' | asset_url | stylesheet_tag }}
-    
+
     {{ content_for_header }}
   </head>
 
@@ -44,7 +43,7 @@
     <div id="header-group">
       {% sections 'header-group' %}
     </div>
-    
+
     <main
       id="MainContent"
       class="content-for-layout"
@@ -57,16 +56,43 @@
     </main>
 
     {% sections 'footer-group' %}
-    
+
     {% # theme-check-disable ParserBlockingScript %}
     <script src="{{ 'critical.js' | asset_url }}"></script>
     {% # theme-check-enable ParserBlockingScript %}
-    
+
     {% render 'search-modal' %}
-    
+
     {% if settings.quick_add or settings.mobile_quick_add %}
       {% render 'quick-add-modal' %}
     {% endif %}
-    {{ 'swiper.js' | asset_url | script_tag }}"
+    <script src="{{ 'swiper.js' | asset_url }}"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        new Swiper('.customer-review-slider', {
+          slidesPerView: 3,
+          spaceBetween: 30,
+          loop: true,
+          autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+          breakpoints: {
+            0: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          },
+        });
+      });
+    </script>
   </body>
 </html>
