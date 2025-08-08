@@ -731,6 +731,8 @@
       ],
       "name": "Customer Say Slider",
       "settings": {
+        "customer_title": "Customer Say",
+        "section_title": "customer-title",
         "padding_top": 100,
         "padding_bottom": 100,
         "padding_left": 0,
