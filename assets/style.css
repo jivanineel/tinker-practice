@@ -110,7 +110,9 @@
 }
 
 .gallery-section .instagram-image .overlay-image .social-icons__icon-wrapper .social-icons__icon {
-    color: #fff
+    color: #fff;
+    width: 26px;
+    height: 26px;
 }
 
 .gallery-section .instagram-image:hover .overlay-image{
