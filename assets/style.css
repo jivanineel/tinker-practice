@@ -210,7 +210,7 @@
         width: 100%;
     }
 
-    .gallery-section>.layout-panel-flex {
+    .gallery-section .layout-panel-flex {
         flex-wrap: wrap;
     }
 
