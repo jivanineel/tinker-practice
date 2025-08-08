@@ -875,7 +875,7 @@
       "block_order": [
         "group_EnnVJX"
       ],
-      "name": "t:names.custom_section",
+      "name": "Gallery section",
       "settings": {
         "content_direction": "column",
         "vertical_on_mobile": true,
