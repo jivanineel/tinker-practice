@@ -3,7 +3,7 @@
     {% for block in section.blocks %}
       <div class="swiper-slide">
         <div class="review-card">
-          <div>
+          <div class="customer-info">
             {% if block.settings.image != blank %}
               <img
                 src="{{ block.settings.image | image_url: width: 80 }}"
@@ -13,7 +13,6 @@
                 loading="lazy"
               >
             {% endif %}
-
             <h4>{{ block.settings.name }}</h4>
           </div>
           <p>{{ block.settings.text }}</p>
@@ -64,3 +63,10 @@
   ]
 }
 {% endschema %}
+
+{% stylesheet %}
+  .customer-info{
+    display: flex;
+    gap: 20px;
+  }
+{% endstylesheet %}
