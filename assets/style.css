@@ -209,20 +209,6 @@
     .footer-grid .footer-groups.footer-input{
         width: 100%;
     }
-
-    
-    .gallery-section .layout-panel-flex{
-        flex-wrap: wrap
-    }
-    
-    .gallery-section .layout-panel-flex .layout-panel-flex{
-        width: 33.33%;
-        flex: none !important;
-    }
-
-    .gallery-section .layout-panel-flex .layout-panel-flex .image-block{
-        flex: none !important;
-    }
 }
 
 @media screen and (max-width: 768px) {
