@@ -7,10 +7,10 @@
             <div class="customer-info">
               {% if block.settings.image != blank %}
                 <img
-                  src="{{ block.settings.image | image_url: width: 80 }}"
+                  src="{{ block.settings.image | image_url: width: 50 }}"
                   alt="{{ block.settings.image.alt | escape }}"
-                  width="80"
-                  height="80"
+                  width="50"
+                  height="50"
                   loading="lazy"
                 >
               {% endif %}
