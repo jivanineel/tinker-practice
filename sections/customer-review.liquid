@@ -88,7 +88,12 @@
       "id": "section_background",
       "label": "Section background"
     },
-
+    {
+        "type": "font_picker",
+        "id": "review_font_famliy",
+        "label": "Review font family",
+        "default": "mono"
+    },
     {
       "type": "range",
       "id": "card_padding_top",
@@ -246,6 +251,7 @@
   .review-card .review-text{
       font-size: 14px;
       line-height: 150%;
+      font-family: {{ section.settings.review_font_famliy }}
   }
 
   .section-customer-title{
