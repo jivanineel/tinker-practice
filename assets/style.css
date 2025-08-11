@@ -185,10 +185,14 @@
         width: 50%;
     }
 
-    .offer-section .layout-panel-flex .offer-group{
+    .offer-section .layout-panel-flex{
         width: 50%;
-        flex-basis: none !important
     }
+    
+    .layout-panel-flex--row>.group-block--width-custom.offer-group{
+    flex-basis: none !important
+
+}
 
 .offer-text{
     position: relative;
