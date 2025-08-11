@@ -181,14 +181,6 @@
     max-width: 1312px;
 }
 
-.offer-section .offer-product{
-    width: 50% !important;
-}
-
-.offer-section .offer-product img{
-    width: 100%
-}
-
 .offer-text{
     position: relative;
 }
@@ -251,10 +243,6 @@
     }
     .offer-section .layout-panel-flex{
         flex-direction: column !important;
-    }
-
-    .offer-section .offer-product{
-        width: 100% !important;
     }
 }
 
