@@ -1,56 +1,100 @@
-<div class="offer-time">
-    {% for block in section.blocks %}
-        <div class="offer-time-card">
-          <p class="offer-time">{{ block.settings.offer-remaining-time }}</p>
-          <p class="offer-valid">{{ block.settings.offer-time-values }}</p>
-        </div>
-    {% endfor %}
+<div class="offer-time" 
+     data-start-time="{{ 'now' | date: '%s' }}" 
+     data-seconds-left="{{ section.settings.total_seconds | default: 86400 }}">
+     
+  <div class="offer-time-card">
+    <p class="offer-time days">00</p>
+    <p class="offer-valid">Days</p>
+  </div>
+
+  <div class="offer-time-card">
+    <p class="offer-time hours">00</p>
+    <p class="offer-valid">Hours</p>
+  </div>
+
+  <div class="offer-time-card">
+    <p class="offer-time minutes">00</p>
+    <p class="offer-valid">Min</p>
+  </div>
+
+  <div class="offer-time-card">
+    <p class="offer-time seconds">00</p>
+    <p class="offer-valid">Sec</p>
+  </div>
 </div>
+
 <style>
-    .offer-time{
-        display: flex;
-    }
-
-    .offer-time-card{
-        max-width: 160px;
-        width: 100%;
-        height: 96px;
-        border: 1px solid #553E39;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .offer-time{
-        font-size: 32px;
-        font-weight: 700;
-    }
-
-    .offer-valid{
-        font-size: 16px;
-        font-weight: 600;
-        color: #A67E69;
-    },
-    
+.offer-time {
+  display: flex;
+  gap: 12px;
+}
+.offer-time-card {
+  max-width: 160px;
+  width: 100%;
+  height: 96px;
+  border: 1px solid #553E39;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.offer-time {
+  font-size: 32px;
+  font-weight: 700;
+}
+.offer-valid {
+  font-size: 16px;
+  font-weight: 600;
+  color: #A67E69;
+}
 </style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const timerEl = document.querySelector(".offer-time");
+  if (!timerEl) return;
+
+  let secondsLeft = parseInt(timerEl.dataset.secondsLeft, 10);
+
+  function updateTimer() {
+    if (secondsLeft <= 0) return;
+
+    const days = Math.floor(secondsLeft / 86400);
+    const hours = Math.floor((secondsLeft % 86400) / 3600);
+    const minutes = Math.floor((secondsLeft % 3600) / 60);
+    const seconds = secondsLeft % 60;
+
+    timerEl.querySelector(".days").textContent = String(days).padStart(2, "0");
+    timerEl.querySelector(".hours").textContent = String(hours).padStart(2, "0");
+    timerEl.querySelector(".minutes").textContent = String(minutes).padStart(2, "0");
+    timerEl.querySelector(".seconds").textContent = String(seconds).padStart(2, "0");
+
+    secondsLeft--;
+    if (secondsLeft >= 0) {
+      setTimeout(updateTimer, 1000);
+    }
+  }
+
+  updateTimer();
+});
+</script>
 
 {% schema %}
 {
-    "name": "offer-time",
-    "tag": "div",
-    "settings": [
-        {
-            "type": "number",
-            "id": "offer-remaining-time",
-            "label": "offer remaining"
-        },
-        {
-            "type": "text",
-            "id": "offer-time-values",
-            "label": "Offer working"
-        }
-    ],
+  "name": "Offer Countdown Timer",
+  "settings": [
+    {
+      "type": "number",
+      "id": "total_seconds",
+      "label": "Time Remaining (in seconds)",
+      "default": 86400,
+      "info": "Default is 86400 seconds (24 hours)."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Countdown Timer"
+    }
+  ]
 }
-
 {% endschema %}
