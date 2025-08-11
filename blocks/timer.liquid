@@ -2,6 +2,7 @@
     {% for block in section.blocks %}
         <div class="offer-time-card">
           <p>{{ block.settings.offer-remaining-time }}</p>
+          <p>{{ block.settings.offer-time-values }}</p>
         </div>
     {% endfor %}
 </div>
@@ -32,6 +33,11 @@
             "id": "offer-remaining-time",
             "label": "offer remaining"
         },
+        {
+            "type": "text",
+            "id": "offer-time-values",
+            "label": "Offer working"
+        }
     ]
 }
 
