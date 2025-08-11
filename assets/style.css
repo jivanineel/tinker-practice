@@ -190,7 +190,7 @@
 }
 
 .layout-panel-flex--row>.group-block--width-custom.offer-group{
-    flex-basis: 1 !important
+    flex-basis: 100% !important
 }
 
 .offer-text{
