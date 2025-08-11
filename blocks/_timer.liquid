@@ -1,4 +1,4 @@
-<div class="offer-time-container">
+<div class="offer-time">
   <div class="offer-time-card">
     <p class="offer-time days">00</p>
     <p class="offer-valid">Days</p>
@@ -45,7 +45,7 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    const timerEl = document.querySelector('.offer-time-container');
+    const timerEl = document.querySelector('.offer-time');
     if (!timerEl) return;
 
     let totalSeconds = 24 * 60 * 60; // 24 hours in seconds
