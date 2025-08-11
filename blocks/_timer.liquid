@@ -51,61 +51,61 @@
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-    const timerElement = document.querySelector(".offer-time");
+      const timerElement = document.querySelector(".offer-time");
 
-    if (!timerElement) return;
+      if (!timerElement) return;
 
-    // Get start values from data attributes
-    const startDays = parseInt(timerElement.dataset.startDays) || 0;
-    const startHours = parseInt(timerElement.dataset.startHours) || 0;
-    const startMinutes = parseInt(timerElement.dataset.startMinutes) || 0;
-    const startSeconds = parseInt(timerElement.dataset.startSeconds) || 0;
+      // Get start values from data attributes
+      const startDays = parseInt(timerElement.dataset.startDays) || 0;
+      const startHours = parseInt(timerElement.dataset.startHours) || 0;
+      const startMinutes = parseInt(timerElement.dataset.startMinutes) || 0;
+      const startSeconds = parseInt(timerElement.dataset.startSeconds) || 0;
 
-    // Check if end time exists in localStorage
-    let endTime = localStorage.getItem("countdownEndTime");
+      // Check if end time exists in localStorage
+      let endTime = localStorage.getItem("countdownEndTime");
 
-    if (!endTime) {
-      // If not stored, set new end time
-      endTime = new Date().getTime() + (
-        ((startDays * 24 * 60 * 60) +
-        (startHours * 60 * 60) +
-        (startMinutes * 60) +
-        startSeconds) * 1000
-      );
-      localStorage.setItem("countdownEndTime", endTime);
-    } else {
-      // Convert back to number
-      endTime = parseInt(endTime);
-    }
-
-    function updateCountdown() {
-      const now = new Date().getTime();
-      let distance = endTime - now;
-
-      if (distance <= 0) {
-        clearInterval(interval);
-        document.getElementById("days").textContent = "00";
-        document.getElementById("hours").textContent = "00";
-        document.getElementById("minutes").textContent = "00";
-        document.getElementById("seconds").textContent = "00";
-        localStorage.removeItem("countdownEndTime");
-        return;
+      if (!endTime) {
+        // If not stored, set new end time
+        endTime = new Date().getTime() + (
+          ((startDays * 24 * 60 * 60) +
+          (startHours * 60 * 60) +
+          (startMinutes * 60) +
+          startSeconds) * 1000
+        );
+        localStorage.setItem("countdownEndTime", endTime);
+      } else {
+        // Convert back to number
+        endTime = parseInt(endTime);
       }
 
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      function updateCountdown() {
+        const now = new Date().getTime();
+        let distance = endTime - now;
 
-      document.getElementById("days").textContent = String(days).padStart(2, "0");
-      document.getElementById("hours").textContent = String(hours).padStart(2, "0");
-      document.getElementById("minutes").textContent = String(minutes).padStart(2, "0");
-      document.getElementById("seconds").textContent = String(seconds).padStart(2, "0");
-    }
+        if (distance <= 0) {
+          clearInterval(interval);
+          document.getElementById("days").textContent = "00";
+          document.getElementById("hours").textContent = "00";
+          document.getElementById("minutes").textContent = "00";
+          document.getElementById("seconds").textContent = "00";
+          localStorage.removeItem("countdownEndTime");
+          return;
+        }
 
-    updateCountdown();
-    const interval = setInterval(updateCountdown, 1000);
-  });
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("days").textContent = String(days).padStart(2, "0");
+        document.getElementById("hours").textContent = String(hours).padStart(2, "0");
+        document.getElementById("minutes").textContent = String(minutes).padStart(2, "0");
+        document.getElementById("seconds").textContent = String(seconds).padStart(2, "0");
+      }
+
+      updateCountdown();
+      const interval = setInterval(updateCountdown, 1000);
+    });
   });
 </script>
 
