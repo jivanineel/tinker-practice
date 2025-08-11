@@ -645,7 +645,7 @@
         "image_CC4HPD",
         "group_ywcNPV"
       ],
-      "name": "t:names.image_with_text",
+      "name": "offer",
       "settings": {
         "content_direction": "row",
         "vertical_on_mobile": true,
