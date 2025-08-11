@@ -378,7 +378,7 @@
                 "font_size": "2.5rem",
                 "line_height": "normal",
                 "letter_spacing": "normal",
-                "font_family": "mono",
+                "font_family": "playfair_display_n4",
                 "case": "none",
                 "wrap": "pretty",
                 "color": "var(--color-foreground)",
