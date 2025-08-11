@@ -81,7 +81,7 @@
     border-radius: 50%;
 }
 
-.custom-product-card .spacing-style.text-block:last-child{
+.custom-product-card .spacing-style.text-block:last-child .price{
     font-weight: 700;
 }
 
