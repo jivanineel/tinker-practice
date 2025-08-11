@@ -51,36 +51,56 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    const timerEl = document.querySelector('.offer-time-container'); // Now correct element
-    if (!timerEl) return;
+  const timerEl = document.querySelector('.offer-time-container');
+  if (!timerEl) return;
 
-    let totalSeconds =
+  const storageKey = 'offerTimerEndTime';
+
+  // Check if we already have an end time saved
+  let endTime = localStorage.getItem(storageKey);
+
+  if (!endTime) {
+    // Get starting values from theme editor
+    const totalSeconds =
       (parseInt(timerEl.dataset.startDays, 10) || 0) * 86400 +
       (parseInt(timerEl.dataset.startHours, 10) || 0) * 3600 +
       (parseInt(timerEl.dataset.startMinutes, 10) || 0) * 60 +
       (parseInt(timerEl.dataset.startSeconds, 10) || 0);
 
-    function updateTimer() {
-      if (totalSeconds < 0) totalSeconds = 0;
+    // Calculate end time based on now
+    endTime = Date.now() + totalSeconds * 1000;
+    localStorage.setItem(storageKey, endTime);
+  } else {
+    endTime = parseInt(endTime, 10);
+  }
 
-      const days = Math.floor(totalSeconds / 86400);
-      const hours = Math.floor((totalSeconds % 86400) / 3600);
-      const minutes = Math.floor((totalSeconds % 3600) / 60);
-      const seconds = totalSeconds % 60;
+  function updateTimer() {
+    const now = Date.now();
+    let remaining = Math.floor((endTime - now) / 1000);
 
-      timerEl.querySelector('.days').textContent = String(days).padStart(2, '0');
-      timerEl.querySelector('.hours').textContent = String(hours).padStart(2, '0');
-      timerEl.querySelector('.minutes').textContent = String(minutes).padStart(2, '0');
-      timerEl.querySelector('.seconds').textContent = String(seconds).padStart(2, '0');
-
-      if (totalSeconds > 0) {
-        totalSeconds--;
-        setTimeout(updateTimer, 1000);
-      }
+    if (remaining <= 0) {
+      remaining = 0;
+      localStorage.removeItem(storageKey); // reset for next time
     }
 
-    updateTimer();
-  });
+    const days = Math.floor(remaining / 86400);
+    const hours = Math.floor((remaining % 86400) / 3600);
+    const minutes = Math.floor((remaining % 3600) / 60);
+    const seconds = remaining % 60;
+
+    timerEl.querySelector('.days').textContent = String(days).padStart(2, '0');
+    timerEl.querySelector('.hours').textContent = String(hours).padStart(2, '0');
+    timerEl.querySelector('.minutes').textContent = String(minutes).padStart(2, '0');
+    timerEl.querySelector('.seconds').textContent = String(seconds).padStart(2, '0');
+
+    if (remaining > 0) {
+      setTimeout(updateTimer, 1000);
+    }
+  }
+
+  updateTimer();
+});
+
 </script>
 
 {% schema %}
