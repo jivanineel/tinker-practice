@@ -820,7 +820,7 @@
               "name": "Countdown Timer",
               "settings": {
                 "days": 10,
-                "hours": 1212,
+                "hours": 12,
                 "minutes": 10,
                 "seconds": 5
               },
