@@ -1,6 +1,6 @@
 <div class="offer-time">
   <div class="offer-time-card">
-
+    <p>{{ block.settings.offer-remaining-time }}</p>
   </div>
 </div>
 <style>
@@ -23,7 +23,14 @@
 {% schema %}
 {
     "name": "offer-time",
-    "tag": "div"
+    "tag": "div",
+    "settings": [
+        {
+            "type": "number",
+            "id": "offer-remaining-time",
+            "label": "offer remaining"
+        },
+    ]
 }
 
 {% endschema %}
