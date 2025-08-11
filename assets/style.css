@@ -181,6 +181,10 @@
     max-width: 1312px;
 }
 
+.offer-section .offer-product{
+    width: 50% !important;
+}
+
 .offer-text{
     position: relative;
 }
