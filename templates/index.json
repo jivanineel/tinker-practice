@@ -710,7 +710,7 @@
           "type": "group",
           "settings": {
             "link": "",
-            "group_class": "",
+            "group_class": "offer-group",
             "common_group_class": "",
             "open_in_new_tab": false,
             "content_direction": "column",
