@@ -504,6 +504,7 @@
         "image_CC4HPD": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/offer-section.png",
             "link": "",
             "custom_image_class": "",
             "image_ratio": "square",
@@ -657,7 +658,7 @@
         "section_width": "page-width",
         "section_height": "",
         "section_height_custom": 50,
-        "color_scheme": "",
+        "color_scheme": "scheme-7",
         "background_media": "none",
         "video_position": "cover",
         "background_image_position": "cover",
