@@ -156,7 +156,7 @@
         "group_UkkJC4",
         "image_MirWgx"
       ],
-      "name": "t:names.image_with_text",
+      "name": "Banner",
       "settings": {
         "content_direction": "row",
         "vertical_on_mobile": true,
