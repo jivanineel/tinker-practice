@@ -159,6 +159,7 @@
       "name": "Banner",
       "settings": {
         "content_direction": "row",
+        "section_custom_class": "",
         "vertical_on_mobile": true,
         "horizontal_alignment": "flex-start",
         "vertical_alignment": "center",
@@ -294,6 +295,7 @@
       "name": "Rating section",
       "settings": {
         "content_direction": "column",
+        "section_custom_class": "",
         "vertical_on_mobile": true,
         "horizontal_alignment": "flex-start",
         "vertical_alignment": "center",
@@ -648,6 +650,7 @@
       "name": "offer",
       "settings": {
         "content_direction": "row",
+        "section_custom_class": "offer-section",
         "vertical_on_mobile": true,
         "horizontal_alignment": "flex-start",
         "vertical_alignment": "center",
@@ -1743,6 +1746,7 @@
       "name": "Gallery Section",
       "settings": {
         "content_direction": "column",
+        "section_custom_class": "",
         "vertical_on_mobile": true,
         "horizontal_alignment": "flex-start",
         "vertical_alignment": "center",
