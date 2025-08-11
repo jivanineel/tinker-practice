@@ -622,7 +622,7 @@
             "button_htArGd": {
               "type": "button",
               "settings": {
-                "label": "Shop now",
+                "label": "Get 20% Off",
                 "link": "shopify://collections/all",
                 "open_in_new_tab": false,
                 "style_class": "button",
