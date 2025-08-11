@@ -190,10 +190,10 @@
     position: absolute;
     top: 0;
     right: 0;
+    width: 165px;
+    height: 35px;
     background: url({{ 'offer-marker.svg' | asset_url }}) no-repeat center;
-    background-size: contain; /* or cover depending on your need */
-    width: 20px;  /* set the size */
-    height: 20px; /* set the size */
+    background-size: contain;
 }
 
 @media screen and (max-width: 1440px){
