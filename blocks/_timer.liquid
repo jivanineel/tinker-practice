@@ -53,7 +53,7 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-  const timerEl = document.querySelector(".offer-time");
+  const timerEl = document.querySelector("div.offer-time"); // target the main div, not <p>
   if (!timerEl) return;
 
   // Get initial values from Shopify editor settings
@@ -86,6 +86,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   updateTimer();
 });
+
 </script>
 
 {% schema %}
