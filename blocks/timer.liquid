@@ -1,7 +1,9 @@
 <div class="offer-time">
-  <div class="offer-time-card">
-    <p>{{ block.settings.offer-remaining-time }}</p>
-  </div>
+    {% for block in section.blocks %}
+        <div class="offer-time-card">
+          <p>{{ block.settings.offer-remaining-time }}</p>
+        </div>
+    {% endfor %}
 </div>
 <style>
     .offer-time{
