@@ -1,6 +1,6 @@
 <div class="offer-time">
   <div class="offer-time-card">
-    <p class="offer-time days">00</p>
+    <p class="offer-time-remaining days">00</p>
     <p
       class="offer-valid"
       style="{% render 'typography-style', settings: block.settings %}; font-family: var(--font-family);"
@@ -9,7 +9,7 @@
     </p>
   </div>
   <div class="offer-time-card">
-    <p class="offer-time hours">00</p>
+    <p class="offer-time-remaining hours">00</p>
     <p
       class="offer-valid"
       style="{% render 'typography-style', settings: block.settings %}; font-family: var(--font-family);"
@@ -18,7 +18,7 @@
     </p>
   </div>
   <div class="offer-time-card">
-    <p class="offer-time minutes">00</p>
+    <p class="offer-time-remaining minutes">00</p>
     <p
       class="offer-valid"
       style="{% render 'typography-style', settings: block.settings %}; font-family: var(--font-family);"
@@ -27,7 +27,7 @@
     </p>
   </div>
   <div class="offer-time-card">
-    <p class="offer-time seconds">00</p>
+    <p class="offer-time-remaining seconds">00</p>
     <p
       class="offer-valid"
       style=" {% render 'typography-style', settings: block.settings %}; font-family: var(--font-family);"
@@ -54,7 +54,7 @@
     justify-content: center;
     align-items: center;
   }
-  .offer-time {
+  .offer-time-remaining {
     font-size: 32px;
     font-weight: 700;
     margin-bottom: 0 !important;
