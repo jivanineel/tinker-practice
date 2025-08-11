@@ -1,88 +1,83 @@
-<div
-  class="offer-time"
-  data-start-days="{{ section.settings.days | default: 0 }}"
-  data-start-hours="{{ section.settings.hours | default: 0 }}"
-  data-start-minutes="{{ section.settings.minutes | default: 0 }}"
-  data-start-seconds="{{ section.settings.seconds | default: 0 }}"
->
+<div class="offer-timer"
+     data-start-days="{{ section.settings.days | default: 0 }}"
+     data-start-hours="{{ section.settings.hours | default: 0 }}"
+     data-start-minutes="{{ section.settings.minutes | default: 0 }}"
+     data-start-seconds="{{ section.settings.seconds | default: 0 }}">
+  
   <div class="offer-time-card">
-    <p class="offer-time days">00</p>
+    <p class="time-number days">00</p>
     <p class="offer-valid">Days</p>
   </div>
   <div class="offer-time-card">
-    <p class="offer-time hours">00</p>
+    <p class="time-number hours">00</p>
     <p class="offer-valid">Hours</p>
   </div>
   <div class="offer-time-card">
-    <p class="offer-time minutes">00</p>
+    <p class="time-number minutes">00</p>
     <p class="offer-valid">Min</p>
   </div>
   <div class="offer-time-card">
-    <p class="offer-time seconds">00</p>
+    <p class="time-number seconds">00</p>
     <p class="offer-valid">Sec</p>
   </div>
 </div>
 
 <style>
-  .offer-time { display:flex;}
-  .offer-time-card {
-    width:160px;height:96px;border:1px solid #553E39;
-    display:flex;flex-direction:column;justify-content:center;align-items:center;
-  }
-  .offer-time { font-size:32px;font-weight:700;margin-bottom:0!important; }
-  .offer-valid { font-size:16px;font-weight:600;color:#A67E69;margin-top:0!important; }
+.offer-timer { display:flex;}
+.offer-time-card {
+  width:160px;height:96px;border:1px solid #553E39;
+  display:flex;flex-direction:column;justify-content:center;align-items:center;
+}
+.time-number { font-size:32px;font-weight:700;margin-bottom:0!important; }
+.offer-valid { font-size:16px;font-weight:600;color:#A67E69;margin-top:0!important; }
 </style>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const timerEl = document.querySelector('.offer-time');
-    if (!timerEl) return;
+document.addEventListener("DOMContentLoaded", function() {
+  const timerEl = document.querySelector(".offer-timer");
+  if (!timerEl) return;
 
-    // Get values from data attributes
-    let days = parseInt(timerEl.dataset.startDays) || 0;
-    let hours = parseInt(timerEl.dataset.startHours) || 0;
-    let minutes = parseInt(timerEl.dataset.startMinutes) || 0;
-    let seconds = parseInt(timerEl.dataset.startSeconds) || 0;
+  let days = parseInt(timerEl.dataset.startDays) || 0;
+  let hours = parseInt(timerEl.dataset.startHours) || 0;
+  let minutes = parseInt(timerEl.dataset.startMinutes) || 0;
+  let seconds = parseInt(timerEl.dataset.startSeconds) || 0;
 
-    function updateDisplay() {
-      timerEl.querySelector('.days').textContent = String(days).padStart(2, '0');
-      timerEl.querySelector('.hours').textContent = String(hours).padStart(2, '0');
-      timerEl.querySelector('.minutes').textContent = String(minutes).padStart(2, '0');
-      timerEl.querySelector('.seconds').textContent = String(seconds).padStart(2, '0');
+  function updateDisplay() {
+    timerEl.querySelector(".days").textContent = String(days).padStart(2, "0");
+    timerEl.querySelector(".hours").textContent = String(hours).padStart(2, "0");
+    timerEl.querySelector(".minutes").textContent = String(minutes).padStart(2, "0");
+    timerEl.querySelector(".seconds").textContent = String(seconds).padStart(2, "0");
+  }
+
+  function tick() {
+    if (days === 0 && hours === 0 && minutes === 0 && seconds === 0) {
+      return; // stop countdown at zero
     }
 
-    function tick() {
-      if (days === 0 && hours === 0 && minutes === 0 && seconds === 0) {
-        return; // stop countdown at zero
-      }
-
-      seconds--;
-      if (seconds < 0) {
-        seconds = 59;
-        minutes--;
-        if (minutes < 0) {
-          minutes = 59;
-          hours--;
-          if (hours < 0) {
-            hours = 23;
-            days--;
-            if (days < 0) {
-              days = 0;
-              hours = 0;
-              minutes = 0;
-              seconds = 0;
-            }
+    seconds--;
+    if (seconds < 0) {
+      seconds = 59;
+      minutes--;
+      if (minutes < 0) {
+        minutes = 59;
+        hours--;
+        if (hours < 0) {
+          hours = 23;
+          days--;
+          if (days < 0) {
+            days = 0; hours = 0; minutes = 0; seconds = 0;
           }
         }
       }
-
-      updateDisplay();
-      setTimeout(tick, 1000);
     }
 
     updateDisplay();
-    tick();
-  });
+    setTimeout(tick, 1000);
+  }
+
+  updateDisplay();
+  tick();
+});
 </script>
 
 {% schema %}
@@ -94,6 +89,8 @@
     { "type": "number", "id": "minutes", "label": "Minutes", "default": 0 },
     { "type": "number", "id": "seconds", "label": "Seconds", "default": 0 }
   ],
-  "presets": [{ "name": "Countdown Timer" }]
+  "presets": [
+    { "name": "Countdown Timer" }
+  ]
 }
 {% endschema %}
