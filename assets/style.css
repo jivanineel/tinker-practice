@@ -264,6 +264,10 @@
     .offer-section .layout-panel-flex .offer-group{
         width: 100%;
     }
+
+    .layout-panel-flex--row>.group-block--width-custom.offer-group{
+        flex-basis: 100% !important
+    }
 }
 
 @media screen and (max-width: 768px) {
