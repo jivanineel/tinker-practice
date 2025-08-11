@@ -1,24 +1,24 @@
-{% assign total_seconds = section.settings.days | times: 86400
-  | plus: section.settings.hours | times: 3600
-  | plus: section.settings.minutes | times: 60
-  | plus: section.settings.seconds %}
+<div class="offer-time" 
+     data-start-days="{{ section.settings.days | default: 0 }}"
+     data-start-hours="{{ section.settings.hours | default: 24 }}"
+     data-start-minutes="{{ section.settings.minutes | default: 0 }}"
+     data-start-seconds="{{ section.settings.seconds | default: 0 }}">
 
-{% assign end_timestamp = 'now' | date: "%s" | plus: total_seconds %}
-
-<div class="offer-time"
-     data-end-time="{{ end_timestamp }}">
   <div class="offer-time-card">
     <p class="offer-time days">00</p>
     <p class="offer-valid">Days</p>
   </div>
+
   <div class="offer-time-card">
     <p class="offer-time hours">00</p>
     <p class="offer-valid">Hours</p>
   </div>
+
   <div class="offer-time-card">
     <p class="offer-time minutes">00</p>
     <p class="offer-valid">Min</p>
   </div>
+
   <div class="offer-time-card">
     <p class="offer-time seconds">00</p>
     <p class="offer-valid">Sec</p>
@@ -56,25 +56,30 @@ document.addEventListener("DOMContentLoaded", function() {
   const timerEl = document.querySelector(".offer-time");
   if (!timerEl) return;
 
-  const endTime = parseInt(timerEl.dataset.endTime, 10) * 1000;
+  // Get initial values from Shopify editor settings
+  let totalSeconds = 
+      (parseInt(timerEl.dataset.startDays, 10) * 86400) +
+      (parseInt(timerEl.dataset.startHours, 10) * 3600) +
+      (parseInt(timerEl.dataset.startMinutes, 10) * 60) +
+      parseInt(timerEl.dataset.startSeconds, 10);
 
   function updateTimer() {
-    const now = Date.now();
-    let diff = Math.floor((endTime - now) / 1000);
+    if (totalSeconds <= 0) {
+      totalSeconds = 0; // Prevent negatives
+    }
 
-    if (diff < 0) diff = 0;
-
-    const days = Math.floor(diff / 86400);
-    const hours = Math.floor((diff % 86400) / 3600);
-    const minutes = Math.floor((diff % 3600) / 60);
-    const seconds = diff % 60;
+    const days = Math.floor(totalSeconds / 86400);
+    const hours = Math.floor((totalSeconds % 86400) / 3600);
+    const minutes = Math.floor((totalSeconds % 3600) / 60);
+    const seconds = totalSeconds % 60;
 
     timerEl.querySelector(".days").textContent = String(days).padStart(2, "0");
     timerEl.querySelector(".hours").textContent = String(hours).padStart(2, "0");
     timerEl.querySelector(".minutes").textContent = String(minutes).padStart(2, "0");
     timerEl.querySelector(".seconds").textContent = String(seconds).padStart(2, "0");
 
-    if (diff > 0) {
+    if (totalSeconds > 0) {
+      totalSeconds--;
       setTimeout(updateTimer, 1000);
     }
   }
