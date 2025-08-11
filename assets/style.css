@@ -185,6 +185,10 @@
     width: 50% !important;
 }
 
+.offer-section .offer-product img{
+    width: 100%
+}
+
 .offer-text{
     position: relative;
 }
