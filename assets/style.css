@@ -187,6 +187,7 @@
 
     .offer-section .layout-panel-flex .offer-group{
         width: 50%;
+        flex-basis: none
     }
 
 .offer-text{
