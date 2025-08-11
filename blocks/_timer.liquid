@@ -1,7 +1,9 @@
 <div class="offer-time" 
-     data-start-time="{{ 'now' | date: '%s' }}" 
-     data-seconds-left="{{ section.settings.total_seconds | default: 86400 }}">
-     
+     data-days="{{ section.settings.days | default: 0 }}"
+     data-hours="{{ section.settings.hours | default: 24 }}"
+     data-minutes="{{ section.settings.minutes | default: 0 }}"
+     data-seconds="{{ section.settings.seconds | default: 0 }}">
+
   <div class="offer-time-card">
     <p class="offer-time days">00</p>
     <p class="offer-valid">Days</p>
@@ -26,27 +28,26 @@
 <style>
 .offer-time {
   display: flex;
+  gap: 12px;
 }
 .offer-time-card {
-  width: 160px;
+  max-width: 160px;
+  width: 100%;
   height: 96px;
   border: 1px solid #553E39;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 16px 20px;
 }
 .offer-time {
   font-size: 32px;
   font-weight: 700;
-  margin-bottom: 0 !important; 
 }
 .offer-valid {
   font-size: 16px;
   font-weight: 600;
   color: #A67E69;
-  margin-top: 0 !important; 
 }
 </style>
 
@@ -55,23 +56,27 @@ document.addEventListener("DOMContentLoaded", function() {
   const timerEl = document.querySelector(".offer-time");
   if (!timerEl) return;
 
-  let secondsLeft = parseInt(timerEl.dataset.secondsLeft, 10);
+  let totalSeconds = 
+      (parseInt(timerEl.dataset.days, 10) * 86400) +
+      (parseInt(timerEl.dataset.hours, 10) * 3600) +
+      (parseInt(timerEl.dataset.minutes, 10) * 60) +
+      parseInt(timerEl.dataset.seconds, 10);
 
   function updateTimer() {
-    if (secondsLeft <= 0) return;
+    if (totalSeconds <= 0) return;
 
-    const days = Math.floor(secondsLeft / 86400);
-    const hours = Math.floor((secondsLeft % 86400) / 3600);
-    const minutes = Math.floor((secondsLeft % 3600) / 60);
-    const seconds = secondsLeft % 60;
+    const days = Math.floor(totalSeconds / 86400);
+    const hours = Math.floor((totalSeconds % 86400) / 3600);
+    const minutes = Math.floor((totalSeconds % 3600) / 60);
+    const seconds = totalSeconds % 60;
 
     timerEl.querySelector(".days").textContent = String(days).padStart(2, "0");
     timerEl.querySelector(".hours").textContent = String(hours).padStart(2, "0");
     timerEl.querySelector(".minutes").textContent = String(minutes).padStart(2, "0");
     timerEl.querySelector(".seconds").textContent = String(seconds).padStart(2, "0");
 
-    secondsLeft--;
-    if (secondsLeft >= 0) {
+    totalSeconds--;
+    if (totalSeconds >= 0) {
       setTimeout(updateTimer, 1000);
     }
   }
@@ -86,10 +91,27 @@ document.addEventListener("DOMContentLoaded", function() {
   "settings": [
     {
       "type": "number",
-      "id": "total_seconds",
-      "label": "Time Remaining (in seconds)",
-      "default": 86400,
-      "info": "Default is 86400 seconds (24 hours)."
+      "id": "days",
+      "label": "Days",
+      "default": 0
+    },
+    {
+      "type": "number",
+      "id": "hours",
+      "label": "Hours",
+      "default": 24
+    },
+    {
+      "type": "number",
+      "id": "minutes",
+      "label": "Minutes",
+      "default": 0
+    },
+    {
+      "type": "number",
+      "id": "seconds",
+      "label": "Seconds",
+      "default": 0
     }
   ],
   "presets": [
