@@ -397,6 +397,13 @@
         width: 18px;
         height: 18px;
     }
+
+    .offer-text strong:before {
+        top: -11px;
+        right: -4px;
+        width: 121px;
+        height: 30px;
+    }
 }
 
 @media screen and (max-width:425px) {
