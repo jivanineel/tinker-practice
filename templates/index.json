@@ -819,7 +819,10 @@
               "type": "_timer",
               "name": "Countdown Timer",
               "settings": {
-                "total_seconds": 86400
+                "days": 10,
+                "hours": 0,
+                "minutes": 0,
+                "seconds": 0
               },
               "blocks": {}
             }
