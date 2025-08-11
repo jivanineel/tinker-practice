@@ -185,13 +185,10 @@
     width: 50%;
 }
 
-.offer-section .layout-panel-flex{
+.offer-section .layout-panel-flex .offer-group{
     width: 50%;
 }
 
-/* .layout-panel-flex--row>.group-block--width-custom.offer-group{
-    flex-basis: 1 !important
-} */
 
 .offer-text{
     position: relative;
