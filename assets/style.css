@@ -186,17 +186,19 @@
 }
 
 .offer-text::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 165px;
-    height: 35px;
-    background: url({{ 'offer-marker.svg' | asset_url }});
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 36px;
+  height: 36px;
+  background-image: url("{{ 'offer-marker.svg' | asset_url }}");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
+
 
 @media screen and (max-width: 1440px){
     .banner-class .layout-panel-flex--column{
