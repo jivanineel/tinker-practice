@@ -777,7 +777,7 @@
             "text_BkTVyY": {
               "type": "text",
               "settings": {
-                "text": "<p>We are commited to offering the finest selection of clean and natural skin care products created by the world’s leading brands that are poineers in innovation, science, techonlogy, and sustainability.</p>",
+                "text": "<p>We are commited to offering the finest selection of <strong>clean and natural</strong> skin care products created by the world’s leading brands that are poineers in innovation, science, techonlogy, and sustainability.</p>",
                 "text_custom_class": "offer-text",
                 "width": "100%",
                 "max_width": "none",
