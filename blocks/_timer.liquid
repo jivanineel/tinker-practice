@@ -1,19 +1,24 @@
-<div class="offer-time"
-     data-date="{{ section.settings.end_date | escape }}"
-     data-time="{{ section.settings.end_time | escape }}">
+<div class="offer-time" 
+     data-start-days="{{ section.settings.days | default: 0 }}"
+     data-start-hours="{{ section.settings.hours | default: 24 }}"
+     data-start-minutes="{{ section.settings.minutes | default: 0 }}"
+     data-start-seconds="{{ section.settings.seconds | default: 0 }}">
 
   <div class="offer-time-card">
     <p class="offer-time days">00</p>
     <p class="offer-valid">Days</p>
   </div>
+
   <div class="offer-time-card">
     <p class="offer-time hours">00</p>
     <p class="offer-valid">Hours</p>
   </div>
+
   <div class="offer-time-card">
     <p class="offer-time minutes">00</p>
     <p class="offer-valid">Min</p>
   </div>
+
   <div class="offer-time-card">
     <p class="offer-time seconds">00</p>
     <p class="offer-valid">Sec</p>
@@ -25,8 +30,7 @@
   display: flex;
 }
 .offer-time-card {
-  max-width: 160px;
-  width: 100%;
+  width: 160px;
   height: 96px;
   border: 1px solid #553E39;
   display: flex;
@@ -37,14 +41,13 @@
 .offer-time {
   font-size: 32px;
   font-weight: 700;
-    margin-bottom: 0;
-
+  margin-bottom: 0 !important;
 }
 .offer-valid {
   font-size: 16px;
   font-weight: 600;
   color: #A67E69;
-    margin-top: 0;
+  margin-top: 0 !important;
 }
 </style>
 
@@ -53,29 +56,30 @@ document.addEventListener("DOMContentLoaded", function() {
   const timerEl = document.querySelector(".offer-time");
   if (!timerEl) return;
 
-  const dateStr = timerEl.dataset.date;
-  const timeStr = timerEl.dataset.time;
-  const endDate = new Date(`${dateStr}T${timeStr}`).getTime(); // Always valid ISO format
+  // Get initial values from Shopify editor settings
+  let totalSeconds = 
+      (parseInt(timerEl.dataset.startDays, 10) * 86400) +
+      (parseInt(timerEl.dataset.startHours, 10) * 3600) +
+      (parseInt(timerEl.dataset.startMinutes, 10) * 60) +
+      parseInt(timerEl.dataset.startSeconds, 10);
 
   function updateTimer() {
-    const now = new Date().getTime();
-    let distance = endDate - now;
-
-    if (distance <= 0) {
-      distance = 0;
+    if (totalSeconds <= 0) {
+      totalSeconds = 0; // Prevent negatives
     }
 
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    const days = Math.floor(totalSeconds / 86400);
+    const hours = Math.floor((totalSeconds % 86400) / 3600);
+    const minutes = Math.floor((totalSeconds % 3600) / 60);
+    const seconds = totalSeconds % 60;
 
     timerEl.querySelector(".days").textContent = String(days).padStart(2, "0");
     timerEl.querySelector(".hours").textContent = String(hours).padStart(2, "0");
     timerEl.querySelector(".minutes").textContent = String(minutes).padStart(2, "0");
     timerEl.querySelector(".seconds").textContent = String(seconds).padStart(2, "0");
 
-    if (distance > 0) {
+    if (totalSeconds > 0) {
+      totalSeconds--;
       setTimeout(updateTimer, 1000);
     }
   }
@@ -89,16 +93,28 @@ document.addEventListener("DOMContentLoaded", function() {
   "name": "Offer Countdown Timer",
   "settings": [
     {
-      "type": "text",
-      "id": "end_date",
-      "label": "End Date (YYYY-MM-DD)",
-      "default": "2025-08-12"
+      "type": "number",
+      "id": "days",
+      "label": "Days",
+      "default": 0
     },
     {
-      "type": "text",
-      "id": "end_time",
-      "label": "End Time (HH:MM:SS)",
-      "default": "12:00:00"
+      "type": "number",
+      "id": "hours",
+      "label": "Hours",
+      "default": 24
+    },
+    {
+      "type": "number",
+      "id": "minutes",
+      "label": "Minutes",
+      "default": 0
+    },
+    {
+      "type": "number",
+      "id": "seconds",
+      "label": "Seconds",
+      "default": 0
     }
   ],
   "presets": [
