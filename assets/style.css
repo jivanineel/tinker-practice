@@ -188,8 +188,8 @@
 .offer-text::before {
   content: "";
   position: absolute;
-  top: 0;
-  right: 0;
+  top: -5px;
+  right: 30px;
   display: block;
   width: 167px; /* match your SVG width */
   height: 37px;  /* match your SVG height */
