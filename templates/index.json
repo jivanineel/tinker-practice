@@ -595,10 +595,10 @@
             "text_BkTVyY": {
               "type": "text",
               "settings": {
-                "text": "<p>Made with care and unconditionally loved by our customers, this signature bestseller exceeds all expectations.</p>",
+                "text": "<p>We are commited to offering the finest selection of clean and natural skin care products created by the world’s leading brands that are poineers in innovation, science, techonlogy, and sustainability.</p>",
                 "text_custom_class": "",
-                "width": "fit-content",
-                "max_width": "narrow",
+                "width": "100%",
+                "max_width": "none",
                 "alignment": "left",
                 "type_preset": "rte",
                 "font": "var(--font-body--family)",
