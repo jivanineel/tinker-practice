@@ -1,8 +1,8 @@
 <div class="offer-time" 
-     data-days="{{ section.settings.days | default: 0 }}"
-     data-hours="{{ section.settings.hours | default: 24 }}"
-     data-minutes="{{ section.settings.minutes | default: 0 }}"
-     data-seconds="{{ section.settings.seconds | default: 0 }}">
+     data-start-days="{{ section.settings.days | default: 0 }}"
+     data-start-hours="{{ section.settings.hours | default: 24 }}"
+     data-start-minutes="{{ section.settings.minutes | default: 0 }}"
+     data-start-seconds="{{ section.settings.seconds | default: 0 }}">
 
   <div class="offer-time-card">
     <p class="offer-time days">00</p>
@@ -56,14 +56,17 @@ document.addEventListener("DOMContentLoaded", function() {
   const timerEl = document.querySelector(".offer-time");
   if (!timerEl) return;
 
+  // Get initial values from Shopify editor settings
   let totalSeconds = 
-      (parseInt(timerEl.dataset.days, 10) * 86400) +
-      (parseInt(timerEl.dataset.hours, 10) * 3600) +
-      (parseInt(timerEl.dataset.minutes, 10) * 60) +
-      parseInt(timerEl.dataset.seconds, 10);
+      (parseInt(timerEl.dataset.startDays, 10) * 86400) +
+      (parseInt(timerEl.dataset.startHours, 10) * 3600) +
+      (parseInt(timerEl.dataset.startMinutes, 10) * 60) +
+      parseInt(timerEl.dataset.startSeconds, 10);
 
   function updateTimer() {
-    if (totalSeconds <= 0) return;
+    if (totalSeconds <= 0) {
+      totalSeconds = 0; // Prevent negatives
+    }
 
     const days = Math.floor(totalSeconds / 86400);
     const hours = Math.floor((totalSeconds % 86400) / 3600);
@@ -75,8 +78,8 @@ document.addEventListener("DOMContentLoaded", function() {
     timerEl.querySelector(".minutes").textContent = String(minutes).padStart(2, "0");
     timerEl.querySelector(".seconds").textContent = String(seconds).padStart(2, "0");
 
-    totalSeconds--;
-    if (totalSeconds >= 0) {
+    if (totalSeconds > 0) {
+      totalSeconds--;
       setTimeout(updateTimer, 1000);
     }
   }
