@@ -1,34 +1,38 @@
 <div class="offer-time">
   <div class="offer-time-card">
     <p class="offer-time days">00</p>
-    <p class="offer-valid" 
-        style="{% render 'typography-style', settings: block.settings %}; font-family: var(--font-family);"
+    <p
+      class="offer-valid"
+      style="{% render 'typography-style', settings: block.settings %}; font-family: var(--font-family);"
     >
-        Days
+      Days
     </p>
   </div>
   <div class="offer-time-card">
     <p class="offer-time hours">00</p>
-    <p class="offer-valid" 
-        style="{% render 'typography-style', settings: block.settings %}; font-family: var(--font-family);"
+    <p
+      class="offer-valid"
+      style="{% render 'typography-style', settings: block.settings %}; font-family: var(--font-family);"
     >
-        Hours
+      Hours
     </p>
   </div>
   <div class="offer-time-card">
     <p class="offer-time minutes">00</p>
-    <p class="offer-valid" 
-        style="{% render 'typography-style', settings: block.settings %}; font-family: var(--font-family);"
+    <p
+      class="offer-valid"
+      style="{% render 'typography-style', settings: block.settings %}; font-family: var(--font-family);"
     >
-        Min
+      Min
     </p>
   </div>
   <div class="offer-time-card">
     <p class="offer-time seconds">00</p>
-    <p class="offer-valid" 
-        style=" {% render 'typography-style', settings: block.settings %}; font-family: var(--font-family);"
+    <p
+      class="offer-valid"
+      style=" {% render 'typography-style', settings: block.settings %}; font-family: var(--font-family);"
     >
-        Sec
+      Sec
     </p>
   </div>
 </div>
@@ -47,8 +51,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
   }
+  .offer-time:first-child,
+  .offer-time:last-child{
+    border-radius: 6px;
+    }
+
   .offer-time {
     font-size: 32px;
     font-weight: 700;
@@ -118,9 +126,8 @@
           "label": "t:options.accent"
         }
       ],
-      "default": "var(--font-body--family)",
-    },
-
+      "default": "var(--font-body--family)"
+    }
   ],
   "presets": [
     {
