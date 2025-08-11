@@ -1,8 +1,8 @@
 <div class="offer-timer"
-     data-start-days="{{ section.settings.days | default: 0 }}"
-     data-start-hours="{{ section.settings.hours | default: 0 }}"
-     data-start-minutes="{{ section.settings.minutes | default: 0 }}"
-     data-start-seconds="{{ section.settings.seconds | default: 0 }}">
+     data-start-days="{{ section.settings.days }}"
+     data-start-hours="{{ section.settings.hours }}"
+     data-start-minutes="{{ section.settings.minutes }}"
+     data-start-seconds="{{ section.settings.seconds }}">
   
   <div class="offer-time-card">
     <p class="time-number days">00</p>
@@ -23,13 +23,13 @@
 </div>
 
 <style>
-.offer-timer { display:flex;}
+.offer-timer { display:flex; gap:12px; }
 .offer-time-card {
-  width:160px;height:96px;border:1px solid #553E39;
-  display:flex;flex-direction:column;justify-content:center;align-items:center;
+  width:160px; height:96px; border:1px solid #553E39;
+  display:flex; flex-direction:column; justify-content:center; align-items:center;
 }
-.time-number { font-size:32px;font-weight:700;margin-bottom:0!important; }
-.offer-valid { font-size:16px;font-weight:600;color:#A67E69;margin-top:0!important; }
+.time-number { font-size:32px; font-weight:700; margin-bottom:0!important; }
+.offer-valid { font-size:16px; font-weight:600; color:#A67E69; margin-top:0!important; }
 </style>
 
 <script>
@@ -37,10 +37,12 @@ document.addEventListener("DOMContentLoaded", function() {
   const timerEl = document.querySelector(".offer-timer");
   if (!timerEl) return;
 
-  let days = parseInt(timerEl.dataset.startDays) || 0;
-  let hours = parseInt(timerEl.dataset.startHours) || 0;
-  let minutes = parseInt(timerEl.dataset.startMinutes) || 0;
-  let seconds = parseInt(timerEl.dataset.startSeconds) || 0;
+  let days = Number(timerEl.dataset.startDays) || 0;
+  let hours = Number(timerEl.dataset.startHours) || 0;
+  let minutes = Number(timerEl.dataset.startMinutes) || 0;
+  let seconds = Number(timerEl.dataset.startSeconds) || 0;
+
+  console.log("Starting countdown from:", days, hours, minutes, seconds);
 
   function updateDisplay() {
     timerEl.querySelector(".days").textContent = String(days).padStart(2, "0");
@@ -51,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   function tick() {
     if (days === 0 && hours === 0 && minutes === 0 && seconds === 0) {
-      return; // stop countdown at zero
+      return;
     }
 
     seconds--;
