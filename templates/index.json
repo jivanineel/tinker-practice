@@ -801,6 +801,14 @@
               },
               "blocks": {}
             },
+            "timer_DYUibN": {
+              "type": "_timer",
+              "name": "Countdown Timer",
+              "settings": {
+                "font": "var(--font-accent--family)"
+              },
+              "blocks": {}
+            },
             "button_htArGd": {
               "type": "button",
               "settings": {
@@ -814,21 +822,13 @@
                 "custom_width_mobile": 100
               },
               "blocks": {}
-            },
-            "timer_DYUibN": {
-              "type": "_timer",
-              "name": "Countdown Timer",
-              "settings": {
-                "font": "var(--font-accent--family)"
-              },
-              "blocks": {}
             }
           },
           "block_order": [
             "text_hbDKPw",
             "text_BkTVyY",
-            "button_htArGd",
-            "timer_DYUibN"
+            "timer_DYUibN",
+            "button_htArGd"
           ]
         }
       },
