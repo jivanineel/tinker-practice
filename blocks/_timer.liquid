@@ -56,22 +56,34 @@
 
   const storageKey = 'offerTimerEndTime';
 
-  // Check if we already have an end time saved
-  let endTime = localStorage.getItem(storageKey);
+  // Always check if theme editor values are different from stored ones
+  const editorValues = {
+    days: parseInt(timerEl.dataset.startDays, 10) || 0,
+    hours: parseInt(timerEl.dataset.startHours, 10) || 0,
+    minutes: parseInt(timerEl.dataset.startMinutes, 10) || 0,
+    seconds: parseInt(timerEl.dataset.startSeconds, 10) || 0
+  };
 
-  if (!endTime) {
-    // Get starting values from theme editor
+  // Create a hash string for comparison
+  const editorHash = `${editorValues.days}-${editorValues.hours}-${editorValues.minutes}-${editorValues.seconds}`;
+  const savedHash = localStorage.getItem(storageKey + '-hash');
+
+  let endTime;
+
+  if (editorHash !== savedHash) {
+    // New settings from editor → reset timer
     const totalSeconds =
-      (parseInt(timerEl.dataset.startDays, 10) || 0) * 86400 +
-      (parseInt(timerEl.dataset.startHours, 10) || 0) * 3600 +
-      (parseInt(timerEl.dataset.startMinutes, 10) || 0) * 60 +
-      (parseInt(timerEl.dataset.startSeconds, 10) || 0);
+      editorValues.days * 86400 +
+      editorValues.hours * 3600 +
+      editorValues.minutes * 60 +
+      editorValues.seconds;
 
-    // Calculate end time based on now
     endTime = Date.now() + totalSeconds * 1000;
     localStorage.setItem(storageKey, endTime);
+    localStorage.setItem(storageKey + '-hash', editorHash);
   } else {
-    endTime = parseInt(endTime, 10);
+    // Use saved end time
+    endTime = parseInt(localStorage.getItem(storageKey), 10) || 0;
   }
 
   function updateTimer() {
@@ -80,7 +92,8 @@
 
     if (remaining <= 0) {
       remaining = 0;
-      localStorage.removeItem(storageKey); // reset for next time
+      localStorage.removeItem(storageKey);
+      localStorage.removeItem(storageKey + '-hash');
     }
 
     const days = Math.floor(remaining / 86400);
@@ -100,7 +113,6 @@
 
   updateTimer();
 });
-
 </script>
 
 {% schema %}
