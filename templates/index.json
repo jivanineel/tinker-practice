@@ -1564,7 +1564,7 @@
       "block_order": [
         "group_3i34Bn"
       ],
-      "name": "t:names.custom_section",
+      "name": "Gallery Section",
       "settings": {
         "content_direction": "column",
         "vertical_on_mobile": true,
