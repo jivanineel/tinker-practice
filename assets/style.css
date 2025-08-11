@@ -193,12 +193,12 @@
     flex-basis: 50% !important
 }
 
-.offer-text b{
+.offer-text strong{
     position: relative;
     font-weight: 400;
 }
 
-.offer-text b::before {
+.offer-text strong::before {
     content: "";
     position: absolute;
     top: -10px;
