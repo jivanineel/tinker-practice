@@ -688,7 +688,7 @@
           "settings": {
             "image": "shopify://shop_images/offer-section.png",
             "link": "",
-            "custom_image_class": "",
+            "custom_image_class": "offer-product",
             "image_ratio": "square",
             "width": "fill",
             "custom_width": 100,
