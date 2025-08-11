@@ -177,6 +177,10 @@
     height: 50px;
 }
 
+.offer-section .layout-panel-flex{
+    max-width: 1312px;
+}
+
 @media screen and (max-width: 1440px){
     .banner-class .layout-panel-flex--column{
         max-width: 90%;
