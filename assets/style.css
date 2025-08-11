@@ -246,7 +246,11 @@
         flex: none;
     }
     .offer-section .layout-panel-flex{
-        flex-direction:column !important;
+        flex-direction: column !important;
+    }
+
+    .offer-section .offer-product{
+        width: 100% !important;
     }
 }
 
