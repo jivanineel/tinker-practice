@@ -1,24 +1,24 @@
-<div class="offer-time" 
-     data-start-days="{{ section.settings.days | default: 0 }}"
-     data-start-hours="{{ section.settings.hours | default: 24 }}"
-     data-start-minutes="{{ section.settings.minutes | default: 0 }}"
-     data-start-seconds="{{ section.settings.seconds | default: 0 }}">
+{% assign total_seconds = section.settings.days | times: 86400
+  | plus: section.settings.hours | times: 3600
+  | plus: section.settings.minutes | times: 60
+  | plus: section.settings.seconds %}
 
+{% assign end_timestamp = 'now' | date: "%s" | plus: total_seconds %}
+
+<div class="offer-time"
+     data-end-time="{{ end_timestamp }}">
   <div class="offer-time-card">
     <p class="offer-time days">00</p>
     <p class="offer-valid">Days</p>
   </div>
-
   <div class="offer-time-card">
     <p class="offer-time hours">00</p>
     <p class="offer-valid">Hours</p>
   </div>
-
   <div class="offer-time-card">
     <p class="offer-time minutes">00</p>
     <p class="offer-valid">Min</p>
   </div>
-
   <div class="offer-time-card">
     <p class="offer-time seconds">00</p>
     <p class="offer-valid">Sec</p>
