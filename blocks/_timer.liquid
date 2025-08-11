@@ -56,30 +56,25 @@ document.addEventListener("DOMContentLoaded", function() {
   const timerEl = document.querySelector(".offer-time");
   if (!timerEl) return;
 
-  // Get initial values from Shopify editor settings
-  let totalSeconds = 
-      (parseInt(timerEl.dataset.startDays, 10) * 86400) +
-      (parseInt(timerEl.dataset.startHours, 10) * 3600) +
-      (parseInt(timerEl.dataset.startMinutes, 10) * 60) +
-      parseInt(timerEl.dataset.startSeconds, 10);
+  const endTime = parseInt(timerEl.dataset.endTime, 10) * 1000;
 
   function updateTimer() {
-    if (totalSeconds <= 0) {
-      totalSeconds = 0; // Prevent negatives
-    }
+    const now = Date.now();
+    let diff = Math.floor((endTime - now) / 1000);
 
-    const days = Math.floor(totalSeconds / 86400);
-    const hours = Math.floor((totalSeconds % 86400) / 3600);
-    const minutes = Math.floor((totalSeconds % 3600) / 60);
-    const seconds = totalSeconds % 60;
+    if (diff < 0) diff = 0;
+
+    const days = Math.floor(diff / 86400);
+    const hours = Math.floor((diff % 86400) / 3600);
+    const minutes = Math.floor((diff % 3600) / 60);
+    const seconds = diff % 60;
 
     timerEl.querySelector(".days").textContent = String(days).padStart(2, "0");
     timerEl.querySelector(".hours").textContent = String(hours).padStart(2, "0");
     timerEl.querySelector(".minutes").textContent = String(minutes).padStart(2, "0");
     timerEl.querySelector(".seconds").textContent = String(seconds).padStart(2, "0");
 
-    if (totalSeconds > 0) {
-      totalSeconds--;
+    if (diff > 0) {
       setTimeout(updateTimer, 1000);
     }
   }
