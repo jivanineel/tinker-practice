@@ -1,5 +1,5 @@
 <div
-  class="offer-time"
+  class="offer-time-container"
   data-start-days="{{ section.settings.days }}"
   data-start-hours="{{ section.settings.hours }}"
   data-start-minutes="{{ section.settings.minutes }}"
@@ -9,17 +9,14 @@
     <p class="offer-time days">00</p>
     <p class="offer-valid">Days</p>
   </div>
-
   <div class="offer-time-card">
     <p class="offer-time hours">00</p>
     <p class="offer-valid">Hours</p>
   </div>
-
   <div class="offer-time-card">
     <p class="offer-time minutes">00</p>
     <p class="offer-valid">Min</p>
   </div>
-
   <div class="offer-time-card">
     <p class="offer-time seconds">00</p>
     <p class="offer-valid">Sec</p>
@@ -54,20 +51,17 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    const timerEl = document.querySelector('div.offer-time'); // target the main div, not <p>
+    const timerEl = document.querySelector('.offer-time-container'); // Now correct element
     if (!timerEl) return;
 
-    // Get initial values from Shopify editor settings
     let totalSeconds =
-      parseInt(timerEl.dataset.startDays, 10) * 86400 +
-      parseInt(timerEl.dataset.startHours, 10) * 3600 +
-      parseInt(timerEl.dataset.startMinutes, 10) * 60 +
-      parseInt(timerEl.dataset.startSeconds, 10);
+      (parseInt(timerEl.dataset.startDays, 10) || 0) * 86400 +
+      (parseInt(timerEl.dataset.startHours, 10) || 0) * 3600 +
+      (parseInt(timerEl.dataset.startMinutes, 10) || 0) * 60 +
+      (parseInt(timerEl.dataset.startSeconds, 10) || 0);
 
     function updateTimer() {
-      if (totalSeconds <= 0) {
-        totalSeconds = 0; // Prevent negatives
-      }
+      if (totalSeconds < 0) totalSeconds = 0;
 
       const days = Math.floor(totalSeconds / 86400);
       const hours = Math.floor((totalSeconds % 86400) / 3600);
