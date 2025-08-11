@@ -192,7 +192,7 @@
     right: 0;
     width: 165px;
     height: 35px;
-    background: url(" offer-marker.svg' | asset_url ");
+    background: url("{{ 'offer-marker.svg' | asset_url }}");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center
