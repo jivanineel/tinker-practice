@@ -196,6 +196,7 @@
 .offer-text strong{
     position: relative;
     font-weight: 400;
+    display: inline-block;
 }
 
 .offer-text strong::before {
