@@ -71,5 +71,6 @@
     {% endif %}
     --letter-spacing: var(--letter-spacing--{{ type }}-{{ settings.letter_spacing }});
   {%- endif -%}
+    --font-family: {{ settings.font }};
 {%- endcapture -%}
 {{- variables | strip | strip_newlines -}}
