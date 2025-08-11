@@ -819,7 +819,7 @@
               "type": "_timer",
               "name": "Countdown Timer",
               "settings": {
-                "font": "var(--font-body--family)"
+                "font": "var(--font-accent--family)"
               },
               "blocks": {}
             }
