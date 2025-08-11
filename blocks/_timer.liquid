@@ -45,70 +45,32 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-  const timerEl = document.querySelector('.offer-time-container');
-  if (!timerEl) return;
+    const timerEl = document.querySelector('.offer-time');
+    if (!timerEl) return;
 
-  const storageKey = 'offerTimerEndTime';
-  const storageHashKey = 'offerTimerSettingsHash';
+    let totalSeconds = 24 * 60 * 60; // 24 hours in seconds
 
-  // Get values from Shopify Theme Editor
-  const startDays = parseInt(timerEl.dataset.startDays, 10) || 0;
-  const startHours = parseInt(timerEl.dataset.startHours, 10) || 0;
-  const startMinutes = parseInt(timerEl.dataset.startMinutes, 10) || 0;
-  const startSeconds = parseInt(timerEl.dataset.startSeconds, 10) || 0;
+    function updateTimer() {
+      if (totalSeconds < 0) totalSeconds = 0;
 
-  // Create a hash of the starting values (to detect changes in the editor)
-  const currentHash = `${startDays}-${startHours}-${startMinutes}-${startSeconds}`;
-  const savedHash = localStorage.getItem(storageHashKey);
+      const days = Math.floor(totalSeconds / 86400);
+      const hours = Math.floor((totalSeconds % 86400) / 3600);
+      const minutes = Math.floor((totalSeconds % 3600) / 60);
+      const seconds = totalSeconds % 60;
 
-  let endTime;
+      timerEl.querySelector('.days').textContent = String(days).padStart(2, '0');
+      timerEl.querySelector('.hours').textContent = String(hours).padStart(2, '0');
+      timerEl.querySelector('.minutes').textContent = String(minutes).padStart(2, '0');
+      timerEl.querySelector('.seconds').textContent = String(seconds).padStart(2, '0');
 
-  if (currentHash !== savedHash) {
-    // Settings have changed → start fresh
-    const totalSeconds =
-      startDays * 86400 +
-      startHours * 3600 +
-      startMinutes * 60 +
-      startSeconds;
-
-    endTime = Date.now() + totalSeconds * 1000;
-
-    // Save in localStorage
-    localStorage.setItem(storageKey, endTime);
-    localStorage.setItem(storageHashKey, currentHash);
-  } else {
-    // Use saved end time
-    endTime = parseInt(localStorage.getItem(storageKey), 10) || Date.now();
-  }
-
-  function updateTimer() {
-    const now = Date.now();
-    let remaining = Math.floor((endTime - now) / 1000);
-
-    if (remaining <= 0) {
-      remaining = 0;
-      localStorage.removeItem(storageKey);
-      localStorage.removeItem(storageHashKey);
+      if (totalSeconds > 0) {
+        totalSeconds--;
+        setTimeout(updateTimer, 1000);
+      }
     }
 
-    const days = Math.floor(remaining / 86400);
-    const hours = Math.floor((remaining % 86400) / 3600);
-    const minutes = Math.floor((remaining % 3600) / 60);
-    const seconds = remaining % 60;
-
-    timerEl.querySelector('.days').textContent = String(days).padStart(2, '0');
-    timerEl.querySelector('.hours').textContent = String(hours).padStart(2, '0');
-    timerEl.querySelector('.minutes').textContent = String(minutes).padStart(2, '0');
-    timerEl.querySelector('.seconds').textContent = String(seconds).padStart(2, '0');
-
-    if (remaining > 0) {
-      setTimeout(updateTimer, 1000);
-    }
-  }
-
-  updateTimer();
-});
-
+    updateTimer();
+  });
 </script>
 
 {% schema %}
