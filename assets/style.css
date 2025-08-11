@@ -241,7 +241,9 @@
         width: 33.33%;
         flex: none;
     }
-
+    .offer-section .layout-panel-flex{
+        flex-direction:column !important;
+    }
 }
 
 @media screen and (max-width: 768px) {
