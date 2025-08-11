@@ -819,10 +819,7 @@
               "type": "_timer",
               "name": "Countdown Timer",
               "settings": {
-                "days": 11,
-                "hours": 10,
-                "minutes": 0,
-                "seconds": 0
+                "font": "var(--font-accent--family)"
               },
               "blocks": {}
             }
