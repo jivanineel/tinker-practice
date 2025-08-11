@@ -182,7 +182,18 @@
 }
 
 .offer-text{
-    position: 
+    position: relative;
+}
+
+.offer-text::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url({{ 'offer-marker.svg' | asset_url }}) no-repeat center;
+    background-size: contain; /* or cover depending on your need */
+    width: 20px;  /* set the size */
+    height: 20px; /* set the size */
 }
 
 @media screen and (max-width: 1440px){
