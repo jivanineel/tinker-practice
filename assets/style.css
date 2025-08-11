@@ -256,6 +256,10 @@
     .offer-section .layout-panel-flex .image-block{
         width: 100%;
     }
+
+    .offer-section .layout-panel-flex .offer-group{
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 768px) {
