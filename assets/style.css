@@ -182,15 +182,15 @@
 }
 
 .offer-section .layout-panel-flex .image-block{
-        width: 50%;
-    }
+    width: 50%;
+}
 
 .offer-section .layout-panel-flex{
     width: 50%;
 }
 
 .layout-panel-flex--row>.group-block--width-custom.offer-group{
-    flex-basis: none !important
+    flex-basis: 1 !important
 }
 
 .offer-text{
