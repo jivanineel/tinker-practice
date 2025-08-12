@@ -836,7 +836,7 @@
                       "name": "t:names.text",
                       "settings": {
                         "text": "<p>World Wide Shipping</p>",
-                        "text_custom_class": "",
+                        "text_custom_class": "advantage-name",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
@@ -1023,7 +1023,7 @@
                       "name": "t:names.text",
                       "settings": {
                         "text": "<p>Organnic Cosmetics</p>",
-                        "text_custom_class": "",
+                        "text_custom_class": "advantage-name",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
@@ -1210,7 +1210,7 @@
                       "name": "t:names.text",
                       "settings": {
                         "text": "<p>Laconic Design</p>",
-                        "text_custom_class": "",
+                        "text_custom_class": "advantage-name",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
