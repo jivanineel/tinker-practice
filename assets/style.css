@@ -148,7 +148,8 @@
 }
 
 .footer-groups{
-    width: calc(100%+5px);
+    max-width: 200px;
+    width: 100%;
 }
 
 .footer-groups ul li a{
