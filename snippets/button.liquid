@@ -19,6 +19,8 @@
     size-style
     {{ block.settings.style_class }}
     {{ block.settings.style_class }}--{{ block.id }}
+
+    {{ block.settings.custom_button_class }}
   "
   style="{% render 'size-style', settings: block.settings %}"
   {%- if block.settings.open_in_new_tab -%}
