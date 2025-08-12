@@ -294,6 +294,10 @@
     .layout-panel-flex--row>.group-block--width-custom.offer-group{
         flex-basis: 100% !important
     }
+
+    .advantage-name p{
+        font-size: 20px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -333,10 +337,6 @@
 
     .advantage-info img{
         max-width: 60px
-    }
-
-    .advantage-name p{
-        font-size: 20px;
     }
 
     .advantage-info .layout-panel-flex{
