@@ -272,6 +272,12 @@
     }
 }
 
+@media (min-width: 1200px) and (max-width: 991px){
+    .banner-class{
+        gap: 20px;
+    }
+}
+
 @media screen and (max-width: 991px) {
     .banner-heading p{
         font-size: 48px !important;
