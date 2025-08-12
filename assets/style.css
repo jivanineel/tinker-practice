@@ -519,8 +519,12 @@
         font-size: 18px
     }
 
+    .special-offer{
+        margin-bottom: 10px;
+    }
+
     .special-offer p{
-        font-size: 14px
+        font-size: 14px;
     }
 }
 
