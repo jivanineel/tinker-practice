@@ -462,10 +462,6 @@
         width: 30px;
         height: 30px;
     }
-    .resource-list--grid{
-        grid-template-columns: repeat(1, 1fr);
-    }
-
     
     .footer-grid .footer-groups.footer-input{
         width: 100%;
