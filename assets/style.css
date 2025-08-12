@@ -272,7 +272,7 @@
     }
 }
 
-@media (min-width: 1200px) and (max-width: 991px){
+@media (min-width: 992px) and (max-width: 1199px){
     .banner-class{
         gap: 20px;
     }
