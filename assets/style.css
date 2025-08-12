@@ -409,6 +409,10 @@
         width: 121px;
         height: 30px;
     }
+
+    .offer-section .common-btn{
+        max-width: 150px
+    }
 }
 
 @media screen and (max-width:425px) {
