@@ -140,11 +140,13 @@
 
 .dot-link-none{
     list-style: none;
+    cursor: pointer;
 }
 
 .dot-link{
     list-style: disc;
     padding-left: 20px;
+    cursor: pointer;
 }
 
 .footer-groups{
