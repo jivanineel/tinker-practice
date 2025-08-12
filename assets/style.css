@@ -327,6 +327,10 @@
         max-width: 150px;
     }
 
+    .banner-class .common-btn{
+        max-width: 100px
+    }
+
     .banner-content{
         margin-bottom: 0;
     }
