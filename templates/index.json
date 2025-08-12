@@ -1087,7 +1087,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p>Organnic Cosmetics</p>",
+                        "text": "<p>Organic Cosmetics</p>",
                         "text_custom_class": "advantage-name",
                         "width": "fit-content",
                         "max_width": "normal",
