@@ -1452,7 +1452,7 @@
               "name": "t:names.text",
               "settings": {
                 "text": "<p>special Offer</p>",
-                "text_custom_class": "",
+                "text_custom_class": "special-offer",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
