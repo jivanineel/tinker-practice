@@ -295,6 +295,10 @@
         flex-basis: 100% !important
     }
 
+    .advantage-info img{
+        max-width: 60px
+    }
+
     .advantage-name p{
         font-size: 20px;
     }
@@ -333,10 +337,6 @@
         right: -7px;
         width: 143px;
         height: 31px;
-    }
-
-    .advantage-info img{
-        max-width: 60px
     }
 
     .advantage-info .layout-panel-flex{
