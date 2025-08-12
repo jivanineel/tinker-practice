@@ -176,6 +176,14 @@
     border-radius: 50%;
 }
 
+.social-media .social-icons__icon-wrapper:hover{
+    background: #CBB6A6;
+}
+
+.social-media .social-icons__icon-wrapper:hover svg{
+    color: #553E3980
+}
+
 .social-media .social-icons__icon-wrapper svg{
     width: 24px;
     height: 24px;
