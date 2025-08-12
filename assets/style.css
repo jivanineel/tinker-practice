@@ -247,6 +247,10 @@
     background-size: contain;
 }
 
+.special-offer{
+    color: #CBB6A6
+}
+
 .advantage-info img{
     max-width: 80px;
 }
