@@ -944,7 +944,7 @@
                   "type": "image",
                   "name": "t:names.image",
                   "settings": {
-                    "image": "shopify://shop_images/purchase-advantages-1.svg",
+                    "image": "shopify://shop_images/purchase-advantages-2.svg",
                     "link": "",
                     "custom_image_class": "",
                     "image_ratio": "adapt",
@@ -1118,7 +1118,7 @@
                   "type": "image",
                   "name": "t:names.image",
                   "settings": {
-                    "image": "shopify://shop_images/purchase-advantages-1.svg",
+                    "image": "shopify://shop_images/purchase-advantages-3.svg",
                     "link": "",
                     "custom_image_class": "",
                     "image_ratio": "adapt",
