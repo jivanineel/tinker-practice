@@ -449,6 +449,10 @@
         width: 50%;
     }
 
+    .common-btn.offer-btn{
+        max-width: 100px;
+    }
+
     .footer-input,
     .footer-contact-info{
         max-width: 100%;
