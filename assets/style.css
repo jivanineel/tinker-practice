@@ -147,6 +147,10 @@
     padding-left: 20px;
 }
 
+.footer-groups{
+    width: calc(100%+5px);
+}
+
 .footer-groups ul li a{
     margin-left: 0;
     transition: all 0.2s ease-in-out
