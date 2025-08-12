@@ -152,12 +152,12 @@
     width: 100%;
 }
 
-.footer-groups ul li a{
+.footer-groups ul.dot-link-none li a{
     margin-left: 0;
     transition: all 0.2s ease-in-out
 }
 
-.footer-groups ul li a:hover{
+.footer-groups ul.dot-link-none li a:hover{
     margin-left: 3px;
 }
 
