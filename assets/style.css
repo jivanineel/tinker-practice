@@ -475,7 +475,6 @@
 
     .common-btn.offer-btn{
         max-width: 100px;
-        margin-top: 20px
     }
 
     .footer-input,
@@ -510,6 +509,7 @@
         max-width: 150px;
         font-size: 14px;
         padding: 16px 0;
+        margin-top: 50px;
     }
 
     .advantage-info img{
