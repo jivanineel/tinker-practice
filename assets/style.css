@@ -247,7 +247,7 @@
     background-size: contain;
 }
 
-.special-offer{
+.special-offer p{
     color: #CBB6A6
 }
 
@@ -517,6 +517,10 @@
     
     .advantage-name p{
         font-size: 18px
+    }
+
+    .special-offer p{
+        font-size: 14px
     }
 }
 
