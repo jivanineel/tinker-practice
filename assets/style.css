@@ -89,6 +89,7 @@
     position: relative;
     overflow: hidden;
     transition: all 0.5s ease-in-out;
+    cursor: pointer;
 }
 
 .gallery-section .instagram-image .overlay-image{
