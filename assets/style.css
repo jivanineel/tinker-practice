@@ -205,6 +205,10 @@
     max-width: 1312px;
 }
 
+.common-btn.offer-btn{
+    max-width: 150px;
+}
+
 .offer-section .layout-panel-flex .image-block{
     width: 50%;
 }
