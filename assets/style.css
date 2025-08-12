@@ -296,7 +296,7 @@
     }
 
     .advantage-info .layout-panel-flex{
-        flex-wrap: wrap
+        flex-direction: column;
     }
 
     .advantage-info .advantage-card{
