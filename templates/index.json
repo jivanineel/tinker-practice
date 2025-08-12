@@ -864,7 +864,7 @@
                       "name": "t:names.text",
                       "settings": {
                         "text": "<p>Experience the convenience of global delivery and unlock the power of premium grooming.</p>",
-                        "text_custom_class": "",
+                        "text_custom_class": "advantage-details",
                         "width": "fit-content",
                         "max_width": "narrow",
                         "alignment": "left",
@@ -1051,7 +1051,7 @@
                       "name": "t:names.text",
                       "settings": {
                         "text": "<p>Nature’s best for your skin. Discover our orgranic cosmetic for men, crafted with pure, gentle ingredients.</p>",
-                        "text_custom_class": "",
+                        "text_custom_class": "advantage-details",
                         "width": "fit-content",
                         "max_width": "narrow",
                         "alignment": "left",
@@ -1238,7 +1238,7 @@
                       "name": "t:names.text",
                       "settings": {
                         "text": "<p>Effortlessly stylish. Our men’s beauty and care essentials feature a sleek, minimalist design</p>",
-                        "text_custom_class": "",
+                        "text_custom_class": "advantage-details",
                         "width": "fit-content",
                         "max_width": "narrow",
                         "alignment": "left",
