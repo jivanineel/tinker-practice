@@ -287,6 +287,10 @@
         font-size: 48px !important;
     }
 
+    .banner-content p{
+        margin-bottom: 0
+    }
+
     .shopping-category p{
         font-size: 34px;
     }
