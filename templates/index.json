@@ -470,8 +470,8 @@
       ],
       "custom_css": [
         "slideshow-slides {justify-content: center;}",
-        "@media screen and (max-width: 991px) {slideshow-slides {gap: 30px; justify-content: start; } slideshow-slide {width: 111px; }}",
-        "@media screen and (max-width: 575px) {slideshow-slide {width: 80px; }}"
+        "@media screen and (max-width: 991px) {slideshow-slides {gap: 30px; justify-content: start; } slideshow-slide {width: 130px; }}",
+        "@media screen and (max-width: 575px) {slideshow-slide {width: 92px; }}"
       ],
       "name": "Shop By Category",
       "settings": {
