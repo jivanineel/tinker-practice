@@ -1009,7 +1009,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p>World Wide Shipping</p>",
+                        "text": "<p>Organnic Cosmetics</p>",
                         "text_custom_class": "",
                         "width": "fit-content",
                         "max_width": "normal",
