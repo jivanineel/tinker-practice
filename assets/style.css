@@ -330,6 +330,11 @@
         width: 143px;
         height: 31px;
     }
+
+    
+    .advantage-name p{
+        font-size: 20px;
+    }
 }
 
 @media screen and (max-width: 575px) {
@@ -436,6 +441,11 @@
 
     .advantage-details p{
         font-size: 16px
+    }
+
+    
+    .advantage-name p{
+        font-size: 18px
     }
 }
 
