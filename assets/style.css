@@ -343,6 +343,10 @@
         height: 31px;
     }
 
+    .advantage-info .advantage-card{
+        max-width: 100%
+    }
+
     .advantage-info .layout-panel-flex{
         flex-direction: column;
     }
