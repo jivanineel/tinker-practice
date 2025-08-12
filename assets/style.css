@@ -148,12 +148,12 @@
 }
 
 .footer-groups ul li a{
-    padding-left: 0;
+    margin-left: 0;
     transition: all 0.2s ease-in-out
 }
 
 .footer-groups ul li a:hover{
-    padding-left: 3px;
+    margin-left: 3px;
 }
 
 .footer-dot-text ul{
