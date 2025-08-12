@@ -1037,7 +1037,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p>Experience the convenience of global delivery and unlock the power of premium grooming.</p>",
+                        "text": "<p>Nature’s best for your skin. Discover our orgranic cosmetic for men, crafted with pure, gentle ingredients.</p>",
                         "text_custom_class": "",
                         "width": "fit-content",
                         "max_width": "narrow",
@@ -1183,7 +1183,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p>World Wide Shipping</p>",
+                        "text": "<p>Laconic Design</p>",
                         "text_custom_class": "",
                         "width": "fit-content",
                         "max_width": "normal",
