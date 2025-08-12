@@ -294,6 +294,14 @@
     .layout-panel-flex--row>.group-block--width-custom.offer-group{
         flex-basis: 100% !important
     }
+
+    .advantage-info .layout-panel-flex{
+        flex-wrap: wrap
+    }
+
+    .advantage-info .advantage-card{
+        max-width: 50%
+    }
 }
 
 @media screen and (max-width: 768px) {
