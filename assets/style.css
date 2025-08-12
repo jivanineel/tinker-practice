@@ -111,7 +111,7 @@
 
 .gallery-section .instagram-image .overlay-image .social-icons__icon-wrapper .social-icons__icon {
     color: #fff;
-    width: 39px;
+    min-width: 39px;
     height: 39px;
 }
 
@@ -400,8 +400,8 @@
     }
     
     .gallery-section .instagram-image .overlay-image .social-icons__icon-wrapper .social-icons__icon {
-        width: 18px;
-        height: 18px;
+        minwidth: 24px;
+        height: 24px;
     }
 
     .offer-text strong:before {
