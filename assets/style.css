@@ -234,6 +234,10 @@
     border-left: none;
 }
 
+.advantages-divider{
+    background: #2C2723
+}
+
 @media screen and (max-width: 1440px){
     .banner-class .layout-panel-flex--column{
         max-width: 90%;
