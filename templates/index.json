@@ -1261,7 +1261,7 @@
       "name": "advantages",
       "settings": {
         "content_direction": "column",
-        "section_custom_class": "",
+        "section_custom_class": "advantages-sec",
         "vertical_on_mobile": true,
         "horizontal_alignment": "flex-start",
         "vertical_alignment": "center",
