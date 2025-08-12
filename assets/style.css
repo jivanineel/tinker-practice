@@ -484,6 +484,7 @@
     .offer-section .common-btn{
         max-width: 150px;
         font-size: 16px;
+        padding: 16px 0;
     }
 
     .advantage-info img{
