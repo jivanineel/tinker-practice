@@ -190,7 +190,8 @@
 }
 
 .offer-section .common-btn{
-    max-width: 230px;
+    max-width: 250px;
+    padding: 16px 0;
 }
 
 .layout-panel-flex--row>.group-block--width-custom.offer-group{
