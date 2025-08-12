@@ -1517,7 +1517,7 @@
         "review_RjUBGM": {
           "type": "review",
           "settings": {
-            "image": "shopify://shop_images/customer-review-1.png",
+            "image": "shopify://shop_images/customer-review-2.png",
             "name": "Isabella",
             "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
           }
@@ -1525,7 +1525,7 @@
         "review_TGDALr": {
           "type": "review",
           "settings": {
-            "image": "shopify://shop_images/customer-review-1.png",
+            "image": "shopify://shop_images/customer-review-3.png",
             "name": "Isabella",
             "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
           }
@@ -1533,7 +1533,7 @@
         "review_4D6kNk": {
           "type": "review",
           "settings": {
-            "image": "shopify://shop_images/customer-review-1.png",
+            "image": "shopify://shop_images/customer-review-4.png",
             "name": "Isabella",
             "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
           }
