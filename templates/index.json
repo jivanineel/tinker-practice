@@ -1261,7 +1261,7 @@
       "name": "advantages",
       "settings": {
         "content_direction": "column",
-        "section_custom_class": "advantages-sec",
+        "section_custom_class": "advantages-section",
         "vertical_on_mobile": true,
         "horizontal_alignment": "flex-start",
         "vertical_alignment": "center",
@@ -1276,7 +1276,7 @@
         "background_media": "none",
         "video_position": "cover",
         "background_image_position": "cover",
-        "border": "solid",
+        "border": "none",
         "border_width": 1,
         "border_opacity": 100,
         "border_radius": 0,
