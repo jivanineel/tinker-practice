@@ -331,7 +331,10 @@
         height: 31px;
     }
 
-    
+    .advantage-info img{
+        max-width: 60px
+    }
+
     .advantage-name p{
         font-size: 20px;
     }
@@ -443,6 +446,9 @@
         font-size: 16px
     }
 
+    .advantage-info img{
+        max-width: 45px
+    }
     
     .advantage-name p{
         font-size: 18px
