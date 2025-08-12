@@ -299,6 +299,10 @@
         max-width: 60px
     }
 
+    .advantage-details p{
+        font-size: 16px
+    }
+
     .advantage-name p{
         font-size: 20px;
     }
@@ -444,10 +448,6 @@
     .offer-section .common-btn{
         max-width: 150px;
         font-size: 16px;
-    }
-
-    .advantage-details p{
-        font-size: 16px
     }
 
     .advantage-info img{
