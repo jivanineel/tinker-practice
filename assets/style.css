@@ -223,6 +223,10 @@
     max-width: 80px;
 }
 
+.advantage-info .advantage-card{
+    max-width: 337px;
+    width: 100%;
+}
 
 .advantages-section{
     border: 1px solid #2C2723;
