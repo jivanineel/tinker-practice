@@ -192,6 +192,7 @@
 .offer-section .common-btn{
     max-width: 250px;
     padding: 21px 0;
+    font-size: 18px;
 }
 
 .layout-panel-flex--row>.group-block--width-custom.offer-group{
@@ -411,7 +412,8 @@
     }
 
     .offer-section .common-btn{
-        max-width: 150px
+        max-width: 150px;
+        font-size: 16px;
     }
 }
 
