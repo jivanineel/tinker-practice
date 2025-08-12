@@ -971,7 +971,7 @@
                 "thickness": 1,
                 "corner_radius": "square",
                 "divider-class": "advantages-divider",
-                "width_percent": 100,
+                "width_percent": 48,
                 "padding-block-start": 0,
                 "padding-block-end": 0
               },
