@@ -302,10 +302,7 @@
     const minSlider = document.getElementById('price-min-slider');
     const maxSlider = document.getElementById('price-max-slider');
 
-    // Find the parent filter form
-    const filterForm = minInput ? minInput.closest('form') : null;
-
-    if (!minInput || !maxInput || !minSlider || !maxSlider || !filterForm) return;
+    if (!minInput || !maxInput || !minSlider || !maxSlider) return;
 
     function syncFromSlider() {
       let minVal = parseInt(minSlider.value);
@@ -313,19 +310,11 @@
       if (minVal > maxVal) [minVal, maxVal] = [maxVal, minVal];
       minInput.value = minVal;
       maxInput.value = maxVal;
-
-      // Submit the form automatically
-      filterForm.dispatchEvent(new Event('input', { bubbles: true }));
-      filterForm.submit();
     }
 
     function syncFromInput() {
       minSlider.value = minInput.value || 0;
       maxSlider.value = maxInput.value || maxSlider.max;
-
-      // Submit the form automatically
-      filterForm.dispatchEvent(new Event('input', { bubbles: true }));
-      filterForm.submit();
     }
 
     minSlider.addEventListener('input', syncFromSlider);
@@ -333,7 +322,6 @@
     minInput.addEventListener('change', syncFromInput);
     maxInput.addEventListener('change', syncFromInput);
 
-    // Initialize
     syncFromInput();
   });
 {% endjavascript %}
