@@ -80,6 +80,27 @@
             {{ filter.label }}
           </div>
 
+          <!-- Double Range Slider -->
+          <div class="price-slider">
+            <div class="price-slider-track"></div>
+            <input
+              type="range"
+              id="price-min-slider"
+              min="0"
+              max="{{ filter.range_max | money_without_currency | replace: ',', '' }}"
+              value="{{ filter.min_value.value | default: 0 | money_without_currency | replace: ',', '' }}"
+              step="1"
+            >
+            <input
+              type="range"
+              id="price-max-slider"
+              min="0"
+              max="{{ filter.range_max | money_without_currency | replace: ',', '' }}"
+              value="{{ filter.max_value.value | default: filter.range_max | money_without_currency | replace: ',', '' }}"
+              step="1"
+            >
+          </div>
+
           <!-- Price Inputs -->
           <div class="price-facet__inputs-wrapper">
             <div class="price-facet__input-wrapper">
@@ -113,27 +134,6 @@
                 max="{{ filter.range_max | money_without_currency | replace: ',', '' }}"
               >
             </div>
-          </div>
-
-          <!-- Double Range Slider -->
-          <div class="price-slider">
-            <div class="price-slider-track"></div>
-            <input
-              type="range"
-              id="price-min-slider"
-              min="0"
-              max="{{ filter.range_max | money_without_currency | replace: ',', '' }}"
-              value="{{ filter.min_value.value | default: 0 | money_without_currency | replace: ',', '' }}"
-              step="1"
-            >
-            <input
-              type="range"
-              id="price-max-slider"
-              min="0"
-              max="{{ filter.range_max | money_without_currency | replace: ',', '' }}"
-              value="{{ filter.max_value.value | default: filter.range_max | money_without_currency | replace: ',', '' }}"
-              step="1"
-            >
           </div>
         </div>
       </price-facet-component>
