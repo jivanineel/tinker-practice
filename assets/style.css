@@ -539,6 +539,10 @@
     .special-offer p{
         font-size: 14px;
     }
+
+    .product-banner{
+        font-size: 30px;
+    }   
 }
 
 @media screen and (max-width:425px) {
