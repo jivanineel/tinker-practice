@@ -50,7 +50,7 @@
 
       <div class="facets__status-wrapper">
         {% if is_swatch %}
-          <facet-status-component
+          {% comment %} <facet-status-component
             class="facets__status facets__status--swatches"
             facet-type="swatches"
           >
@@ -68,7 +68,7 @@
                 endif
               -%}
             </span>
-          </facet-status-component>
+          </facet-status-component> {% endcomment %}
         {% else %}
           <facet-status-component
             class="facets__status"
