@@ -149,8 +149,8 @@
                 "custom_width_mobile": 100,
                 "height": "fit",
                 "custom_height": 100,
-                "inherit_color_scheme": true,
-                "color_scheme": "",
+                "inherit_color_scheme": false,
+                "color_scheme": "scheme-1",
                 "background_media": "none",
                 "video_position": "cover",
                 "background_image_position": "cover",
@@ -162,10 +162,10 @@
                 "overlay_color": "#00000026",
                 "overlay_style": "solid",
                 "gradient_direction": "to top",
-                "padding-block-start": 0,
+                "padding-block-start": 20,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
-                "padding-inline-end": 24
+                "padding-inline-end": 0
               },
               "blocks": {
                 "product_title_NzQUxN": {
