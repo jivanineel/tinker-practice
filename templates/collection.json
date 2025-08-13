@@ -16,7 +16,7 @@
           "type": "text",
           "settings": {
             "text": "<p>{{ closest.collection.title }}</p>",
-            "text_custom_class": "",
+            "text_custom_class": "product-banner",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
