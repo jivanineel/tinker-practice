@@ -23,7 +23,7 @@
             "type_preset": "custom",
             "font": "var(--font-primary--family)",
             "font_size": "",
-            "line_height": "normal",
+            "line_height": "tight",
             "letter_spacing": "normal",
             "font_family": "mono",
             "case": "none",
