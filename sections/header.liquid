@@ -168,7 +168,7 @@
 
 <header-component
   id="header-component"
-  class="{{ class }} {{ section.settings.header_class }}"
+  class="{{ class }} component-{{ section.settings.header_class }}"
   {% if transparent %}
     transparent="{{ transparent }}"
   {% endif %}
@@ -1037,3 +1037,9 @@
   "presets": []
 }
 {% endschema %}
+
+<style>
+  .component-{{ section.settings.header_class }}{
+    max
+  }
+</style>
