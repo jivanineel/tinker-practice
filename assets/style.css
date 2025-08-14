@@ -283,6 +283,10 @@
     min-height: 477px;
 }
 
+.collection-product-card .card-gallery .slide-show{
+    height: 100%
+}
+
 .quantity-selector{
     flex:none;
 }
