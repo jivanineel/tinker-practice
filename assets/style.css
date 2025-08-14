@@ -127,6 +127,10 @@
     transition: all 0.5s ease-in-out;
 }
 
+.footer-grid{
+    max-width: 1312px
+}
+
 .footer-logo{
     max-width: 132px;
 }
