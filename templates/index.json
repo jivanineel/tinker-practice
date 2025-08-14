@@ -638,6 +638,7 @@
           "settings": {
             "product_card_gap": 0,
             "inherit_color_scheme": false,
+            "custom_product_card": "home-collection",
             "color_scheme": "scheme-1",
             "border": "none",
             "border_width": 1,
