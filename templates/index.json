@@ -1706,7 +1706,7 @@
       "settings": {
         "customer_title": "Customer Say",
         "text-align": "center",
-        "padding_top": 100,
+        "padding_top": 0,
         "padding_bottom": 100,
         "padding_left": 0,
         "padding_right": 0,
