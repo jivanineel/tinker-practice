@@ -472,7 +472,7 @@
                           "settings": {
                             "text": "<p>Elegant design</p>",
                             "text_custom_class": "",
-                            "width": "100%",
+                            "width": "fit-content",
                             "max_width": "normal",
                             "alignment": "center",
                             "type_preset": "h6",
