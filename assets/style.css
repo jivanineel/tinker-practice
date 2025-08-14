@@ -287,6 +287,10 @@
     height: 100%
 }
 
+.collection-product-card .card-gallery slideshow-component .product-media{
+    height: 100%;
+}
+
 .quantity-selector{
     flex:none;
 }
