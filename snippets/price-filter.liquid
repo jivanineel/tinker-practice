@@ -284,12 +284,22 @@
 {% stylesheet %}
   /* Price filter base (kept from your file) */
   .price-facet { container-type: inline-size; display: flex; flex-direction: column; }
-  .facets__inputs-wrapper.price-facet__inputs-wrapper { flex-wrap: nowrap; }
-  .price-facet__field { width: 50%; flex-grow: 0; }
+  .facets__inputs-wrapper.price-facet__inputs-wrapper { 
+    flex-wrap: nowrap; 
+  }
+  .price-facet__field { 
+    width: 50%; 
+    flex-grow: 0; 
+  }
 
   @container (max-width: 199px) {
-    .facets__inputs-wrapper.price-facet__inputs-wrapper { flex-wrap: wrap; width: 100%; }
-    .price-facet__inputs-wrapper .price-facet__field { width: 100%; }
+    .facets__inputs-wrapper.price-facet__inputs-wrapper { 
+      flex-wrap: wrap; 
+      width: 100%; 
+    }
+    .price-facet__inputs-wrapper .price-facet__field { 
+      width: 100%; 
+    }
   }
 
   .facets .facets__inputs-wrapper.price-facet__inputs-wrapper {
@@ -297,10 +307,14 @@
     gap: calc(var(--gap-sm) + (var(--style-border-width-inputs) * 2));
   }
 
-  .facets--horizontal .facets__panel-content:has(.price-facet) { min-width: 360px; }
+  .facets--horizontal .facets__panel-content:has(.price-facet) { 
+    min-width: 360px; 
+  }
 
   .facets--horizontal .facets__inputs-wrapper.price-facet__inputs-wrapper {
-    @media screen and (min-width: 750px) { padding: calc(var(--padding-md) + var(--style-border-width-inputs)); }
+    @media screen and (min-width: 750px) { 
+      padding: calc(var(--padding-md) + var(--style-border-width-inputs)); 
+    }
   }
 
   .price-facet__input { 
@@ -308,7 +322,7 @@
     text-align: right; 
     padding-left: calc(2.5 * var(--input-padding-x)); 
   }
-  
+
   .price-facet__input::placeholder { 
     color: var(--facets-input-label-color); 
   }
