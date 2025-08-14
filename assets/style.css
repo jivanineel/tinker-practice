@@ -307,8 +307,8 @@
     font-size: 22px;
 }
 
-.collection-product-card p{
-    font-size: 22px;
+.collection-product-card .price{
+    font-size: 18px;
 }
 
 .quantity-selector{
