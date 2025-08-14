@@ -59,6 +59,7 @@
       },
       "settings": {
         "logo_position": "left",
+        "header_class": "header-main",
         "menu_position": "center",
         "menu_row": "top",
         "show_search": true,
