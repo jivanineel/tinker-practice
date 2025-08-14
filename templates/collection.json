@@ -104,6 +104,7 @@
           "settings": {
             "product_card_gap": 0,
             "inherit_color_scheme": false,
+            "custom_product_class": "collection-product-card",
             "color_scheme": "scheme-7",
             "border": "none",
             "border_width": 1,

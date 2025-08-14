@@ -273,9 +273,14 @@
 }
 
 
+/* COLLECTION page */
 .product-banner{
     font-size: 50px;
     font-weight: 400 !important;
+}
+
+.collection-product-card{
+    min-height: 561px;
 }
 
 .quantity-selector{
