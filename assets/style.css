@@ -278,6 +278,10 @@
     font-weight: 400 !important;
 }
 
+.quantity-selector{
+    flex:none;
+}
+
 @media screen and (max-width: 1440px){
     .banner-class .layout-panel-flex--column{
         max-width: 90%;
