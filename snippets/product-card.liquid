@@ -87,7 +87,7 @@
       border-style
       gap-style
       {% if block.settings.inherit_color_scheme == false %} color-{{ block.settings.color_scheme }}{% endif %}
-      {{ settings.custom_product_card }}
+      {{ block.settings.custom_product_card }}
     "
     style="
       {% render 'border-override', settings: block.settings %}
