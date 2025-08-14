@@ -1,9 +1,3 @@
-/* common width */
-.collection-grid-list{
-    max-width: 1312px;
-    margin: 0 auto;
-}
-
 .common-btn{
     font-size: 16px;
     line-height: 1;
@@ -77,10 +71,6 @@
     right: 0;
 }
 
-.home-collection .product-media-container{
-    max-height: 350px;
-}
-
 .adding-icons{
     height:40px;
     width: 40px;
@@ -129,11 +119,6 @@
 .gallery-section .instagram-image:hover .overlay-image{
     top: 0;
     transition: all 0.5s ease-in-out;
-}
-
-.footer-section .layout-panel-flex{
-    max-width: 1312px;
-    margin: 0 auto;
 }
 
 .footer-logo{
@@ -219,7 +204,6 @@
 
 .offer-section .layout-panel-flex{
     max-width: 1312px;
-    margin: 0 auto;
 }
 
 .common-btn.offer-btn{
@@ -269,11 +253,6 @@
     color: #CBB6A6 !important
 }
 
-.advantage-info{
-    max-width: 1312px;
-    margin: 0 auto
-}
-
 .advantage-info img{
     max-width: 80px;
 }
@@ -294,42 +273,9 @@
 }
 
 
-/* COLLECTION page */
 .product-banner{
     font-size: 50px;
     font-weight: 400 !important;
-}
-
-.collection-product-card .card-gallery{
-    min-height: 477px;
-}
-
-.collection-product-card .card-gallery slideshow-component{
-    height: 100%
-}
-
-.collection-product-card .card-gallery slideshow-container{
-    height: 100%;
-}
-
-.collection-product-card .card-gallery slideshow-slides{
-    height: 100%;
-}
-
-.collection-product-card .card-gallery slideshow-slide{
-    height: 100%;
-}
-
-.collection-product-card .card-gallery slideshow-component .product-media{
-    height: 100%;
-}
-
-.collection-product-card p{
-    font-size: 22px;
-}
-
-.collection-product-card .price{
-    font-size: 18px;
 }
 
 .quantity-selector{
@@ -469,19 +415,7 @@
 
     .product-banner{
         font-size: 36px;
-    }
-
-    .collection-product-card .card-gallery{
-        min-height:390px
-    }
-    
-    .collection-product-card p{
-        font-size: 20px;
-    }
-
-    .collection-product-card .price{
-        font-size: 16px;
-    }
+    }   
 }
 
 @media screen and (max-width: 750px) {
@@ -610,18 +544,6 @@
     .product-banner{
         font-size: 30px;
     }   
-
-    .collection-product-card .card-gallery{
-        min-height:246px
-    }
-
-    .collection-product-card p{
-        font-size: 18px;
-    }
-
-    .collection-product-card .price{
-        font-size: 14px;
-    }
 }
 
 @media screen and (max-width:425px) {
