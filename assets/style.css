@@ -448,7 +448,15 @@
 
     .product-banner{
         font-size: 36px;
-    }   
+    }
+    
+    .collection-product-card p{
+        font-size: 20px;
+    }
+
+    .collection-product-card .price{
+        font-size: 16px;
+    }
 }
 
 @media screen and (max-width: 750px) {
