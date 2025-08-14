@@ -279,8 +279,8 @@
     font-weight: 400 !important;
 }
 
-.collection-product-card{
-    min-height: 561px;
+.collection-product-card img{
+    min-height: 477px;
 }
 
 .quantity-selector{
