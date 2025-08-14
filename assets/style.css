@@ -77,6 +77,10 @@
     right: 0;
 }
 
+.home-collection .product-media-container{
+    max-height: 350px;
+}
+
 .adding-icons{
     height:40px;
     width: 40px;
