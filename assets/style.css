@@ -590,7 +590,11 @@
         font-size: 30px;
     }   
 
-    ..collection-product-card p{
+    .collection-product-card .card-gallery{
+        min-height:300px
+    }
+
+    .collection-product-card p{
         font-size: 18px;
     }
 
