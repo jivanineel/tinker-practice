@@ -287,15 +287,15 @@
     height: 100%
 }
 
-slideshow-container{
+.collection-product-card .card-gallery slideshow-container{
     height: 100%;
 }
 
-slideshow-slides{
+.collection-product-card .card-gallery slideshow-slides{
     height: 100%;
 }
 
-slideshow-slide{
+.collection-product-card .card-gallery slideshow-slide{
     height: 100%;
 }
 
