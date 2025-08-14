@@ -303,9 +303,21 @@
     @media screen and (min-width: 750px) { padding: calc(var(--padding-md) + var(--style-border-width-inputs)); }
   }
 
-  .price-facet__input { width: 100%; text-align: right; padding-left: calc(2.5 * var(--input-padding-x)); }
-  .price-facet__input::placeholder { color: var(--facets-input-label-color); }
-  .price-facet__separator { display: flex; align-items: center; justify-content: center; font-size: var(--font-paragraph--size); }
+  .price-facet__input { 
+    width: 100%; 
+    text-align: right; 
+    padding-left: calc(2.5 * var(--input-padding-x)); 
+  }
+  
+  .price-facet__input::placeholder { 
+    color: var(--facets-input-label-color); 
+  }
+  .price-facet__separator { 
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    font-size: var(--font-paragraph--size); 
+  }
   .price-facet__highest-price { 
     padding: var(--padding-xs) 0 var(--padding-sm); 
   }
