@@ -283,7 +283,7 @@
     min-height: 477px;
 }
 
-.collection-product-card .card-gallery .slide-show{
+.collection-product-card .card-gallery slideshow-component{
     height: 100%
 }
 
