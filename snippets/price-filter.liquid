@@ -16,7 +16,6 @@
     data-disable-animation-on-desktop="true"
     data-close-with-escape="true"
   {% endif %}
-
   open-by-default-on-mobile
   {% if filter_style == 'vertical' %}
     open
@@ -47,7 +46,6 @@
               {{- filter.max_value.value | money | strip_html -}}
             {%- elsif filter.min_value.value != null -%}
               {{ filter.min_value.value | money | strip_html }}–{{ filter.range_max | money | strip_html }}
-
             {%- elsif filter.max_value.value != null -%}
               {{- 0 | money | strip_html -}}
               –
@@ -60,6 +58,7 @@
         {{- 'icon-caret.svg' | inline_asset_content -}}
       </span>
     </summary>
+
     <floating-panel-component
       {% unless filter_style == 'vertical' %}
         data-close-on-resize
@@ -80,127 +79,202 @@
             {{ filter.label }}
           </div>
 
-          <!-- Price Inputs -->
-          <div class="price-facet__inputs-wrapper">
-            <div class="price-facet__input-wrapper">
+          <!-- Shopify native inputs (kept intact so filtering keeps working) -->
+          <div class="price-facet__inputs-wrapper facets__inputs-wrapper facets__inputs-wrapper--row">
+            <div class="field price-facet__field price-facet__input-wrapper">
               <span class="price-facet__currency">{{ cart.currency.symbol }}</span>
               <input
-                class="price-facet__input"
+                class="field__input price-facet__input"
                 name="{{ filter.min_value.param_name }}"
-                id="Filter-{{ filter.label | escape }}-GTE"
+                id="{{ filter.label | escape }}-GTE"
                 {% if filter.min_value.value %}
-                  value="{{ filter.min_value.value | money_without_currency | replace: ',', '' }}"
+                  value="{{ filter.min_value.value | money_without_currency | replace: ',', '' | strip }}"
                 {% endif %}
-                type="number"
+                type="text"
+                inputmode="decimal"
                 placeholder="0"
-                min="0"
-                max="{{ filter.range_max | money_without_currency | replace: ',', '' }}"
-                style="outline: none"
+                data-min="0"
+                data-max="{{ min_input_max_value | money_without_currency | replace: ',', '' | strip }}"
+                ref="minInput"
+                autocomplete="off"
+                {% if autofocus %}
+                  autofocus
+                {% endif %}
               >
+              <label class="field__label price-facet__label" for="{{ filter.label | escape }}-GTE">
+                {{- cart.currency.symbol -}}
+              </label>
             </div>
-            <span class="price-facet__separator">To</span>
-            <div class="price-facet__input-wrapper">
+
+            <div class="price-facet__separator">{{ 'fields.separator' | t }}</div>
+
+            <div class="field price-facet__field price-facet__input-wrapper">
               <span class="price-facet__currency">{{ cart.currency.symbol }}</span>
               <input
-                class="price-facet__input"
+                class="field__input price-facet__input"
                 name="{{ filter.max_value.param_name }}"
-                id="Filter-{{ filter.label | escape }}-LTE"
+                id="{{ filter.label | escape }}-LTE"
                 {% if filter.max_value.value %}
-                  value="{{ filter.max_value.value | money_without_currency | replace: ',', '' }}"
+                  value="{{ filter.max_value.value | money_without_currency | replace: ',', '' | strip }}"
                 {% endif %}
-                type="number"
-                placeholder="{{ filter.range_max | money_without_currency | replace: ',', '' }}"
-                min="0"
-                max="{{ filter.range_max | money_without_currency | replace: ',', '' }}"
-                style="outline: none"
+                type="text"
+                inputmode="decimal"
+                placeholder="{{ filter.range_max | money_without_currency | replace: ',', '' | strip }}"
+                data-min="{{ max_input_min_value | money_without_currency | replace: ',', '' | strip }}"
+                data-max="{{ filter.range_max | money_without_currency | replace: ',', '' | strip }}"
+                ref="maxInput"
+                autocomplete="off"
+                {% if autofocus %}
+                  autofocus
+                {% endif %}
               >
+              <label class="field__label price-facet__label" for="{{ filter.label | escape }}-LTE">
+                {{- cart.currency.symbol -}}
+              </label>
             </div>
           </div>
 
-          <!-- Double Range Slider -->
+          <!-- Highest price helper text (kept) -->
+          <div class="price-facet__highest-price">
+            {%- assign formatted_highest_price = filter.range_max | money -%}
+            {{ 'content.price_filter_html' | t: price: formatted_highest_price }}
+          </div>
+
+          <!-- Double range slider (new) -->
+          {% assign _range_max = filter.range_max | money_without_currency | replace: ',', '' | strip %}
+          {% assign _range_min = 0 %}
           <div class="price-slider">
-            <div class="price-slider-track" id="price-slider-track"></div>
+            <div class="price-slider__track"></div>
+            <div class="price-slider__range js-range-bar"></div>
+
             <input
               type="range"
-              id="price-min-slider"
-              min="0"
-              max="{{ filter.range_max | money_without_currency | replace: ',', '' }}"
-              value="{{ filter.min_value.value | default: 0 | money_without_currency | replace: ',', '' }}"
+              class="price-slider__thumb price-slider__thumb--min js-min-slider"
+              min="{{ _range_min }}"
+              max="{{ _range_max }}"
+              value="{{ filter.min_value.value | default: _range_min | money_without_currency | replace: ',', '' | strip }}"
               step="1"
+              aria-label="Minimum price"
             >
             <input
               type="range"
-              id="price-max-slider"
-              min="0"
-              max="{{ filter.range_max | money_without_currency | replace: ',', '' }}"
-              value="{{ filter.max_value.value | default: filter.range_max | money_without_currency | replace: ',', '' }}"
+              class="price-slider__thumb price-slider__thumb--max js-max-slider"
+              min="{{ _range_min }}"
+              max="{{ _range_max }}"
+              value="{{ filter.max_value.value | default: _range_max | money_without_currency | replace: ',', '' | strip }}"
               step="1"
+              aria-label="Maximum price"
             >
           </div>
         </div>
 
         {% javascript %}
-          document.addEventListener('DOMContentLoaded', function () {
-            const minInput = document.querySelector('.price-facet__input[name*="filter.v.price.gte"]');
-            const maxInput = document.querySelector('.price-facet__input[name*="filter.v.price.lte"]');
-            const minSlider = document.getElementById('price-min-slider');
-            const maxSlider = document.getElementById('price-max-slider');
-            const sliderTrack = document.querySelector('.slider-track');
+          (function () {
+            // Reusable initializer (runs on load and after AJAX facet updates)
+            function initAllPriceSliders() {
+              document.querySelectorAll('price-facet-component').forEach(function (component) {
+                if (component.dataset.sliderInitialized === 'true') return;
 
-            const minGap = 1; // at least 1 unit gap
+                const minInput = component.querySelector('.price-facet__input[name*="filter.v.price.gte"]');
+                const maxInput = component.querySelector('.price-facet__input[name*="filter.v.price.lte"]');
+                const minSlider = component.querySelector('.js-min-slider');
+                const maxSlider = component.querySelector('.js-max-slider');
+                const rangeBar = component.querySelector('.js-range-bar');
 
-            if (!minInput || !maxInput || !minSlider || !maxSlider || !sliderTrack) return;
+                if (!minInput || !maxInput || !minSlider || !maxSlider || !rangeBar) return;
 
-            function updateRangeHighlight() {
-              const rangeMin = parseInt(minSlider.min);
-              const rangeMax = parseInt(minSlider.max);
-              const percent1 = ((minSlider.value - rangeMin) / (rangeMax - rangeMin)) * 100;
-              const percent2 = ((maxSlider.value - rangeMin) / (rangeMax - rangeMin)) * 100;
-              sliderTrack.style.left = percent1 + '%';
-              sliderTrack.style.width = percent2 - percent1 + '%';
-            }
+                const minGap = 1; // enforce min < max by at least 1 unit
 
-            function syncFromSlider(e) {
-              let minVal = parseInt(minSlider.value);
-              let maxVal = parseInt(maxSlider.value);
+                // Helpers
+                const toNumber = (val) => {
+                  if (val == null) return 0;
+                  const s = String(val)
+                    .replace(/,/g, '')
+                    .replace(/[^\d.]/g, '');
+                  const n = parseFloat(s);
+                  return isNaN(n) ? 0 : n;
+                };
 
-              if (e.target.id === 'price-min-slider') {
-                if (minVal >= maxVal - minGap) {
-                  minVal = maxVal - minGap;
+                const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
+
+                function updateRangeBar() {
+                  const rangeMin = toNumber(minSlider.min);
+                  const rangeMax = toNumber(minSlider.max);
+                  const minVal = toNumber(minSlider.value);
+                  const maxVal = toNumber(maxSlider.value);
+
+                  const leftPct = ((minVal - rangeMin) / (rangeMax - rangeMin)) * 100;
+                  const rightPct = ((maxVal - rangeMin) / (rangeMax - rangeMin)) * 100;
+
+                  rangeBar.style.left = leftPct + '%';
+                  rangeBar.style.width = rightPct - leftPct + '%';
+                }
+
+                function syncFromSlider(e) {
+                  let minVal = toNumber(minSlider.value);
+                  let maxVal = toNumber(maxSlider.value);
+
+                  // prevent crossing (strictly less-than with a 1-unit gap)
+                  if (e && e.target === minSlider && minVal >= maxVal - minGap) {
+                    minVal = maxVal - minGap;
+                    minSlider.value = minVal;
+                  }
+                  if (e && e.target === maxSlider && maxVal <= minVal + minGap) {
+                    maxVal = minVal + minGap;
+                    maxSlider.value = maxVal;
+                  }
+
+                  minInput.value = minVal;
+                  maxInput.value = maxVal;
+                  updateRangeBar();
+                }
+
+                function syncFromInput() {
+                  let minVal = toNumber(minInput.value);
+                  let maxVal = toNumber(maxInput.value);
+
+                  const sliderMin = toNumber(minSlider.min);
+                  const sliderMax = toNumber(maxSlider.max);
+
+                  minVal = clamp(minVal, sliderMin, sliderMax);
+                  maxVal = clamp(maxVal, sliderMin, sliderMax);
+
+                  if (minVal >= maxVal - minGap) {
+                    maxVal = minVal + minGap; // keep strict separation
+                  }
+
                   minSlider.value = minVal;
-                }
-              } else {
-                if (maxVal <= minVal + minGap) {
-                  maxVal = minVal + minGap;
                   maxSlider.value = maxVal;
+                  updateRangeBar();
                 }
-              }
 
-              minInput.value = minVal;
-              maxInput.value = maxVal;
-              updateRangeHighlight();
+                // Bind events (no auto-submit; your theme handles submission normally)
+                minSlider.addEventListener('input', syncFromSlider);
+                maxSlider.addEventListener('input', syncFromSlider);
+                minInput.addEventListener('input', syncFromInput);
+                maxInput.addEventListener('input', syncFromInput);
+                minInput.addEventListener('change', syncFromInput);
+                maxInput.addEventListener('change', syncFromInput);
+
+                // Initial sync
+                syncFromInput();
+
+                // Mark initialized to avoid duplicate listeners after re-renders
+                component.dataset.sliderInitialized = 'true';
+              });
             }
 
-            function syncFromInput() {
-              let minVal = parseInt(minInput.value) || parseInt(minSlider.min);
-              let maxVal = parseInt(maxInput.value) || parseInt(maxSlider.max);
-
-              if (minVal < parseInt(minSlider.min)) minVal = parseInt(minSlider.min);
-              if (maxVal > parseInt(maxSlider.max)) maxVal = parseInt(maxSlider.max);
-              if (minVal >= maxVal - minGap) maxVal = minVal + minGap;
-
-              minSlider.value = minVal;
-              maxSlider.value = maxVal;
-              updateRangeHighlight();
+            // Run now (even if DOMContentLoaded already happened)
+            if (document.readyState === 'loading') {
+              document.addEventListener('DOMContentLoaded', initAllPriceSliders);
+            } else {
+              initAllPriceSliders();
             }
 
-            minSlider.addEventListener('input', syncFromSlider);
-            maxSlider.addEventListener('input', syncFromSlider);
-            minInput.addEventListener('change', syncFromInput);
-            maxInput.addEventListener('change', syncFromInput);
-
-            syncFromInput();
-          });
+            // Re-run after Shopify section/facet re-render events (Dawn/Tinker patterns)
+            document.addEventListener('shopify:section:load', initAllPriceSliders);
+            document.addEventListener('facets:updated', initAllPriceSliders);
+          })();
         {% endjavascript %}
       </price-facet-component>
     </floating-panel-component>
@@ -208,31 +282,14 @@
 </accordion-custom>
 
 {% stylesheet %}
-  /* Price filter */
-  .price-facet {
-    container-type: inline-size;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .facets__inputs-wrapper.price-facet__inputs-wrapper {
-    flex-wrap: nowrap;
-  }
-
-  .price-facet__field {
-    width: 50%;
-    flex-grow: 0;
-  }
+  /* Price filter base (kept from your file) */
+  .price-facet { container-type: inline-size; display: flex; flex-direction: column; }
+  .facets__inputs-wrapper.price-facet__inputs-wrapper { flex-wrap: nowrap; }
+  .price-facet__field { width: 50%; flex-grow: 0; }
 
   @container (max-width: 199px) {
-    .facets__inputs-wrapper.price-facet__inputs-wrapper {
-      flex-wrap: wrap;
-      width: 100%;
-    }
-
-    .price-facet__inputs-wrapper .price-facet__field {
-      width: 100%;
-    }
+    .facets__inputs-wrapper.price-facet__inputs-wrapper { flex-wrap: wrap; width: 100%; }
+    .price-facet__inputs-wrapper .price-facet__field { width: 100%; }
   }
 
   .facets .facets__inputs-wrapper.price-facet__inputs-wrapper {
@@ -240,124 +297,39 @@
     gap: calc(var(--gap-sm) + (var(--style-border-width-inputs) * 2));
   }
 
-  .facets--horizontal .facets__panel-content:has(.price-facet) {
-    min-width: 360px;
-  }
+  .facets--horizontal .facets__panel-content:has(.price-facet) { min-width: 360px; }
 
   .facets--horizontal .facets__inputs-wrapper.price-facet__inputs-wrapper {
-    @media screen and (min-width: 750px) {
-      padding: calc(var(--padding-md) + var(--style-border-width-inputs));
-    }
+    @media screen and (min-width: 750px) { padding: calc(var(--padding-md) + var(--style-border-width-inputs)); }
   }
 
-  .price-facet__input {
-    width: 100%;
-    text-align: right;
-    padding-left: calc(2.5 * var(--input-padding-x));
-    border: none;
-  }
+  .price-facet__input { width: 100%; text-align: right; padding-left: calc(2.5 * var(--input-padding-x)); }
+  .price-facet__input::placeholder { color: var(--facets-input-label-color); }
+  .price-facet__separator { display: flex; align-items: center; justify-content: center; font-size: var(--font-paragraph--size); }
+  .price-facet__highest-price { padding: var(--padding-xs) 0 var(--padding-sm); }
+  .facets--horizontal .price-facet__highest-price { padding: 0 var(--padding-md) var(--padding-xs); }
+  .field__label.price-facet__label { top: 0; left: 0; color: var(--facets-input-label-color); padding: var(--input-padding-y) var(--input-padding-x); transform: none; }
 
-  .price-facet__input::placeholder {
-    color: var(--facets-input-label-color);
-  }
+  /* Visuals for the card */
+  .price-facet__wrapper { background: #fff; padding: 15px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,.08); }
+  .price-facet__input-wrapper { display: flex; align-items: center; border: 1px solid #e5e5e5; padding: 5px 10px; border-radius: 6px; }
+  .price-facet__currency { color: #999; margin-right: 6px; }
 
-  .price-facet__separator {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: var(--font-paragraph--size);
+  /* Slider */
+  .price-slider { position: relative; margin-top: 14px; height: 24px; }
+  .price-slider__track {
+    position: absolute; left: 0; right: 0; top: 50%; height: 4px;
+    background: #ddd; transform: translateY(-50%); border-radius: 2px; z-index: 1;
   }
-
-  .price-facet__highest-price {
-    padding: var(--padding-xs) 0 var(--padding-sm);
+  .price-slider__range {
+    position: absolute; top: 50%; height: 4px; transform: translateY(-50%);
+    background: #000; border-radius: 2px; z-index: 2; left: 0; width: 0;
   }
-
-  .facets--horizontal .price-facet__highest-price {
-    padding: 0 var(--padding-md) var(--padding-xs);
+  .price-slider__thumb { position: absolute; width: 100%; -webkit-appearance: none; background: transparent; pointer-events: none; height: 24px; z-index: 3; }
+  .price-slider__thumb::-webkit-slider-thumb {
+    pointer-events: auto; -webkit-appearance: none; width: 16px; height: 16px; border-radius: 50%; background: #000; cursor: pointer;
   }
-
-  .field__label.price-facet__label {
-    top: 0;
-    left: 0;
-    color: var(--facets-input-label-color);
-    padding: var(--input-padding-y) var(--input-padding-x);
-    transform: none;
+  .price-slider__thumb::-moz-range-thumb {
+    pointer-events: auto; width: 16px; height: 16px; border-radius: 50%; background: #000; cursor: pointer;
   }
 {% endstylesheet %}
-
-<style>
-  .price-facet__wrapper {
-    background: #fff;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  }
-
-  .price-facet__inputs-wrapper {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    align-items: center;
-    margin-top: 10px;
-  }
-
-  .price-facet__input-wrapper {
-    display: flex;
-    align-items: center;
-    border: 1px solid #ccc;
-    padding: 5px 10px;
-    border-radius: 4px;
-  }
-
-  .price-facet__currency {
-    color: #aaa;
-    margin-right: 4px;
-  }
-
-  /* Slider Styles */
-  .price-slider {
-    position: relative;
-    margin-top: 15px;
-    height: 20px;
-  }
-
-  .price-slider-track {
-    position: absolute;
-    height: 2px;
-    background: #ccc;
-    top: 18%;
-    left: 0;
-    right: 0;
-    transform: translateY(-50%);
-    z-index: 1;
-  }
-
-  .price-slider input[type=range] {
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    -webkit-appearance: none;
-    background: transparent;
-    pointer-events: none;
-    z-index: 2;
-  }
-
-  .price-slider input[type=range]::-webkit-slider-thumb {
-    pointer-events: auto;
-    -webkit-appearance: none;
-    height: 16px;
-    width: 16px;
-    background: black;
-    border-radius: 50%;
-    cursor: pointer;
-  }
-
-  .price-slider input[type=range]::-moz-range-thumb {
-    pointer-events: auto;
-    height: 16px;
-    width: 16px;
-    background: black;
-    border-radius: 50%;
-    cursor: pointer;
-  }
-</style>
