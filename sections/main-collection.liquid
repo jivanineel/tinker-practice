@@ -43,7 +43,7 @@
   {% render 'skip-to-content-link', href: '#ResultsList', text: 'accessibility.skip_to_results_list' %}
 
   <div
-    class="collection-wrapper grid gap-style"
+    class="collection-wrapper grid gap-style {{ section.settings.collection_grid_class }}"
   >
     {% content_for 'block',
       type: 'filters',
