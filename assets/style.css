@@ -462,13 +462,6 @@
         font-size: 16px;
     }
     
-    .custom-product-card .spacing-style.text-block{
-        padding: 10px 10px 5px 10px
-    }
-    .custom-product-card .spacing-style.text-block:last-child{
-        padding: 0 10px 10px 10px;
-    }
-    
     .custom-product-card span{
         font-size: 12px;
     }
