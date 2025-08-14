@@ -264,6 +264,10 @@
     color: #CBB6A6 !important
 }
 
+.advantage-info{
+    max-width: 1312px;
+}
+
 .advantage-info img{
     max-width: 80px;
 }
