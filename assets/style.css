@@ -449,6 +449,10 @@
     .product-banner{
         font-size: 36px;
     }
+
+    .collection-product-card .card-gallery{
+        min-height:390px
+    }
     
     .collection-product-card p{
         font-size: 20px;
