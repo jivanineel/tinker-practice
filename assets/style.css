@@ -279,7 +279,7 @@
     font-weight: 400 !important;
 }
 
-.collection-product-card img{
+.collection-product-card .product-media{
     min-height: 477px;
 }
 
