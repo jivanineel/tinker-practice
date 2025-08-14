@@ -1,3 +1,8 @@
+/* common width */
+.collection-grid-list{
+    max-width: 1312px;
+}
+
 .common-btn{
     font-size: 16px;
     line-height: 1;
