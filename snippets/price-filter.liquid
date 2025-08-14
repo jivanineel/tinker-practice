@@ -325,16 +325,29 @@
     position: absolute; top: 50%; height: 4px; transform: translateY(-50%);
     background: #000; border-radius: 2px; z-index: 2; left: 0; width: 0;
   }
-  .price-slider__thumb { position: absolute; width: 100%; -webkit-appearance: none; background: transparent; pointer-events: none; height: 24px; z-index: 3; }
+  .price-slider__thumb { 
+    position: absolute;
+    width: 100%;
+    -webkit-appearance: none;
+    background: transparent; 
+    pointer-events: none; 
+    height: 24px; 
+    z-index: 3; 
+  }
   .price-slider__thumb::-webkit-slider-thumb {
-    pointer-events: auto; -webkit-appearance: none; width: 16px; height: 16px; border-radius: 50%; background: #000; cursor: pointer;
+    pointer-events: auto;
+    -webkit-appearance: none;
+    width: 16px; height: 16px;
+    border-radius: 50%;
+    background: #000;
+    cursor: pointer;
   }
   .price-slider__thumb::-moz-range-thumb {
     pointer-events: auto;
-     width: 16px;
-      height: 16px;
-       border-radius: 50%;
-       background: #000;
-        cursor: pointer;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #000;
+    cursor: pointer;
   }
 {% endstylesheet %}
