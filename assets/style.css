@@ -325,7 +325,7 @@
     min-height: 382px;
 }
 
-.modal-discount.popup-link__content .modal-group{
+.modal-discount.popup-link__content .popup-link__inner{
     height: 100%;
 }
 
