@@ -516,7 +516,7 @@
         display: none;
     }
 
-    .modal-discount.popup-link__content ..image-block:has(.modal-mobile){
+    .modal-discount.popup-link__content .image-block:has(.modal-mobile){
         display: block;
     }
 }
