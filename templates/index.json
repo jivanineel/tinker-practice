@@ -1723,7 +1723,7 @@
                           "name": "t:names.text",
                           "settings": {
                             "text": "<p>HUG DISCOUNT</p>",
-                            "text_custom_class": "",
+                            "text_custom_class": "huge-discount",
                             "width": "fit-content",
                             "max_width": "normal",
                             "alignment": "left",
