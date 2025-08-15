@@ -2,6 +2,7 @@
   <input
     class="custom-input component-{{ block.settings.input_class }}"
     placeholder="{{ block.settings.input_placeholder }}"
+    style="{% render 'typography-style', settings: block.settings %}; font-family: var(--font-family);"
   >
 </section>
 
