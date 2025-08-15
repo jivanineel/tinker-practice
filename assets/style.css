@@ -373,6 +373,10 @@
         grid-template-columns: repeat(3, 1fr)
     }
 
+    .footer-grid {
+        max-width: 1312px;
+    }
+
     .footer-grid .footer-groups{
         width: 50%;
     }
