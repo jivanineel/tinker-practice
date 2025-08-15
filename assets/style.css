@@ -351,12 +351,6 @@
     }
 }
 
-@media screen and (min-width: 767px) {
-    .modal-discount.popup-link__content>.layout-panel-flex{
-        flex-direction: row;
-    }
-}
-
 @media (min-width: 992px) and (max-width: 1199px){
     .banner-class{
         gap: 20px;
@@ -409,7 +403,7 @@
     .offer-section .layout-panel-flex{
         flex-direction: column !important;
     }
-
+    
     .offer-section .layout-panel-flex .image-block{
         width: 100%;
     }
@@ -437,6 +431,11 @@
     .product-banner{
         font-size: 42px;
     }   
+}
+@media screen and (min-width: 767px) {
+    .modal-discount.popup-link__content>.layout-panel-flex{
+        flex-direction: row !important;
+    }
 }
 
 @media screen and (max-width: 768px) {
