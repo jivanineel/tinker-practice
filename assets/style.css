@@ -289,6 +289,10 @@
     min-height: 382px;
 }
 
+.modal-discount.popup-link__content img{
+    max-width: 287px;
+}
+
 @media screen and (max-width: 1440px){
     .banner-class .layout-panel-flex--column{
         max-width: 90%;
