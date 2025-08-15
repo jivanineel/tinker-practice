@@ -20,7 +20,7 @@
 
   <dialog
     ref="dialog"
-    class="popup-link__content dialog-modal color-{{ settings.popover_color_scheme }}{% if block.settings.behavior == 'drawer' %} popup-link__content--drawer dialog-drawer{% endif %} "
+    class="popup-link__content dialog-modal color-{{ settings.popover_color_scheme }}{% if block.settings.behavior == 'drawer' %} popup-link__content--drawer dialog-drawer{% endif %} {{ block.settings.modal_class }}"
     scroll-lock
   >
     <div class="popup-link__inner">
@@ -137,6 +137,11 @@
         }
       ],
       "default": "default"
+    },
+    {
+      "type": "text",
+      "id": "modal_class",
+      "label": "modal-class"
     },
     {
       "type": "header",
