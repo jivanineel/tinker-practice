@@ -17,7 +17,15 @@
             "id": "input_placeholder",
             "label": "Input field placeholder"
         },
-        
+
     ]
 }
 {% endschema %}
+
+<style>
+    .component-{{ block.settings.input_class }}{
+        font-size: {{ block.settings.font_size }};
+        color: {{ block.settings.color }};
+        outline: {{ block.settings.outline }}
+    }
+</style>
