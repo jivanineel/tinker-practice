@@ -1,10 +1,8 @@
-<section class="input-component" style="width: 100%;">
-  <input
-    class="custom-input component-{{ block.settings.input_class }}"
-    placeholder="{{ block.settings.input_placeholder }}"
-    style="{% render 'typography-style', settings: block.settings %}; font-family: var(--font-family);"
-  >
-</section>
+<input
+  class="custom-input component-{{ block.settings.input_class }}"
+  placeholder="{{ block.settings.input_placeholder }}"
+  style="{% render 'typography-style', settings: block.settings %}; font-family: var(--font-family);"
+>
 
 {% schema %}
 {
@@ -91,7 +89,6 @@
 {% endschema %}
 
 <style>
-
   .component-{{ block.settings.input_class }}{
       font-size: {{ block.settings.font_size }}px;
       color: {{ block.settings.color }};
