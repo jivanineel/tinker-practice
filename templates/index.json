@@ -1700,7 +1700,7 @@
                         "height": "fit",
                         "custom_height": 100,
                         "inherit_color_scheme": true,
-                        "color_scheme": "",
+                        "color_scheme": "scheme-7",
                         "background_media": "none",
                         "video_position": "cover",
                         "background_image_position": "cover",
