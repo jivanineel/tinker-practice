@@ -346,6 +346,10 @@
     margin-top: 0
 }
 
+.modal-content-group{
+    width: 100%;
+}
+
 @media screen and (max-width: 1440px){
     .banner-class .layout-panel-flex--column{
         max-width: 90%;
