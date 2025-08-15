@@ -650,6 +650,10 @@
         max-width: 100%;
         min-height: auto;
     }
+
+    .modal-discount.popup-link__content{
+        max-height: auto;
+    }
 }
 
 @media screen and (max-width:425px) {
