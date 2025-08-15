@@ -652,7 +652,7 @@
     }
 
     .modal-discount.popup-link__content{
-        max-height: auto;
+        max-height: fit-content;
     }
 }
 
