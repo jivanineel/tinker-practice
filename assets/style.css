@@ -325,6 +325,10 @@
     min-height: 382px;
 }
 
+.modal-discount.popup-link__content .modal-group{
+    height: 100%;
+}
+
 .modal-discount.popup-link__content .image-block{
     max-width: 287px;
     height: 100%;
