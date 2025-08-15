@@ -330,6 +330,14 @@
     background-size: cover;
 }
 
+.modal-discount.popup-link__content .modal-desktop{
+    display:block;
+}
+
+.modal-discount.popup-link__content .modal-mobile{
+    display: none;
+}
+
 .modal-discount.popup-link__content .image-block img{
     object-fit: cover;
     height: 100%;
