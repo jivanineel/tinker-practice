@@ -490,7 +490,7 @@
     }
     
     .modal-discount.popup-link__content .modal-group>.layout-panel-flex{
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 }
 
