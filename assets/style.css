@@ -326,7 +326,8 @@
 }
 
 .modal-discount.popup-link__content .image-block{
-    width: 100%;
+    max-width: 287px;
+    height: 100%;
 }
 
 .modal-discount.popup-link__content .huge-discount p{
