@@ -353,7 +353,7 @@
 
 @media screen and (min-width: 767px) {
     .modal-discount.popup-link__content .layout-panel-flex{
-        flex-direction: column;
+        flex-direction: row;
     }
 }
 
