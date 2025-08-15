@@ -280,6 +280,7 @@
 
 .collection-grid-list {
     max-width: 1312px;
+    margin: 0 auto;
 }
 
 .collection-product-card .card-gallery{
