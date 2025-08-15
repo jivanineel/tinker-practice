@@ -1772,11 +1772,25 @@
                             "padding-inline-end": 0
                           },
                           "blocks": {}
+                        },
+                        "input_knVRmM": {
+                          "type": "_input",
+                          "name": "input",
+                          "settings": {
+                            "input_class": "",
+                            "input_placeholder": "",
+                            "color": "",
+                            "oultine": "none",
+                            "border_color": "",
+                            "placeholder_color": ""
+                          },
+                          "blocks": {}
                         }
                       },
                       "block_order": [
                         "text_97x8Xk",
-                        "text_e9pd8w"
+                        "text_e9pd8w",
+                        "input_knVRmM"
                       ]
                     }
                   },
