@@ -330,7 +330,7 @@
     background-size: cover;
 }
 
-.modal-discount.popup-link__content .modal-desktop{
+.modal-discount.popup-link__content:has(.modal-desktop){
     display:block;
 }
 
