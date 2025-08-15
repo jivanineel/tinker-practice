@@ -1777,12 +1777,16 @@
                           "type": "_input",
                           "name": "input",
                           "settings": {
-                            "input_class": "",
-                            "input_placeholder": "",
-                            "color": "",
+                            "input_class": "modal input",
+                            "input_placeholder": "Your Email",
+                            "font_size": 16,
+                            "color": "#000000",
                             "oultine": "none",
-                            "border_color": "",
-                            "placeholder_color": ""
+                            "border_size": 1,
+                            "border_color": "#000000",
+                            "border_radius": 6,
+                            "padding": "10px 10px 10px 10px",
+                            "placeholder_color": "#c4bbba"
                           },
                           "blocks": {}
                         }
