@@ -1777,7 +1777,7 @@
                           "type": "_input",
                           "name": "input",
                           "settings": {
-                            "input_class": "modal input",
+                            "input_class": "modal-input",
                             "input_placeholder": "Your Email",
                             "font_size": 16,
                             "color": "#000000",
