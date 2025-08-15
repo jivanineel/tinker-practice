@@ -290,6 +290,10 @@
     height: 100%;
 }
 
+.collection-product-card slideshow-container{
+    height: 100%;
+}
+
 .collection-product-card slideshow-slide{
     height: 100%;
 }
