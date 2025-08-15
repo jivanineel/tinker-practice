@@ -72,13 +72,22 @@
       document.addEventListener('DOMContentLoaded', function () {
         var swiperEl = document.querySelector('.swiper');
         new Swiper(swiperEl, {
-          slidesPerView: "auto",
+          slidesPerView: 'auto',
           spaceBetween: 20,
           pagination: {
             el: '.swiper-pagination',
             clickable: true,
           },
         });
+
+        var popup = document.querySelector('.modal-discount');
+        if (popup) {
+          // Add "open" class or trigger click depending on how your modal is coded
+          popup.classList.add('is-open');
+
+          // If your theme uses a trigger click, uncomment below:
+          // document.querySelector('[data-open-modal]').click();
+        }
       });
     </script>
   </body>
