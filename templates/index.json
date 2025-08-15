@@ -1784,7 +1784,7 @@
                             "border_size": 1,
                             "border_color": "#553e39",
                             "border_radius": 6,
-                            "padding": "10px 10px 10px 10px",
+                            "padding": "15px 10px",
                             "placeholder_color": "#c4bbba",
                             "font": "var(--font-accent--family)"
                           },
