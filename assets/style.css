@@ -501,6 +501,11 @@
     
     .modal-discount.popup-link__content .modal-group>.layout-panel-flex{
         flex-direction: column-reverse;
+        gap:30px;
+    }
+
+    .modal-discount.popup-link__content .modal-content-group{
+        padding: 20px 0
     }
 
     .modal-discount.popup-link__content .image-block:has(.modal-desktop){
