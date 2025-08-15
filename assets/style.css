@@ -501,6 +501,9 @@
         font-size: 36px;
     }
     
+    .modal-discount.popup-link__content .modal-group>.layout-panel-flex{
+        gap: 20px;
+    }
 }
 
 @media screen and (max-width: 750px) {
