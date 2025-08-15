@@ -433,7 +433,7 @@
     } 
     
     .modal-discount.popup-link__content{
-        min-height: auto;
+        min-height: fit-cotent;
     }
 }
 @media screen and (min-width: 768px) {
