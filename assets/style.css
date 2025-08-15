@@ -670,8 +670,8 @@
         height: 200px;
     }
 
-    .modal-discount.popup-link__content .huge-discount p{
-        font-size: 12px;
+    .modal-discount.popup-link__content .discount-percent p{
+        font-size: 20px
     }
 }
 
