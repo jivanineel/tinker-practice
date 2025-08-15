@@ -334,7 +334,7 @@
     display:block;
 }
 
-.modal-discount.popup-link__content .modal-mobile{
+.modal-discount.popup-link__content:has(.modal-mobile){
     display: none;
 }
 
