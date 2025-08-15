@@ -1718,6 +1718,34 @@
                         "padding-inline-end": 0
                       },
                       "blocks": {
+                        "text_97x8Xk": {
+                          "type": "text",
+                          "name": "t:names.text",
+                          "settings": {
+                            "text": "<p>HUG DISCOUNT</p>",
+                            "text_custom_class": "",
+                            "width": "fit-content",
+                            "max_width": "normal",
+                            "alignment": "left",
+                            "type_preset": "rte",
+                            "font": "var(--font-body--family)",
+                            "font_size": "1rem",
+                            "line_height": "normal",
+                            "letter_spacing": "normal",
+                            "font_family": "mono",
+                            "case": "none",
+                            "wrap": "pretty",
+                            "color": "var(--color-foreground)",
+                            "background": false,
+                            "background_color": "#00000026",
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          },
+                          "blocks": {}
+                        },
                         "text_e9pd8w": {
                           "type": "text",
                           "settings": {
@@ -1774,6 +1802,7 @@
                         }
                       },
                       "block_order": [
+                        "text_97x8Xk",
                         "text_e9pd8w",
                         "text_nJgYVp"
                       ]
