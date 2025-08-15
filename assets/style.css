@@ -322,16 +322,16 @@
     padding: 0;
     max-width: 768px;
     width: 100%;
-    min-height: 382px;
 }
 
 .modal-discount.popup-link__content .image-block{
     max-width: 287px;
-    height: 100%;
+    min-height: 382px;
     background-size: cover;
 }
 
 .modal-discount.popup-link__content .image-block img{
+    object-fit: cover;
 }
 
 .modal-discount.popup-link__content .huge-discount p{
