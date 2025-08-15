@@ -1,80 +1,107 @@
 <section class="input-component">
-    <input class="custom-input component-{{ block.settings.input_class }}" placeholder="{{ block.settings.input_placeholder }}">
+  <input
+    class="custom-input component-{{ block.settings.input_class }}"
+    placeholder="{{ block.settings.input_placeholder }}"
+  >
 </section>
 
 {% schema %}
 {
-    "name": "input",
-    "tag": "section",
-    "settings": [
+  "name": "input",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "input_class",
+      "label": "Input field class"
+    },
+    {
+      "type": "text",
+      "id": "input_placeholder",
+      "label": "Input field placeholder"
+    },
+    {
+      "type": "number",
+      "id": "font_size",
+      "label": "Font size"
+    },
+    {
+      "type": "color",
+      "id": "color",
+      "label": "color"
+    },
+    {
+      "type": "number",
+      "id": "border_size",
+      "label": "border size"
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "border color"
+    },
+    {
+      "type": "number",
+      "id": "border_radius",
+      "label": "border radius"
+    },
+    {
+      "type": "text",
+      "id": "padding",
+      "label": "Padding",
+      "info": "top right bottom left"
+    },
+    {
+      "type": "color",
+      "id": "placeholder_color",
+      "label": "placeholder"
+    },
+    {
+      "type": "select",
+      "id": "font",
+      "label": "t:settings.font",
+      "options": [
         {
-            "type": "text",
-            "id": "input_class",
-            "label": "Input field class"
+          "value": "var(--font-body--family)",
+          "label": "t:options.body"
         },
         {
-            "type": "text",
-            "id": "input_placeholder",
-            "label": "Input field placeholder"
+          "value": "var(--font-subheading--family)",
+          "label": "t:options.subheading"
         },
         {
-            "type": "number",
-            "id": "font_size",
-            "label": "Font size"
+          "value": "var(--font-heading--family)",
+          "label": "t:options.heading"
         },
         {
-            "type": "color",
-            "id": "color",
-            "label": "color"
-        },
-        {
-            "type": "number",
-            "id": "border_size",
-            "label": "border size"
-        },
-        {
-            "type": "color",
-            "id": "border_color",
-            "label": "border color" 
-        },
-        {
-            "type": "number",
-            "id": "border_radius",
-            "label": "border radius"
-        },
-        {
-            "type": "text",
-            "id": "padding",
-            "label": "Padding",
-            "info": "top right bottom left"
-        },
-        {
-            "type": "color",
-            "id": "placeholder_color",
-            "label": "placeholder"
+          "value": "var(--font-accent--family)",
+          "label": "t:options.accent"
         }
-    ],
-    "presets": [
-        {
-            "name": "input"
-        }
-    ]
+      ],
+      "default": "var(--font-body--family)"
+    }
+  ],
+  "presets": [
+    {
+      "name": "input"
+    }
+  ]
 }
 {% endschema %}
 
 <style>
-    .component-{{ block.settings.input_class }}{
-        font-size: {{ block.settings.font_size }}px;
-        color: {{ block.settings.color }};
-        outline: none;
-        border-width: {{ block.settings.border_size }}px;
-        border-color: {{ block.settings.border_color }};
-        border-style: solid;
-        border-radius: {{ block.settings.border_radius }}px;
-        padding: {{ block.settings.padding }};
-    }
+  .component-{{ block.settings.input_class }}{
+      font-size: {{ block.settings.font_size }}px;
+      color: {{ block.settings.color }};
+      outline: none;
+      border-width: {{ block.settings.border_size }}px;
+      border-color: {{ block.settings.border_color }};
+      border-style: solid;
+      border-radius: {{ block.settings.border_radius }}px;
+      padding: {{ block.settings.padding }};
+  }
 
-    .component-{{ block.settings.input_class }}:placeholder{
-        color: {{ block.settings.placeholder_color }}
-    }
+  .component-{{ block.settings.input_class }}:placeholder{
+      color: {{ block.settings.placeholder_color }}
+  }
 </style>
