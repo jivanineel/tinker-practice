@@ -17,14 +17,18 @@
             "id": "input_placeholder",
             "label": "Input field placeholder"
         },
-
+        {
+            "type": "number",
+            "id": "font_size",
+            "label": "Font size"
+        }
     ]
 }
 {% endschema %}
 
 <style>
     .component-{{ block.settings.input_class }}{
-        font-size: {{ block.settings.font_size }};
+        font-size: {{ block.settings.font_size }}px;
         color: {{ block.settings.color }};
         outline: {{ block.settings.outline }};
         border-width: {{ block.settings.border_size }};
