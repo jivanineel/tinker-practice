@@ -512,11 +512,11 @@
         flex-direction: column-reverse;
     }
 
-    .modal-discount.popup-link__content:has(.modal-desktop){
+    .modal-discount.popup-link__content .image-block:has(.modal-desktop){
         display: none;
     }
 
-    .modal-discount.popup-link__content:has(.modal-mobile){
+    .modal-discount.popup-link__content ..image-block:has(.modal-mobile){
         display: block;
     }
 }
