@@ -351,6 +351,12 @@
     }
 }
 
+@media screen and (min-width: 767px) {
+    .modal-discount.popup-link__content .layout-panel-flex{
+        flex-direction: column;
+    }
+}
+
 @media (min-width: 992px) and (max-width: 1199px){
     .banner-class{
         gap: 20px;
