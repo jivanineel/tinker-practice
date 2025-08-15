@@ -278,6 +278,10 @@
     flex:none;
 }
 
+.collection-product-card .custom-product-media{
+    height: 477px;
+}
+
 .modal-discount.popup-link__content{
     padding: 0;
     max-width: 768px;
