@@ -332,6 +332,7 @@
 
 .modal-discount.popup-link__content .image-block img{
     object-fit: cover;
+    height: 100%;
 }
 
 .modal-discount.popup-link__content .huge-discount p{
