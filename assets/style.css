@@ -146,6 +146,11 @@
     cursor: pointer;
 }
 
+.footer-grid {
+    max-width: 1312px;
+    margin: 0 auto
+}
+
 .footer-groups{
     max-width: 211px;
     width: 100%;
@@ -371,10 +376,6 @@
 
     .resource-list--grid{
         grid-template-columns: repeat(3, 1fr)
-    }
-
-    .footer-grid {
-        max-width: 1312px;
     }
 
     .footer-grid .footer-groups{
