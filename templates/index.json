@@ -1750,7 +1750,7 @@
                           "type": "text",
                           "settings": {
                             "text": "<p>GET 10% OFF</p>",
-                            "text_custom_class": "",
+                            "text_custom_class": "discount-percent",
                             "width": "fit-content",
                             "max_width": "normal",
                             "alignment": "left",
