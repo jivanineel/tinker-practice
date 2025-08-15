@@ -519,6 +519,10 @@
     .modal-discount.popup-link__content .image-block:has(.modal-mobile){
         display: block;
     }
+
+    .modal-discount.popup-link__content .image-block{
+        max-width: 100%
+    }
 }
 
 @media screen and (max-width: 750px) {
