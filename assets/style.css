@@ -305,6 +305,7 @@
 
 .modal-btn.common-btn{
     max-width: 189px;
+    padding: 15px 0
 }
 
 @media screen and (max-width: 1440px){
