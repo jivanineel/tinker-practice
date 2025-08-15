@@ -71,4 +71,8 @@
         border-style: solid;
         border-radius: {{ block.settings.border_radius }};
     }
+
+    .component-{{ block.settings.input_class }}:placeholder{
+        color: {{ block.settings.placeholder_color }}
+    }
 </style>
