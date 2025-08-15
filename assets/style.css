@@ -298,6 +298,10 @@
     color: #CBB6A6;
 }
 
+.modal-discount.popup-link__content .discount-percent{
+    font-size: 30px;
+}
+
 @media screen and (max-width: 1440px){
     .banner-class .layout-panel-flex--column{
         max-width: 90%;
