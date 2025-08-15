@@ -290,6 +290,10 @@
     height: 100%;
 }
 
+.collection-product-card .slideshow-slides{
+    height: 100%;
+}
+
 .modal-discount.popup-link__content{
     padding: 0;
     max-width: 768px;
