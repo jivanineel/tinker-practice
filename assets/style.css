@@ -282,6 +282,10 @@
     flex:none;
 }
 
+.home-collection{
+    max-height: 350px
+}
+
 .modal-discount.popup-link__content{
     padding: 0;
     max-width: 768px;
