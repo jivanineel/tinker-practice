@@ -345,7 +345,7 @@
     color: #CBB6A6 !important;
 }
 
-.modal-discount.popup-link__content .discount-percent{
+.modal-discount.popup-link__content .discount-percent p{
     font-size: 30px;
     font-weight: 700;
 }
@@ -507,6 +507,10 @@
 
     .modal-discount.popup-link__content .modal-group>.layout-panel-flex{
         gap: 20px;
+    }
+
+    .modal-discount.popup-link__content .discount-percent p{
+
     }
 }
 
