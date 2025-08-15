@@ -661,6 +661,10 @@
     .modal-discount.popup-link__content{
         max-height: fit-content;
     }
+
+    .collection-product-card .card-gallery{
+        height: 280px;
+    }
 }
 
 @media screen and (max-width:425px) {
