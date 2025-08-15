@@ -1789,12 +1789,29 @@
                             "font": "var(--font-accent--family)"
                           },
                           "blocks": {}
+                        },
+                        "button_9yLwnD": {
+                          "type": "button",
+                          "name": "t:names.button",
+                          "settings": {
+                            "label": "View All",
+                            "link": "shopify://collections/all",
+                            "custom_button_class": "",
+                            "open_in_new_tab": false,
+                            "style_class": "button",
+                            "width": "fit-content",
+                            "custom_width": 100,
+                            "width_mobile": "fit-content",
+                            "custom_width_mobile": 100
+                          },
+                          "blocks": {}
                         }
                       },
                       "block_order": [
                         "text_97x8Xk",
                         "text_e9pd8w",
-                        "input_knVRmM"
+                        "input_knVRmM",
+                        "button_9yLwnD"
                       ]
                     }
                   },
