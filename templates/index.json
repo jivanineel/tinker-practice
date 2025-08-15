@@ -183,7 +183,7 @@
                       "settings": {
                         "image": "shopify://shop_images/modal-image.png",
                         "link": "",
-                        "custom_image_class": "",
+                        "custom_image_class": "modal-desktop",
                         "image_ratio": "adapt",
                         "width": "fit-content",
                         "custom_width": 100,
