@@ -1603,6 +1603,7 @@
               "name": "t:names.popup_link",
               "settings": {
                 "behavior": "default",
+                "modal_class": "modal-discount",
                 "heading": "Learn more",
                 "type_preset": "",
                 "padding-block-start": 0,
