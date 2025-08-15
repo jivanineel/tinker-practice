@@ -348,6 +348,7 @@
 
 .modal-content-group .layout-panel-flex{
     width: 100%;
+    margin: 0;
 }
 
 @media screen and (max-width: 1440px){
