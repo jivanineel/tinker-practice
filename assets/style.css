@@ -286,11 +286,11 @@
     height: 100%
 }
 
-.collection-product-card .slideshow-slide{
+.collection-product-card slideshow-slide{
     height: 100%;
 }
 
-.collection-product-card .slideshow-slides{
+.collection-product-card slideshow-slides{
     height: 100%;
 }
 
