@@ -330,6 +330,10 @@
     height: 100%;
 }
 
+.modal-discount.popup-link__content .image-block img{
+    background-size: cover;
+}
+
 .modal-discount.popup-link__content .huge-discount p{
     font-size: 14px;
     color: #CBB6A6 !important;
