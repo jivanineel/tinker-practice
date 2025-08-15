@@ -505,7 +505,7 @@
     }
 
     .modal-discount.popup-link__content .modal-content-group{
-        padding: 20px 0
+        padding: 20px 0;
     }
 
     .modal-discount.popup-link__content .image-block:has(.modal-desktop){
@@ -518,7 +518,7 @@
 
     .modal-discount.popup-link__content .image-block{
         max-width: 100%;
-        height: auto;
+        min-height: auto;
     }
 }
 
