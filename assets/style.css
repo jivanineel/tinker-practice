@@ -446,7 +446,7 @@
         font-size: 42px;
     } 
 }
-@media screen and (min-width: 575px) {
+@media screen and (min-width: 768px) {
     .modal-discount.popup-link__content .modal-group>.layout-panel-flex{
         flex-direction: row ;
     }
@@ -499,6 +499,27 @@
         font-size: 36px;
     }
     
+    .modal-discount.popup-link__content .modal-group>.layout-panel-flex{
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+
+    .modal-discount.popup-link__content .modal-content-group{
+        padding: 20px 0;
+    }
+
+    .modal-discount.popup-link__content .image-block:has(.modal-desktop){
+        display: none;
+    }
+
+    .modal-discount.popup-link__content .image-block:has(.modal-mobile){
+        display: block;
+    }
+
+    .modal-discount.popup-link__content .image-block{
+        max-width: 100%;
+        min-height: auto;
+    }
 }
 
 @media screen and (max-width: 750px) {
@@ -520,31 +541,31 @@
         padding: 10px 0;
         max-width: 150px;
     }
-    
+
     .banner-class .common-btn{
         max-width: 100px
     }
-    
+
     .banner-content{
         margin-bottom: 0;
     }
-    
+
     .rating-image{
         max-width: 100px;
     }
-    
+
     .shopping-category p{
         font-size: 24px;
     }
-    
+
     .rating-text h6{
         font-size: 14px !important;
     }
-    
+
     .custom-product-card p{
         font-size: 16px;
     }
-    
+     
     .product-group-class{
         padding: 10px;
     }
@@ -556,7 +577,7 @@
         width: 15px;
         height: 15px;
     }
-    
+        
     .adding-icons{
         width: 30px;
         height: 30px;
@@ -568,7 +589,7 @@
     .footer-grid .footer-groups{
         width: 50%;
     }
-    
+
     .common-btn.offer-btn{
         max-width: 100px;
     }
@@ -584,7 +605,7 @@
     .dot-link li a{
         font-size: 12px !important;
     }
-    
+
     .footer-heading p{
         font-size: 16px;
     }
@@ -593,21 +614,21 @@
         minwidth: 24px;
         height: 24px;
     }
-    
+
     .offer-text strong:before {
         top: -11px;
         right: -4px;
         width: 121px;
         height: 30px;
     }
-    
+
     .offer-section .common-btn{
         max-width: 150px;
         font-size: 14px;
         padding: 16px 0;
         margin-top: 20px;
     }
-    
+
     .advantage-info img{
         max-width: 45px
     }
@@ -619,35 +640,14 @@
     .special-offer{
         padding-bottom: 10px;
     }
-    
+
     .special-offer p{
         font-size: 14px;
     }
-    
+
     .product-banner{
         font-size: 30px;
     }   
-    .modal-discount.popup-link__content .modal-group>.layout-panel-flex{
-        flex-direction: column-reverse;
-        gap: 20px;
-    }
-    
-    .modal-discount.popup-link__content .modal-content-group{
-        padding: 20px 0;
-    }
-    
-    .modal-discount.popup-link__content .image-block:has(.modal-desktop){
-        display: none;
-    }
-    
-    .modal-discount.popup-link__content .image-block:has(.modal-mobile){
-        display: block;
-    }
-    
-    .modal-discount.popup-link__content .image-block{
-        max-width: 100%;
-        min-height: auto;
-    }
 }
 
 @media screen and (max-width:425px) {
