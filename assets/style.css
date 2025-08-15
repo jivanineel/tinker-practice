@@ -665,6 +665,10 @@
     .collection-product-card .card-gallery{
         height: 200px;
     }
+
+    .modal-discount.popup-link__content .huge-discount p{
+        font-size: 12px;
+    }
 }
 
 @media screen and (max-width:425px) {
