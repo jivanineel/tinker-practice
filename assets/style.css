@@ -329,9 +329,9 @@
     max-width: 287px;
 }
 
-.modal-discount.popup-link__content .huge-discount{
+.modal-discount.popup-link__content .huge-discount p{
     font-size: 14px;
-    color: #CBB6A6;
+    color: #CBB6A6 !important;
 }
 
 .modal-discount.popup-link__content .discount-percent{
