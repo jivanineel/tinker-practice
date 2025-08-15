@@ -28,21 +28,6 @@
             "label": "color"
         },
         {
-            "type": "select",
-            "id": "oultine",
-            "label": "Outline",
-            "options": [
-                {
-                    "label": "None",
-                    "value": "none"
-                },
-                {
-                    "label": "Outline",
-                    "value": "outline"
-                }
-            ]
-        },
-        {
             "type": "number",
             "id": "border_size",
             "label": "border size"
@@ -81,7 +66,7 @@
     .component-{{ block.settings.input_class }}{
         font-size: {{ block.settings.font_size }}px;
         color: {{ block.settings.color }};
-        outline: {{ block.settings.outline }};
+        outline: none;
         border-width: {{ block.settings.border_size }}px;
         border-color: {{ block.settings.border_color }};
         border-style: solid;
