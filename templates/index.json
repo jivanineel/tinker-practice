@@ -205,6 +205,7 @@
                       "type": "image",
                       "name": "t:names.image",
                       "settings": {
+                        "image": "shopify://shop_images/modal-product.jpg",
                         "link": "",
                         "custom_image_class": "modal-mobile",
                         "image_ratio": "adapt",
