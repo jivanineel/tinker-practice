@@ -501,6 +501,10 @@
         font-size: 36px;
     }
     
+    .collection-product-card .card-gallery{
+        height: 340px;
+    }
+
     .modal-discount.popup-link__content .modal-group>.layout-panel-flex{
         gap: 20px;
     }
