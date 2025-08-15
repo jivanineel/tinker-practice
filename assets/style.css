@@ -438,7 +438,7 @@
 }
 @media screen and (min-width: 768px) {
     .modal-discount.popup-link__content>.layout-panel-flex{
-        flex-direction: row !important;
+        flex-direction: row ;
     }
 }
 
@@ -490,7 +490,7 @@
     }
     
     .modal-discount.popup-link__content>.layout-panel-flex{
-        flex-direction: column !important;
+        flex-direction: column;
     }
 }
 
