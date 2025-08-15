@@ -328,10 +328,10 @@
 .modal-discount.popup-link__content .image-block{
     max-width: 287px;
     height: 100%;
+    background-size: cover;
 }
 
 .modal-discount.popup-link__content .image-block img{
-    background-size: cover;
 }
 
 .modal-discount.popup-link__content .huge-discount p{
