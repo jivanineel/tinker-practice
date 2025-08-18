@@ -43,6 +43,10 @@
     height: 350px;
 }
 
+.home-collection slideshow-component{
+    height: 100%;
+}
+
 .overlay-icon{
     position: absolute;
     top: 0;
