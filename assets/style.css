@@ -363,9 +363,9 @@
     color: #CBB6A6 !important;
 }
 
-.popup-link__button{
+/* .popup-link__button{
     display: none
-}
+} */
 
 .modal-discount.popup-link__content .discount-percent p{
     font-size: 30px;
