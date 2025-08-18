@@ -66,20 +66,6 @@
     {% if settings.quick_add or settings.mobile_quick_add %}
       {% render 'quick-add-modal' %}
     {% endif %}
-
-    <div class="modal-discount">
-      <div class="popup-content">
-        <div class="popup-image">
-          <img src="{{ section.settings.modal_image }}" alt="Offer">
-        </div>
-        <div class="popup-form">
-          <h3>HUG DISCOUNT</h3>
-          <h2>GET 10% OFF</h2>
-          <input type="email" placeholder="Your Email">
-          <button>View All</button>
-        </div>
-      </div>
-    </div>
     <script src="{{ 'swiper.js' | asset_url }}"></script>
 
     <script>
