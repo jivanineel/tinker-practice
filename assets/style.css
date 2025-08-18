@@ -398,6 +398,10 @@
         font-size: 48px !important;
     }
 
+    .home-collection .card-gallery{
+        height: auto
+    }
+
     .banner-content{
         margin-bottom: 0
     }
