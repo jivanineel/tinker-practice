@@ -470,6 +470,7 @@
     } 
 
     .modal-discount.popup-link__content{
+        max-width: calc(100% - 20px)
         margin: auto;
     }
 }
