@@ -343,7 +343,7 @@
                           "settings": {
                             "label": "View All",
                             "link": "shopify://collections/all",
-                            "custom_button_class": "",
+                            "custom_button_class": "common-btn",
                             "open_in_new_tab": false,
                             "style_class": "button",
                             "width": "fit-content",
