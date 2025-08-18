@@ -11,8 +11,7 @@
 }
 
 .wishlist-link{
-    max-width: 44px;
-    width: 100%;
+    width: 44px;
     display: flex;
     align-items: center;
     justify-content: center;
