@@ -128,6 +128,7 @@
               "settings": {
                 "behavior": "default",
                 "modal_class": "modal-discount",
+                "pop_link_class": "discount-modal",
                 "heading": "Learn more",
                 "type_preset": "",
                 "padding-block-start": 0,
