@@ -269,7 +269,7 @@
                         "text_rbMk4q": {
                           "type": "text",
                           "settings": {
-                            "text": "<h2>What is the return policy?</h2>",
+                            "text": "<p>GET 10% OFF</p>",
                             "text_custom_class": "",
                             "width": "fit-content",
                             "max_width": "normal",
