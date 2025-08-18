@@ -533,7 +533,7 @@
     }
 
     .modal-discount.popup-link__content .modal-group>.layout-panel-flex{
-        gap: 20px;
+        gap: 0px;
     }
 
     .modal-discount.popup-link__content .discount-percent p{
