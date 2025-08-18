@@ -341,6 +341,7 @@
     max-height: 382px;
     height: 100%;
     margin: auto 60px 60px auto;
+    border-radius: 10px !important;
 }
 
 .modal-discount.popup-link__content .image-block{
