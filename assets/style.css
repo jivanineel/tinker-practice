@@ -10,6 +10,11 @@
     padding: 8px 0
 }
 
+.wishlist-link{
+    max-width: 44px;
+    width: 100%;
+}
+
 .banner-class .layout-panel-flex--column{
     max-width: 70%;
     margin: 0 auto;
