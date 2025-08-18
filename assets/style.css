@@ -470,7 +470,7 @@
     } 
 
     .modal-discount.popup-link__content{
-        margin: auto;
+        margin: auto 20px;
     }
 }
 @media screen and (min-width: 575px) {
