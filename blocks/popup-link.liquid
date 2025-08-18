@@ -11,7 +11,7 @@
 >
   <button
     on:click="/showDialog"
-    class="button button-unstyled popup-link__button text-left spacing-style {{ block.settings.type_preset }}"
+    class="button button-unstyled popup-link__button text-left spacing-style {{ block.settings.type_preset }} {{ block.settings.pop_link_class }}"
     style="{% render 'spacing-style', settings: block.settings %}"
   >
     {{- block.settings.heading }}
