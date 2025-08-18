@@ -79,18 +79,60 @@
             clickable: true,
           },
         });
+      });
 
-        var popup = document.querySelector('.modal-discount');
-        if (popup) {
-          // Add "open" class or trigger click depending on how your modal is coded
-          popup.classList.add('is-open');
+      window.addEventListener('load', function () {
+        // 1) find your popup content by the class you entered in the block ("modal-class")
+        var content = document.querySelector('.modal-discount');
+        if (!content) return;
 
-          // If your theme uses a trigger click, uncomment below:
-          // document.querySelector('[data-open-modal]').click();
+        // 2) find the modal wrapper (usually <modal-dialog id="PopupModal-XXXX">)
+        var modalWrapper = content.closest('[id]');
+        var id = modalWrapper ? modalWrapper.id : null;
+
+        // optional: show only once per session.  Set to true to show every load.
+        var ALWAYS_OPEN = true;
+        var KEY = 'popup-opened:' + (id || 'modal-discount');
+        if (!ALWAYS_OPEN && sessionStorage.getItem(KEY)) return;
+
+        // 3) try to click the official opener that targets this modal ID
+        var selectors = [];
+        if (id) {
+          selectors.push(
+            `[aria-controls="${id}"]`,
+            `[data-modal="#${id}"]`,
+            `[data-modal="${id}"]`,
+            `[data-open-modal="#${id}"]`,
+            `[data-open-modal="${id}"]`,
+            `[data-open-popup="#${id}"]`,
+            `[data-open-popup="${id}"]`
+          );
         }
-        var trigger = document.querySelector('[data-open-popup="modal-discount"]');
-        if (trigger) {
-          trigger.click();
+        // fallback: open the first link/button inside the popup-link block
+        selectors.push('.popup-link a[role="button"]', '.popup-link button', '.popup-link a');
+
+        var opener = null;
+        for (var i = 0; i < selectors.length && !opener; i++) {
+          opener = document.querySelector(selectors[i]);
+        }
+
+        if (opener) {
+          opener.click(); // uses theme’s own open behavior
+          if (!ALWAYS_OPEN) sessionStorage.setItem(KEY, '1');
+          return;
+        }
+
+        // 4) ultimate fallbacks if no opener was found (covers unusual themes)
+        if (modalWrapper) {
+          var nativeDialog = modalWrapper.closest('dialog');
+          if (nativeDialog && nativeDialog.showModal) {
+            nativeDialog.showModal();
+          } else {
+            modalWrapper.classList.add('is-open', 'open', 'active');
+            document.documentElement.classList.add('scroll-lock', 'overflow-hidden');
+            document.body.classList.add('scroll-lock', 'overflow-hidden');
+          }
+          if (!ALWAYS_OPEN) sessionStorage.setItem(KEY, '1');
         }
       });
     </script>
