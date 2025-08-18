@@ -88,6 +88,16 @@
           // If your theme uses a trigger click, uncomment below:
           // document.querySelector('[data-open-modal]').click();
         }
+
+        <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var trigger = document.querySelector('[data-open-popup="modal-discount"]');
+    if (trigger) {
+      trigger.click();
+    }
+  });
+</script>
+
       });
     </script>
   </body>
