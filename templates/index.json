@@ -127,7 +127,7 @@
               "name": "t:names.popup_link",
               "settings": {
                 "behavior": "default",
-                "modal_class": "",
+                "modal_class": "modal-discount",
                 "heading": "Learn more",
                 "type_preset": "",
                 "padding-block-start": 0,
@@ -142,7 +142,7 @@
                   "settings": {
                     "link": "",
                     "group_class": "",
-                    "common_group_class": "modal-discount",
+                    "common_group_class": "",
                     "open_in_new_tab": false,
                     "content_direction": "row",
                     "vertical_on_mobile": true,
