@@ -47,10 +47,14 @@
     height: 100%;
 }
 
+.home-collection slideshow-container{
+    height: 100%;
+}
+
 .home-collection slideshow-slides{
     height: 100%;
 }
-.home-collection slideshow-slides{
+.home-collection slideshow-slide{
     height: 100%;
 }
 
