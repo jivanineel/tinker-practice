@@ -330,9 +330,10 @@
                             "color": "",
                             "border_size": 1,
                             "border_color": "#553e39",
-                            "padding": "",
-                            "placeholder_color": "",
-                            "font": "var(--font-body--family)"
+                            "border_radius": 6,
+                            "padding": "15px 20px",
+                            "placeholder_color": "#c4bbba",
+                            "font": "var(--font-accent--family)"
                           },
                           "blocks": {}
                         }
