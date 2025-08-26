@@ -2810,10 +2810,6 @@
         "padding-block-start": 0,
         "padding-block-end": 0
       }
-    },
-    "pagefly-home": {
-      "type": "pagefly-home",
-      "settings": {}
     }
   },
   "order": [
@@ -2824,8 +2820,7 @@
     "section_imLqNr",
     "section_U3PUXx",
     "customer_review_YVz7pC",
-    "section_ebGQET",
-    "pagefly-home"
+    "section_ebGQET"
   ],
   "layout": "theme.pagefly"
 }
